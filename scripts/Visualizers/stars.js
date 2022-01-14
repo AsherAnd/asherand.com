@@ -10,7 +10,7 @@
 
 function starSetup() {
   // populate star
-  star = new Array(width * 4);
+  star = new Array(width * 2);
   for (let i = 0; i < star.length; i++) {
     star[i] = new Star();
   }
