@@ -9,10 +9,12 @@
 ////////////////////////////////////////////////////////////////
 
 function circleVizual(circleViz, averageVol) {
+  var bigger = width >= height ? width : height;
+  var smaller = width >= height ? height : width;
+
   // inner visual
   // inner circle properties
-
-  var size = map(averageVol, 0, 1, width / 10, width / 4);
+  var size = map(averageVol, 0, 1, bigger / 10, bigger / 4);
   var vizColor = map(averageVol, 0, 1, 0, 360);
 
   stroke(vizColor, 80, 80);
@@ -35,7 +37,7 @@ function circleVizual(circleViz, averageVol) {
 
   // loop through each average volume pushed
   for (var i = 0; i < circleViz.length; i++) {
-    var r = map(circleViz[i], 0, 1, height / 6, width / 3);
+    var r = map(circleViz[i], 0, 1, smaller / 6, bigger / 3);
     var x = r * cos(i);
     var y = r * sin(i);
     point(x, y);
