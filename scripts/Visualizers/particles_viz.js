@@ -30,24 +30,30 @@ class Particle {
     this.pixPosY = Math.floor(this.y);
   }
 
-  show() {
+  show(averageVol) {
+    // particle reacting to music
+    var sizeIncrease = map(averageVol, 0, 1, 1, 2.5);
+
     // draw particle using colors from cover image
     fill(mappedCover[this.pixPosY][this.pixPosX][1]);
     noStroke();
-    ellipse(this.x, this.y, this.r);
+    ellipse(this.x, this.y, this.r * sizeIncrease);
   }
 
-  update(mappedCover) {
+  update(mappedCover, averageVol) {
+    // particle reacting to music
+    var musicBoost = map(averageVol, 0, 1, 0, 2);
+
     // so the index of the particle position is always an integer
     this.pixPosX = Math.floor(this.x);
     this.pixPosY = Math.floor(this.y);
 
     // make particles move at different speed depending on image pixel brightness
     this.speed = mappedCover[this.pixPosY][this.pixPosX][0];
-    var movement = 2.5 - this.speed + this.velocity; //2.5 is a relative brightness calculated from image, might need to change to more accurate number
+    var movement = 4 - this.speed + this.velocity; //2.5 is a relative brightness calculated from image, might need to change to more accurate number
 
     // fall animation
-    this.y += movement;
+    this.y = this.y + movement + musicBoost;
 
     // after it exists screen
     if (this.y > height / 2 + this.partLength / 2) {

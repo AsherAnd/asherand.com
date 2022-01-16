@@ -31,7 +31,7 @@ const covers = [];
 
 // keep track of song, vol and visualizer
 let songIndex = 0;
-let visualIndex = 3;
+let visualIndex = 0;
 let visualIndexMax = 3;
 let muted = false;
 
@@ -121,8 +121,10 @@ function setup() {
 
 // display visuals
 function draw() {
-  // clear background for each visual
-  // clear();
+  // clear background for each visual except particles
+  if (visualIndex != 3) {
+    clear();
+  }
 
   // get audio data
   analyzeMusic();
@@ -158,9 +160,12 @@ function draw() {
       // set up particles
       particlesSetup();
     } else {
+      // background transparency
+      background(0, 0, 0, 5);
+      background(0, 0, 0, 14);
       for (let i = 0; i < particles.length; i++) {
-        particles[i].show();
-        particles[i].update(mappedCover);
+        particles[i].show(averageVol);
+        particles[i].update(mappedCover, averageVol);
       }
     }
   }
@@ -172,18 +177,6 @@ function draw() {
   //   clear();
   //   polyVizual(polyViz, averageVol);
   // }
-
-  // // particles visualizer
-  // else if (visualIndex === 4) {
-  //   // background transparency
-  //   background(0, 0, 0, 10);
-  //   background(0, 0, 0, 14);
-
-  //   for (let i = 0; i < balls.length; i++) {
-  //     balls[i].show();
-  //   }
-  // }
-
   ///////////////////////// under construction////////////////////////////
 }
 
