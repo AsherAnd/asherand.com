@@ -12,7 +12,7 @@ function starSetup() {
   // populate star
   var bigger = width >= height ? width : height;
 
-  star = new Array(bigger * 2);
+  star = new Array(Math.round(bigger * 2));
   for (let i = 0; i < star.length; i++) {
     star[i] = new Star();
   }
