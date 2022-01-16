@@ -8,95 +8,50 @@
 //                                                            //
 ////////////////////////////////////////////////////////////////
 
-//  change color mode
-// colorMode()
-// show image
-class Balls {
-  constructor(location) {
-    this.x = random(width);
-    this.y = 0;
-    this.r = 3;
-    this.speed = random(1, 10);
-    this.location = location;
-    this.path = [];
-  }
+function particlesSetup() {
+  // populate particles
+  var bigger = width >= height ? width : height;
 
-  update() {
-    this.y += this.speed * (averageVol + 0.02 * 2);
-
-    if (this.y > height) {
-      this.y = -5;
-      this.x = random(width);
-    }
-  }
-
-  show() {
-    fill("rgb(0, 200, 20)");
-    // noFill()
-    // stroke(0, 200, 20);
-    noStroke();
-    ellipse(this.x, this.y, this.r);
-    // let v = createVector(this.x, this.y);
-    // this.path.push(v);
-
-    // for (let i = 0; i < this.path.length; i++) {
-    //   let pos = this.path[i];
-    //   let brightness = map(i, 0, this.path.length, 0, 1);
-    //   fill(`rgba(0, 200, 20, ${brightness})`);
-    //   // stroke(0, 200, 20, brightness);
-    //   ellipse(pos.x, pos.y, this.r);
-    // }
-
-    // if (this.path.length > 10) {
-    //   this.path.splice(0, 1);
-    // }
-    this.update();
+  particles = new Array(Math.floor(bigger / 2.5));
+  for (let i = 0; i < particles.length; i++) {
+    particles[i] = new Particle(particles.length, i);
   }
 }
 
-// particles to show image
-// class Particles {
-//   constructor() {
-//     this.x = random(width);
-//     this.y = 0;
-//     this.speed = 0;
-//     this.velocity = random((height * 0.2) / 100);
-//     if (width > height) {
-//       this.size = random((height * 1) / 7 / 100, (height * 0.352) / 100);
-//     } else {
-//       this.size = random((height * 1) / 5 / 100, (height * 0.25) / 100);
-//     }
-//     // index positions for image data
-//     this.pos1 = floor(this.y);
-//     this.pos2 = floor(this.x);
-//   }
-//   show() {
-//     // draw particles
-//     noStroke();
+class Particle {
+  constructor(partLength, partIndex) {
+    this.partLength = partLength;
+    this.x = width / 2 - this.partLength / 2 + partIndex;
+    this.y = height / 2 - this.partLength / 2;
+    this.r = random(1, 2.5);
+    this.speed = 0;
+    this.velocity = random(0, 0.5);
+    this.pixPosX = Math.floor(this.x);
+    this.pixPosY = Math.floor(this.y);
+  }
 
-//     // show image color using particles
-//     fill(mappedImage[this.pos1][this.pos2][1]);
+  show() {
+    // draw particle using colors from cover image
+    fill(mappedCover[this.pixPosY][this.pixPosX][1]);
+    noStroke();
+    ellipse(this.x, this.y, this.r);
+  }
 
-//     ellipse(this.x, this.y, this.size);
+  update(mappedCover) {
+    // so the index of the particle position is always an integer
+    this.pixPosX = Math.floor(this.x);
+    this.pixPosY = Math.floor(this.y);
 
-//     this.update();
-//   }
+    // make particles move at different speed depending on image pixel brightness
+    this.speed = mappedCover[this.pixPosY][this.pixPosX][0];
+    var movement = 2.5 - this.speed + this.velocity; //2.5 is a relative brightness calculated from image, might need to change to more accurate number
 
-//   update() {
-//     // making sure index positions are rounded down
-//     this.pos1 = floor(this.y);
-//     this.pos2 = floor(this.x);
+    // fall animation
+    this.y += movement;
 
-//     // speed of the particles depending on how bright the image pixel is
-//     this.speed = mappedImage[this.pos1][this.pos2][0];
-//     let movement = 3 - this.speed + this.velocity;
-
-//     this.y += movement;
-
-//     // when the particle exists screen
-//     if (this.y > height) {
-//       this.y = 0;
-//       this.x = random(width);
-//     }
-//   }
-// }
+    // after it exists screen
+    if (this.y > height / 2 + this.partLength / 2) {
+      this.y = height / 2 - this.partLength / 2;
+    }
+  }
+}

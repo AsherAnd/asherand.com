@@ -31,8 +31,8 @@ const covers = [];
 
 // keep track of song, vol and visualizer
 let songIndex = 0;
-let visualIndex = 0;
-let visualIndexMax = 2;
+let visualIndex = 3;
+let visualIndexMax = 3;
 let muted = false;
 
 // create reusable audio context
@@ -51,18 +51,30 @@ let averageVol = 0;
 // visualizer variables
 let circleViz = [];
 let polyViz = [];
+let mappedCover = [];
 let star;
+let particles;
 
 // when screen size changes
 function windowResized() {
-  resizeCanvas(windowWidth, windowHeight * 0.9);
+  resizeCanvas(windowWidth, windowHeight * 0.88);
+
+  // reset values
   clear();
+  mappedCover = [];
+  star = [];
+  particles = [];
+
+  starSetup();
+  particlesSetup();
 }
 
 // setup
 function setup() {
-  createCanvas(windowWidth, windowHeight * 0.9);
+  createCanvas(windowWidth, windowHeight * 0.88);
+  pixelDensity(1);
   angleMode(DEGREES);
+  imageMode(CENTER);
   colorMode(HSB, 360, 100, 100, 255);
 
   // load song
@@ -103,14 +115,14 @@ function setup() {
   // change visualizer
   visualizerBtn.addEventListener("click", visualizerButton);
 
-  // setup the star visual
+  // setup star visual
   starSetup();
 }
 
 // display visuals
 function draw() {
   // clear background for each visual
-  clear();
+  // clear();
 
   // get audio data
   analyzeMusic();
@@ -135,6 +147,22 @@ function draw() {
   // circle visualizer
   else if (visualIndex === 2) {
     circleVizual(circleViz, averageVol);
+  }
+
+  // cover/particles visualizer
+  else if (visualIndex === 3) {
+    // if cover image is not mapped
+    if (mappedCover.length === 0) {
+      loadCovers(cover.src);
+
+      // set up particles
+      particlesSetup();
+    } else {
+      for (let i = 0; i < particles.length; i++) {
+        particles[i].show();
+        particles[i].update(mappedCover);
+      }
+    }
   }
 
   ///////////////////////// under construction////////////////////////////

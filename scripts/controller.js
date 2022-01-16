@@ -39,6 +39,9 @@ function loadSong(track) {
     cover.src = `../assets/music/images/Unknown.png`;
   }
 
+  mappedCover = [];
+  particles = [];
+
   console.log(tempAlbum);
 }
 
@@ -79,6 +82,7 @@ function nextButton() {
   }
 
   loadSong(playlist.tracks[songIndex]);
+
   if (isPlaying) {
     playSong();
   }
@@ -93,6 +97,7 @@ function previousButton() {
   }
 
   loadSong(playlist.tracks[songIndex]);
+
   if (isPlaying) {
     playSong();
   }
