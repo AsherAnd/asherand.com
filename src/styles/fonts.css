@@ -81,3 +81,8 @@
   font-weight: 900;
   font-style: italic;
 }
+
+@font-face {
+  font-family: "Furious Styles", "cursive";
+  src: url("../assets/fonts/FuriousStyles/Furious\ Styles\ -\ Demo.ttf");
+}
