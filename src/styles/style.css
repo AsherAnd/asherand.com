@@ -63,6 +63,20 @@ ul {
   background-color: red;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--dark-text-color);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--light-bg);
+}
+
 /* Header */
 
 header {
