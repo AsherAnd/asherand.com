@@ -4,6 +4,11 @@ const comicCover = document.getElementById("comic-cover");
 let mouseX = 0,
   mouseY = 0;
 
+let scrollReveal = ScrollReveal({
+  duration: 2500,
+  distance: "60px",
+});
+
 window.addEventListener("scroll", stickyNavbar);
 
 // comic cover parallax effect
@@ -29,5 +34,8 @@ comicCover.addEventListener("mousemove", (e) => {
 function stickyNavbar() {
   header.classList.toggle("scrolled", window.pageYOffset > 0);
 }
+
+scrollReveal.reveal(".showcase-image", { origin: "top", delay: 250 });
+scrollReveal.reveal(".showcase-info");
 
 stickyNavbar();

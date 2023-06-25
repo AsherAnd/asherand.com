@@ -17,7 +17,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Product Sans";
 }
 
 a {
@@ -35,6 +34,12 @@ body {
   background-repeat: no-repeat;
   overflow-x: hidden;
   color: var(--light-bg);
+  font-family: "Product Sans";
+}
+
+.highlight {
+  color: var(--dark-text-color);
+  font-weight: 900;
 }
 
 img {
@@ -226,6 +231,49 @@ nav.container {
   mix-blend-mode: screen;
 }
 
+/* About Styles */
+
+.about .container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  align-items: center;
+}
+
+.about-image {
+  width: 75%;
+}
+
+/* Footer Styles */
+
+footer {
+  padding: 4rem 0;
+  background-color: var(--dark-bg);
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.socials {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.social-link {
+  color: var(--dark-text-color);
+  border-radius: 50%;
+  margin-left: 4rem;
+  display: flex;
+  align-items: center;
+  font-size: 3rem;
+}
+
+.social-link:hover {
+  color: var(--light-bg);
+}
+
 /* Reusable Styles */
 
 .btn {
@@ -262,6 +310,7 @@ nav.container {
 }
 
 .text {
-  font-size: 0.9rem;
+  font-size: 1rem;
   margin: 2rem 0;
+  line-height: 2;
 }
