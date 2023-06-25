@@ -163,6 +163,16 @@ nav.container {
   margin: 0.8rem 0;
 }
 
+.showcase-btns {
+  margin-top: 3.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.showcase-btns .btn {
+  margin-right: 1.5rem;
+}
+
 .showcase-image {
   position: relative;
 }
@@ -217,6 +227,16 @@ nav.container {
 }
 
 /* Reusable Styles */
+
+.btn {
+  display: inline-block;
+  padding: 0.9rem 1.75rem;
+  border-radius: 17px;
+  background-color: var(--dark-text-color);
+  color: var(--light-bg);
+  font-size: 0.85rem;
+  letter-spacing: 0.4px;
+}
 
 .container {
   position: relative;

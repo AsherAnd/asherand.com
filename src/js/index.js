@@ -6,6 +6,7 @@ let mouseX = 0,
 
 window.addEventListener("scroll", stickyNavbar);
 
+// comic cover parallax effect
 comicCover.addEventListener("mousemove", (e) => {
   let rect = comicCover.getBoundingClientRect();
   x = e.clientX - rect.left;
@@ -22,8 +23,6 @@ comicCover.addEventListener("mousemove", (e) => {
       mouseY * speedY
     }px)`;
   });
-
-  console.log(mouseX, mouseY);
 });
 
 // keep navbar on top when scrolling
