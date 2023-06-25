@@ -1,6 +1,7 @@
 const header = document.querySelector("header");
 const parallaxElem = document.querySelectorAll(".parallax");
 const comicCover = document.getElementById("comic-cover");
+const links = document.querySelectorAll(".nav-link");
 let mouseX = 0,
   mouseY = 0;
 
@@ -9,7 +10,9 @@ let scrollReveal = ScrollReveal({
   distance: "60px",
 });
 
-window.addEventListener("scroll", stickyNavbar);
+window.addEventListener("scroll", () => {
+  stickyNavbar();
+});
 
 // comic cover parallax effect
 comicCover.addEventListener("mousemove", (e) => {

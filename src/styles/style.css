@@ -42,6 +42,10 @@ body {
   font-weight: 900;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 img {
   width: 100%;
 }
@@ -116,11 +120,8 @@ nav.container {
   transition: 0.3s;
 }
 
+.nav-link:hover,
 .nav-link.active {
-  color: var(--light-bg);
-}
-
-.nav-link:hover {
   color: var(--light-bg);
 }
 
