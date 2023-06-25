@@ -34,7 +34,7 @@ body {
   background-repeat: no-repeat;
   overflow-x: hidden;
   color: var(--light-bg);
-  font-family: "Product Sans Regular";
+  font-family: "Product Sans";
 }
 
 .highlight {
@@ -332,7 +332,7 @@ nav.container {
   border-left: 3px solid var(--dark-text-color);
   padding: 0.13rem 0.75rem;
   margin-bottom: 1rem;
-  font-family: "Product Sans Regular";
+  font-family: "Product Sans";
 }
 
 .text {
