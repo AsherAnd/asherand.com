@@ -244,6 +244,13 @@ nav.container {
 }
 
 /* Contact Styles */
+
+.contact {
+  padding: 120px;
+  width: 100%;
+  overflow: hidden;
+}
+
 .contact .container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -276,13 +283,6 @@ nav.container {
 
 .social-link:hover {
   color: var(--light-bg);
-}
-
-/* Footer Styles */
-
-footer {
-  padding: 4rem 0;
-  background-color: var(--dark-bg);
 }
 
 /* Reusable Styles */
