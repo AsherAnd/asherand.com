@@ -41,6 +41,11 @@ img {
   width: 100%;
 }
 
+.parallax {
+  pointer-events: none;
+  user-select: none;
+}
+
 ul {
   list-style: none;
 }
@@ -146,7 +151,8 @@ nav.container {
 }
 
 .showcase-area .heading {
-  font-size: 4rem;
+  font-size: 4.5rem;
+  line-height: 0.5;
 }
 
 .showcase-area .sub-heading {
@@ -159,9 +165,17 @@ nav.container {
 
 .showcase-image {
   position: relative;
-  width: 100%;
-  min-height: calc(100% + 120px);
-  margin-top: -120px;
+}
+
+.showcase-image img {
+  position: absolute;
+  width: 70%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .showcase-image .asher {
@@ -169,6 +183,7 @@ nav.container {
 }
 
 .showcase-image .bg-color {
+  position: relative;
   z-index: 1;
 }
 
@@ -194,14 +209,6 @@ nav.container {
 
 .showcase-image .issue-no {
   z-index: 7;
-}
-
-.showcase-image img {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 75%;
 }
 
 .showcase-image .reflection {
@@ -237,10 +244,4 @@ nav.container {
 .text {
   font-size: 0.9rem;
   margin: 2rem 0;
-}
-
-/* Theme Button */
-
-.toggle-btn {
-  z-index: 10;
 }
