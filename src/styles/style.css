@@ -243,17 +243,24 @@ nav.container {
   width: 75%;
 }
 
-/* Footer Styles */
-
-footer {
-  padding: 4rem 0;
-  background-color: var(--dark-bg);
+/* Contact Styles */
+.contact .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
 }
 
-footer .container {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+.contact .heading {
+  font-size: 4.5rem;
+  line-height: 0.5;
+}
+
+.contact .sub-heading {
+  margin-bottom: 0.7rem;
+}
+
+.contact .text {
+  margin: 0.8rem 0;
 }
 
 .socials {
@@ -263,15 +270,19 @@ footer .container {
 
 .social-link {
   color: var(--dark-text-color);
-  border-radius: 50%;
-  margin-left: 4rem;
   display: flex;
-  align-items: center;
   font-size: 3rem;
 }
 
 .social-link:hover {
   color: var(--light-bg);
+}
+
+/* Footer Styles */
+
+footer {
+  padding: 4rem 0;
+  background-color: var(--dark-bg);
 }
 
 /* Reusable Styles */
