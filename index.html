@@ -171,10 +171,10 @@
         <div class="container">
           <div class="projects-header">
             <div class="filter-btns">
-              <button class="filter-btn">All</button>
-              <button class="filter-btn">Web</button>
-              <button class="filter-btn">Tools</button>
-              <button class="filter-btn">Photoshop</button>
+              <button class="filter-btn" data-filter="all">All</button>
+              <button class="filter-btn" data-filter=".web">Web</button>
+              <button class="filter-btn" data-filter=".tool">Tools</button>
+              <button class="filter-btn" data-filter=".photo">Photoshop</button>
             </div>
             <div class="projects-title">
               <h3 class="sub-heading">Projects</h3>
@@ -185,16 +185,21 @@
             </div>
           </div>
           <div class="projects-gallery">
-            <div class="project-card">
+            <div class="mix project-card web">
               <div class="project-image">
                 <img src="vlcsnap-2023-06-06-20h32m45s121.png" alt="ITSV" />
+                <div class="project-overlay">
+                  <span class="magnify">
+                    <i class="fa-solid fa-magnifying-glass-plus fa-lg"></i>
+                  </span>
+                </div>
               </div>
               <div class="project-description">
                 <h3>Test Text</h3>
                 <a href="" class="btn secondary-btn sm">Read More</a>
               </div>
             </div>
-            <div class="project-card">
+            <div class="mix project-card tool">
               <div class="project-image">
                 <img src="vlcsnap-2021-12-22-11h37m23s491.png" alt="ITSV" />
               </div>
@@ -203,7 +208,7 @@
                 <a href="" class="btn secondary-btn sm">Read More</a>
               </div>
             </div>
-            <div class="project-card">
+            <div class="mix project-card tool">
               <div class="project-image">
                 <img src="Kirby Render2 side.png" alt="ITSV" />
               </div>
@@ -212,7 +217,7 @@
                 <a href="" class="btn secondary-btn sm">Read More</a>
               </div>
             </div>
-            <div class="project-card">
+            <div class="mix project-card web">
               <div class="project-image">
                 <img src="Screenshot 2023-06-25 a145538.png" alt="ITSV" />
               </div>
@@ -221,7 +226,7 @@
                 <a href="" class="btn secondary-btn sm">Read More</a>
               </div>
             </div>
-            <div class="project-card">
+            <div class="mix project-card web">
               <div class="project-image">
                 <img src="bg_color.png" alt="ITSV" />
               </div>
@@ -230,7 +235,7 @@
                 <a href="" class="btn secondary-btn sm">Read More</a>
               </div>
             </div>
-            <div class="project-card">
+            <div class="mix project-card photo">
               <div class="project-image">
                 <img src="Bith Music Album.png" alt="ITSV" />
               </div>
@@ -239,7 +244,7 @@
                 <a href="" class="btn secondary-btn sm">Read More</a>
               </div>
             </div>
-            <div class="project-card">
+            <div class="mix project-card photo">
               <div class="project-image">
                 <img src="awdafefef.png" alt="ITSV" />
               </div>
@@ -301,6 +306,7 @@
       </section>
     </main>
     <!-- JS -->
+    <script src="src/js/mixitup.min.js"></script>
     <script src="src/js/index.js"></script>
   </body>
 </html>

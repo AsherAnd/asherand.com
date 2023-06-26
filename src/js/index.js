@@ -10,6 +10,15 @@ let scrollReveal = ScrollReveal({
   distance: "60px",
 });
 
+let mixer = mixitup(".projects-gallery", {
+  selectors: {
+    target: ".project-card",
+  },
+  animation: {
+    duration: 500,
+  },
+});
+
 window.addEventListener("scroll", () => {
   stickyNavbar();
 });
