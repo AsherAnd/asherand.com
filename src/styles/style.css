@@ -176,11 +176,13 @@ nav.container {
   overflow: hidden;
 }
 
+.empty .container {
+  height: calc(10vh - 120px);
+}
+
 .showcase-area .container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  height: calc(100vh - 120px);
-  max-height: 600px;
+  grid-template-columns: 2fr 1fr;
   align-items: center;
 }
 
@@ -200,7 +202,6 @@ nav.container {
 
 .showcase-image img {
   position: absolute;
-  width: 70%;
   left: 0;
   right: 0;
   bottom: 0;
