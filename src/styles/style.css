@@ -4,8 +4,9 @@
   --dark-gradient-stop: rgba(10, 13, 21, 0.75);
   --dark-text-color: rgb(167, 24, 20);
   --light-bg: white;
-  --light-gradient-start: hsl(0, 0%, 63%);
-  --light-gradient-stop: rgba(255, 255, 255, 1);
+  --light-gradient-start: hsl(0, 0%, 100%);
+  --light-gradient-stop: rgba(10, 13, 21, 0.75);
+  --light-text-color: rgb(28, 159, 223);
   --transparent: rgba(255, 255, 255, 0.4);
 }
 
@@ -196,7 +197,7 @@ nav.container {
 }
 
 .showcase-image .asher {
-  z-index: 5;
+  z-index: 2;
 }
 
 .showcase-image .bg-color {
@@ -204,32 +205,20 @@ nav.container {
   z-index: 1;
 }
 
-.showcase-image .bg1 {
-  z-index: 4;
-}
-
-.showcase-image .bg2 {
-  z-index: 3;
-}
-
-.showcase-image .bg3 {
-  z-index: 2;
-}
-
-.showcase-image .bg4 {
+.showcase-image .bg {
   z-index: 1;
 }
 
 .showcase-image .comics-code {
-  z-index: 6;
+  z-index: 3;
 }
 
 .showcase-image .issue-no {
-  z-index: 7;
+  z-index: 3;
 }
 
 .showcase-image .reflection {
-  z-index: 8;
+  z-index: 4;
   mix-blend-mode: screen;
 }
 
