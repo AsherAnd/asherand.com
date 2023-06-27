@@ -7,7 +7,11 @@
   --light-gradient-start: hsl(0, 0%, 100%);
   --light-gradient-stop: rgba(10, 13, 21, 0.75);
   --light-text-color: rgb(28, 159, 223);
-  --transparent: rgba(255, 255, 255, 0.4);
+  --background: var(--dark-bg);
+  --text-color: var(--dark-text-color);
+  --gradient-start: var(--dark-gradient-start);
+  --gradient-stop: var(--dark-gradient-stop);
+  --secondary-text-color: var(--light-bg);
 }
 
 /* General Styles */
@@ -25,21 +29,21 @@ a {
 }
 
 body {
-  background-color: var(--dark-bg);
+  background-color: var(--background);
   background-attachment: fixed;
   background-image: linear-gradient(
     360deg,
-    var(--dark-gradient-start) 20%,
-    var(--dark-gradient-stop) 100%
+    var(--gradient-start) 20%,
+    var(--gradient-stop) 100%
   );
   background-repeat: no-repeat;
   overflow-x: hidden;
-  color: var(--light-bg);
+  color: var(--secondary-text-color);
   font-family: "Product Sans";
 }
 
 .highlight {
-  color: var(--dark-text-color);
+  color: var(--text-color);
   font-family: "Product Sans Black";
 }
 
@@ -47,21 +51,30 @@ html {
   scroll-behavior: smooth;
 }
 
-img {
-  width: 100%;
+i {
+  color: var(--text-color);
+  cursor: pointer;
 }
 
-.parallax {
-  pointer-events: none;
-  user-select: none;
+i:hover {
+  color: var(--secondary-text-color);
+}
+
+img {
+  width: 100%;
 }
 
 ul {
   list-style: none;
 }
 
+.toggle-btn-container {
+  width: 24px;
+  height: 24px;
+}
+
 ::selection {
-  background-color: red;
+  background-color: var(--secondary-text-color);
 }
 
 ::-webkit-scrollbar {
@@ -70,12 +83,12 @@ ul {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--dark-text-color);
+  background: var(--text-color);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--light-bg);
+  background: var(--background);
 }
 
 /* Header */
@@ -125,7 +138,7 @@ nav.container {
 }
 
 .nav-link {
-  color: var(--dark-text-color);
+  color: var(--text-color);
   display: inline-block;
   margin: 0 1rem;
   text-transform: uppercase;
@@ -137,7 +150,7 @@ nav.container {
 
 .nav-link:hover,
 .nav-link.active {
-  color: var(--light-bg);
+  color: var(--secondary-text-color);
 }
 
 .pages {
@@ -154,7 +167,7 @@ nav.container {
 }
 
 .last-name {
-  color: var(--dark-text-color);
+  color: var(--text-color);
 }
 
 .showcase-area {
@@ -238,7 +251,7 @@ nav.container {
 
 .filter-btn {
   display: inline-block;
-  color: var(--dark-text-color);
+  color: var(--text-color);
   background: none;
   outline: none;
   border: none;
@@ -251,13 +264,13 @@ nav.container {
 }
 
 .filter-btn:hover {
-  color: var(--light-bg);
+  color: var(--secondary-text-color);
 }
 
 .magnify {
   font-size: 1.1rem;
   margin: 0 0.4rem;
-  color: var(--dark-text-color);
+  color: var(--text-color);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -271,7 +284,7 @@ nav.container {
 .project-card {
   border-radius: 15px;
   overflow: hidden;
-  background-color: var(--dark-gradient-start);
+  background-color: var(--gradient-start);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   height: 265px;
   display: grid;
@@ -286,7 +299,7 @@ nav.container {
 
 .project-description h3 {
   font-size: 0.95rem;
-  color: var(--light-bg);
+  color: var(--secondary-text-color);
   font-family: "Product Sans Bold";
   text-transform: capitalize;
 }
@@ -377,13 +390,13 @@ nav.container {
 }
 
 .social-link {
-  color: var(--dark-text-color);
+  color: var(--text-color);
   display: flex;
   font-size: 3rem;
 }
 
 .social-link:hover {
-  color: var(--light-bg);
+  color: var(--secondary-text-color);
 }
 
 /* Reusable Styles */
@@ -392,8 +405,8 @@ nav.container {
   display: inline-block;
   padding: 0.9rem 1.75rem;
   border-radius: 17px;
-  background-color: var(--dark-text-color);
-  color: var(--light-bg);
+  background-color: var(--text-color);
+  color: var(--secondary-text-color);
   font-size: 0.85rem;
   letter-spacing: 0.4px;
   text-transform: capitalize;
@@ -401,14 +414,14 @@ nav.container {
 }
 
 .btn:hover {
-  background-color: var(--light-bg);
-  color: var(--dark-text-color);
+  background-color: var(--secondary-text-color);
+  color: var(--text-color);
 }
 
 .btn.secondary-btn {
   position: relative;
   background-color: transparent;
-  color: var(--dark-text-color);
+  color: var(--text-color);
   font-family: "Product Sans Black";
   font-size: 0.9rem;
   letter-spacing: 0px;
@@ -418,7 +431,7 @@ nav.container {
 }
 
 .btn.secondary-btn:hover {
-  color: var(--light-bg);
+  color: var(--secondary-text-color);
 }
 
 .btn.secondary-btn::before {
@@ -428,7 +441,7 @@ nav.container {
   height: 2.5px;
   bottom: -2.5px;
   left: 0;
-  background-color: var(--light-bg);
+  background-color: var(--secondary-text-color);
   transition: 0.3s ease-in-out;
 }
 
@@ -464,7 +477,7 @@ nav.container {
   text-transform: uppercase;
   font-size: 0.85rem;
   letter-spacing: 0.5px;
-  border-left: 3px solid var(--dark-text-color);
+  border-left: 3px solid var(--text-color);
   padding: 0.13rem 0.75rem;
   font-family: "Product Sans";
   margin-bottom: 0.7rem;
@@ -474,4 +487,32 @@ nav.container {
   font-size: 1rem;
   line-height: 2;
   margin: 0.8rem 0;
+}
+
+/* color theme */
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: var(--light-bg);
+    --text-color: var(--light-text-color);
+    --secondary-text-color: var(--dark-bg);
+    --gradient-start: var(--light-gradient-start);
+    --gradient-stop: var(--light-gradient-stop);
+  }
+}
+
+body.light {
+  --background: var(--light-bg);
+  --text-color: var(--light-text-color);
+  --secondary-text-color: var(--dark-bg);
+  --gradient-start: var(--light-gradient-start);
+  --gradient-stop: var(--light-gradient-stop);
+}
+
+body.dark {
+  --background: var(--dark-bg);
+  --text-color: var(--dark-text-color);
+  --gradient-start: var(--dark-gradient-start);
+  --gradient-stop: var(--dark-gradient-stop);
+  --secondary-text-color: var(--light-bg);
 }
