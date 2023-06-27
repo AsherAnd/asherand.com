@@ -198,6 +198,7 @@ nav.container {
 
 .showcase-image {
   position: relative;
+  overflow: hidden;
 }
 
 .showcase-image img {
@@ -231,9 +232,25 @@ nav.container {
   z-index: 3;
 }
 
-.showcase-image .reflection {
+.showcase-image .plastic {
   z-index: 4;
   mix-blend-mode: screen;
+}
+
+.showcase-image .shine {
+  width: 1000px;
+  height: 100px;
+  margin-left: -100px;
+  transform: rotate(30deg);
+  background: -webkit-linear-gradient(
+    top,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  position: absolute;
+  animation: shine 8s ease-in-out infinite;
+  z-index: 5;
 }
 
 /* About Styles */
@@ -516,4 +533,15 @@ body.dark {
   --gradient-start: var(--dark-gradient-start);
   --gradient-stop: var(--dark-gradient-stop);
   --secondary-text-color: var(--light-bg);
+}
+
+/* Animations */
+@keyframes shine {
+  0%,
+  100% {
+    margin-top: -100px;
+  }
+  50% {
+    margin-top: 800px;
+  }
 }
