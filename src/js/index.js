@@ -1,6 +1,9 @@
 const header = document.querySelector("header");
 const links = document.querySelectorAll(".nav-link");
 const toggleBtn = document.querySelector(".toggle-btn");
+const subject = document.querySelector(".asher");
+const background = document.querySelector(".bg-color");
+
 let mouseX = 0,
   mouseY = 0;
 
@@ -34,6 +37,18 @@ toggleBtn.addEventListener("click", () => {
   changeTheme();
 });
 
+// change image to dark mode
+function changeImageDark() {
+  subject.src = "/src/assets/images/subject-1.png";
+  background.src = "/src/assets/images/bg_color.png";
+}
+
+// change image to light mode
+function changeImageLight() {
+  subject.src = "/src/assets/images/subject-2.png";
+  background.src = "/src/assets/images/bg_color2.png";
+}
+
 // change website theme
 function changeTheme() {
   if (document.body.classList.contains("light")) {
@@ -49,8 +64,10 @@ function changeTheme() {
 function checkMode() {
   if (localStorage.getItem("colorMode") == null) {
     if (window.matchMedia("(prefers-color-scheme: light)").matches) {
+      changeImageLight();
       setMoon();
     } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      changeImageDark();
       setSun();
     }
   }
@@ -67,12 +84,14 @@ function setColorMode() {
 
 // set to dark
 function setDarkMode() {
+  changeImageDark();
   document.querySelector("body").classList = "dark";
   setSun();
 }
 
 // set to light
 function setLightMode() {
+  changeImageLight();
   document.querySelector("body").classList = "light";
   setMoon();
 }
