@@ -64,6 +64,13 @@ img {
   width: 100%;
 }
 
+a::selection,
+button::selection,
+span::selection,
+.last-name::selection {
+  background-color: var(--secondary-text-color);
+}
+
 ul {
   list-style: none;
 }
@@ -74,7 +81,7 @@ ul {
 }
 
 ::selection {
-  background-color: var(--secondary-text-color);
+  background-color: var(--text-color);
 }
 
 ::-webkit-scrollbar {
@@ -177,7 +184,7 @@ nav.container {
 }
 
 .empty .container {
-  height: calc(10vh - 120px);
+  height: calc(15vh - 120px);
 }
 
 .showcase-area .container {
