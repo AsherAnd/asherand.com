@@ -209,6 +209,11 @@ nav.container {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 .showcase-image .asher {
