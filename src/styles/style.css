@@ -277,6 +277,64 @@ nav.container {
   width: 75%;
 }
 
+/* Experience Styles */
+.experience {
+  padding: 120px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.experience-gallery {
+  padding: 30px 120px 0px 120px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.experience-card {
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: var(--gradient-start);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  height: 530px;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+.mySwiper {
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  color: var(--text-color);
+}
+
+.experience-description {
+  padding: 1.1rem 1.6rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.experience-description h3 {
+  font-size: 0.95rem;
+  color: var(--secondary-text-color);
+  font-family: "Product Sans Bold";
+  text-transform: capitalize;
+}
+
+.experience-image {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.experience-image img {
+  width: 105%;
+}
+
 /* Projects Styles */
 
 .filter-btn {
@@ -378,7 +436,7 @@ nav.container {
 }
 
 .projects {
-  padding: 120px;
+  padding: 0px 120px 10px 120px;
   width: 100%;
   overflow: hidden;
 }

@@ -1,5 +1,5 @@
 import { Heading, SubHeading } from "../components/Headings";
-import ProjectGallery from "../components/Gallery";
+import { ProjectGallery } from "../components/Gallery";
 
 function Projects() {
   return (

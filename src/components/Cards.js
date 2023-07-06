@@ -1,6 +1,6 @@
 import { SecondaryButton } from "./Button";
 
-function ProjectCards(props) {
+function ProjectCard(props) {
   return (
     <div className="project-card">
       <div className="project-image">
@@ -19,4 +19,18 @@ function ProjectCards(props) {
   );
 }
 
-export default ProjectCards;
+function ExperienceCard(props) {
+  return (
+    <div className="experience-card">
+      <div className="experience-image">
+        <img src={props.img} alt={props.alt} />
+      </div>
+      <div className="experience-description">
+        <h3>{props.title}</h3>
+        <SecondaryButton link={props.link} text="Read More" />
+      </div>
+    </div>
+  );
+}
+
+export { ProjectCard, ExperienceCard };
