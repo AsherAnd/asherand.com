@@ -7,6 +7,7 @@ function App() {
 
   return (
     <div className="App">
+      <div className="overlay"></div>
       <Header theme={theme} changeTheme={changeTheme} />
       <Main theme={theme} />
     </div>

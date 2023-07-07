@@ -8,9 +8,11 @@ function Theme() {
 
   useEffect(() => {
     if (theme === "light") {
-      document.querySelector("body").classList = "light";
+      document.querySelector("body").classList.add("light");
+      document.querySelector("body").classList.remove("dark");
     } else {
-      document.querySelector("body").classList = "dark";
+      document.querySelector("body").classList.add("dark");
+      document.querySelector("body").classList.remove("light");
     }
   }, [theme]);
 

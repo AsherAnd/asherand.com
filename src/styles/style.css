@@ -42,6 +42,10 @@ body {
   font-family: "Product Sans";
 }
 
+figure {
+  text-align: center;
+}
+
 .highlight {
   color: var(--text-color);
   font-family: "Product Sans Black";
@@ -136,11 +140,11 @@ header.scrolled .name {
   font-family: "Product Sans Black";
   letter-spacing: 5px;
   transition: 0.3s;
+  color: var(--text-color);
 }
 
 nav.container {
   display: flex;
-  flex-wrap: wrap;
   align-items: baseline;
 }
 
@@ -436,7 +440,7 @@ nav.container {
 }
 
 .projects {
-  padding: 0px 120px 10px 120px;
+  padding: 120px;
   width: 100%;
   overflow: hidden;
 }
@@ -556,6 +560,15 @@ nav.container {
   margin: 0 auto;
 }
 
+.hamburger {
+  display: none;
+  padding: 1rem 0;
+  height: 12px;
+  width: 25px;
+  box-sizing: content-box;
+  cursor: pointer;
+}
+
 .heading {
   font-size: 4.5rem;
   line-height: 0.5;
@@ -613,5 +626,229 @@ body.dark {
   }
   50% {
     margin-top: 800px;
+  }
+}
+
+/* 1000px screens */
+@media (max-width: 1000px) {
+  .btn {
+    padding: 0.8rem 1.6rem;
+    font-size: 0.8rem;
+    border-radius: 15px;
+    min-width: 100px;
+  }
+
+  .btn.secondary-btn {
+    font-size: 0.85rem;
+  }
+
+  .filter-btn {
+    font-size: 0.7rem;
+  }
+
+  .heading {
+    font-size: 3.5rem;
+  }
+
+  header .name {
+    height: 100px;
+    line-height: 100px;
+  }
+
+  .name {
+    font-size: 1.45rem;
+  }
+
+  .nav-link {
+    font-size: 0.7rem;
+  }
+
+  .showcase-area {
+    padding: 100px 0;
+  }
+
+  .showcase-area .container {
+    grid-template-columns: 1fr 0.5fr;
+  }
+
+  .sub-heading {
+    font-size: 0.75rem;
+  }
+
+  .text {
+    font-size: 0.94rem;
+    margin: 0.1rem 0;
+  }
+}
+
+/* 768 screen */
+@media (max-width: 768px) {
+  .about .container {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    row-gap: 2rem;
+  }
+
+  .about-info {
+    grid-row: 1;
+  }
+
+  body.open header {
+    max-height: 505px;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0)
+    );
+    background-color: var(--gradient-stop);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  body.open .overlay {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  body.open .pages {
+    opacity: 1;
+  }
+
+  body.open .pages::after {
+    opacity: 0.7;
+    width: 100%;
+  }
+
+  .experience,
+  .projects,
+  .contact {
+    padding: 80px 0px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  header {
+    height: 505px;
+    max-height: 100px;
+    overflow: hidden;
+  }
+
+  header.scrolled {
+    height: 485px;
+    max-height: 80px;
+  }
+
+  header nav {
+    justify-content: space-between;
+  }
+
+  .heading br {
+    content: "";
+  }
+
+  .heading br:after {
+    content: " ";
+  }
+
+  nav.container {
+    flex-wrap: wrap;
+  }
+
+  .nav-link {
+    margin: 1.5rem 0;
+  }
+
+  .overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 10;
+    opacity: 0;
+    transition: 0.3s;
+    pointer-events: none;
+  }
+
+  .pages {
+    position: relative;
+    order: 3;
+    flex-basis: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 0 2rem;
+    transition: 0.3s;
+    opacity: 0.3s;
+  }
+
+  .pages::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 0.5px;
+    background-color: var(--text-color);
+    opacity: 0;
+    top: -0.5rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s;
+  }
+
+  .projects-title {
+    padding-bottom: 0;
+  }
+
+  .side-buttons {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-evenly;
+  }
+
+  .side-buttons .toggle-btn-container {
+    width: 50px;
+  }
+
+  .showcase-area .container {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    row-gap: 4rem;
+  }
+
+  .showcase-image {
+    max-width: 75%;
+  }
+
+  .showcase-info {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .text {
+    margin: 1rem 0 1.54rem;
+  }
+}
+
+/* 500px screens */
+@media (max-width: 500px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .filter-btns {
+    margin-top: 1rem;
+  }
+
+  .projects-header {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .showcase-area .container {
+    row-gap: 4.5rem;
   }
 }

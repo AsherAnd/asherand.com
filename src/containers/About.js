@@ -6,7 +6,10 @@ function About() {
     <section className="about" id="about">
       <div className="container">
         <div className="about-image">
-          <img src={Image} alt="prometheus" />
+          <figure>
+            <img src={Image} alt="prometheus" />
+            <figcaption>(The Coming of Prometheus by Me)</figcaption>
+          </figure>
         </div>
         <div className="about-info">
           <SubHeading text="About Me" />
