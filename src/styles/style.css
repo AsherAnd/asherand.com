@@ -866,7 +866,7 @@ body.dark {
 @media (max-width: 500px) {
   .App {
     overflow: hidden;
-    width: 101%;
+    height: 100vh;
   }
 
   .container {
