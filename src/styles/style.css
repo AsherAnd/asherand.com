@@ -864,11 +864,6 @@ body.dark {
 
 /* 500px screens */
 @media (max-width: 500px) {
-  .App {
-    overflow: hidden;
-    height: 100vh;
-  }
-
   .container {
     padding: 0 1rem;
   }
