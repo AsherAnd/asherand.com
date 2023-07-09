@@ -723,7 +723,7 @@ body.dark {
   }
 
   .contact i {
-    font-size: 24px;
+    font-size: 48px;
   }
 
   .contact li {
@@ -842,6 +842,11 @@ body.dark {
 
 /* 500px screens */
 @media (max-width: 500px) {
+  .body {
+    width: 101%;
+    height: 101%;
+  }
+
   .container {
     padding: 0 1rem;
   }
@@ -860,7 +865,7 @@ body.dark {
   }
 
   .heading {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .project-description {
