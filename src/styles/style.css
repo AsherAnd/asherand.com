@@ -37,7 +37,7 @@ a.amharic:hover {
   color: var(--secondary-text-color);
 }
 
-a::after {
+a.amharic::after {
   content: " ";
 }
 
