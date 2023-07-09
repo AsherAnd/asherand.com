@@ -289,7 +289,6 @@ nav.container {
 }
 
 .experience-gallery {
-  padding: 30px 120px 0px 120px;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
@@ -663,7 +662,11 @@ body.dark {
     font-size: 0.7rem;
   }
 
-  .showcase-area {
+  .showcase-area,
+  .about,
+  .experience,
+  .projects,
+  .contact {
     padding: 100px 0;
   }
 
@@ -719,6 +722,14 @@ body.dark {
     width: 100%;
   }
 
+  .contact i {
+    font-size: 24px;
+  }
+
+  .contact li {
+    padding: 0 1rem;
+  }
+
   .experience,
   .projects,
   .contact {
@@ -742,14 +753,6 @@ body.dark {
 
   header nav {
     justify-content: space-between;
-  }
-
-  .heading br {
-    content: "";
-  }
-
-  .heading br:after {
-    content: " ";
   }
 
   nav.container {
@@ -798,6 +801,10 @@ body.dark {
     transition: 0.3s;
   }
 
+  .projects-header {
+    flex-direction: row-reverse;
+  }
+
   .projects-title {
     padding-bottom: 0;
   }
@@ -812,7 +819,8 @@ body.dark {
     width: 50px;
   }
 
-  .showcase-area .container {
+  .showcase-area .container,
+  .contact .container {
     grid-template-columns: 1fr;
     justify-items: center;
     row-gap: 4rem;
@@ -838,14 +846,33 @@ body.dark {
     padding: 0 1rem;
   }
 
+  .experience-card {
+    height: 257px;
+  }
+
+  .experience-description {
+    padding: 0.8rem 1.4rem;
+    align-items: center;
+  }
+
   .filter-btns {
     margin-top: 1rem;
   }
 
-  .projects-header {
-    flex-direction: column-reverse;
-    justify-content: center;
+  .heading {
+    font-size: 3rem;
+  }
+
+  .project-description {
     align-items: center;
+  }
+
+  .projects-header {
+    display: grid;
+  }
+
+  .projects-title {
+    grid-row: 1;
   }
 
   .showcase-area .container {
