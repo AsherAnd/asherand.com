@@ -1,14 +1,10 @@
 import { useState } from "react";
 import ThemeButton from "./ThemeButton";
 import Hamburger from "./Hamburger";
-import MenuToggle from "../actions/MenuToggle";
 
 function Header(props) {
   // Sticky Navbar
   const [fixed, setScroll] = useState(true);
-
-  // hamburger menu
-  const { _, toggleMenu } = MenuToggle();
 
   window.addEventListener("scroll", () => {
     if (window.pageYOffset > 0) {
@@ -51,7 +47,7 @@ function Header(props) {
         </ul>
         <div className="side-buttons">
           <ThemeButton theme={props.theme} changeTheme={props.changeTheme} />
-          <Hamburger toggle={toggleMenu} />
+          <Hamburger toggle={props.toggleMenu} />
         </div>
       </nav>
     </header>
