@@ -45,8 +45,7 @@ a::after {
   overflow: hidden;
 }
 
-body,
-.mobile-background {
+body {
   background-color: var(--background);
   background-attachment: fixed;
   background-image: linear-gradient(
@@ -58,13 +57,6 @@ body,
   overflow-x: hidden;
   color: var(--secondary-text-color);
   font-family: "Product Sans";
-}
-
-.mobile-background {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
 }
 
 figure {
@@ -907,5 +899,11 @@ body.dark {
 
   .showcase-area .container {
     row-gap: 4.5rem;
+  }
+}
+
+@media (hover: none) {
+  .body {
+    background-attachment: initial;
   }
 }
