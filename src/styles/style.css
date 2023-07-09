@@ -28,6 +28,10 @@ a {
   text-decoration: none;
 }
 
+.App {
+  overflow: hidden;
+}
+
 body {
   background-color: var(--background);
   background-attachment: fixed;
@@ -842,9 +846,9 @@ body.dark {
 
 /* 500px screens */
 @media (max-width: 500px) {
-  .body {
+  .App {
+    overflow: hidden;
     width: 101%;
-    height: 101%;
   }
 
   .container {
