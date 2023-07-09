@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.a6043eee.css",
+    "main.css": "/static/css/main.21a8e411.css",
     "main.js": "/static/js/main.6ec64252.js",
     "static/media/Prometheus.png": "/static/media/Prometheus.f702a1ab68a452add103.png",
     "static/media/bg.png": "/static/media/bg.50b29dcdeebfc7119418.png",
@@ -49,11 +49,11 @@
     "static/media/productsans-regular-webfont.woff2": "/static/media/productsans-regular-webfont.dbe3f7239b2c4bedf5f0.woff2",
     "static/media/comics_code.png": "/static/media/comics_code.62b96ec43f666616f28d.png",
     "index.html": "/index.html",
-    "main.a6043eee.css.map": "/static/css/main.a6043eee.css.map",
+    "main.21a8e411.css.map": "/static/css/main.21a8e411.css.map",
     "main.6ec64252.js.map": "/static/js/main.6ec64252.js.map"
   },
   "entrypoints": [
-    "static/css/main.a6043eee.css",
+    "static/css/main.21a8e411.css",
     "static/js/main.6ec64252.js"
   ]
 }
