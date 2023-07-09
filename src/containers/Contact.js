@@ -9,8 +9,8 @@ function Contact() {
           <SubHeading text="Contact" />
           <Heading first="Interested" second="Reach Out" />
           <p className="text">
-            You're welcome to reach me in any way you'd like and I'll be sure to
-            respond to you in a timely manner.
+            Interested in connecting? You're welcome to reach me in any way
+            you'd like and I'll be sure to respond to you in a timely manner.
           </p>
         </div>
         <div className="contact-options">

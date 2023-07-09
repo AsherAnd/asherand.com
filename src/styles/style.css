@@ -28,6 +28,19 @@ a {
   text-decoration: none;
 }
 
+a.amharic {
+  color: var(--text-color);
+  font-size: 1.2rem;
+}
+
+a.amharic:hover {
+  color: var(--secondary-text-color);
+}
+
+a::after {
+  content: " ";
+}
+
 .App {
   overflow: hidden;
 }
@@ -634,6 +647,11 @@ body.dark {
 
 /* 1000px screens */
 @media (max-width: 1000px) {
+  a.amharic {
+    color: var(--text-color);
+    font-size: 1.14rem;
+  }
+
   .btn {
     padding: 0.8rem 1.6rem;
     font-size: 0.8rem;

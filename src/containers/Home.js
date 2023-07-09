@@ -10,8 +10,8 @@ function Home(props) {
           <SubHeading text="Coder, Developer, Maker"></SubHeading>
           <Heading first="Asher" second="ANDARGACHEW"></Heading>
           <p className="text">
-            Welcome, feel free to look around and contact me for any service
-            inquiries.
+            Welcome to my personal website. Feel free to look around and contact
+            me for any service inquiries.
           </p>
           <br />
           <p>Always looking to collaborate.</p>
