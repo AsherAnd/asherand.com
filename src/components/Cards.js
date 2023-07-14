@@ -1,8 +1,15 @@
 import { SecondaryButton } from "./Button";
+import { motion } from "framer-motion";
 
 function ProjectCard(props) {
   return (
-    <div className="project-card">
+    <motion.div
+      layout
+      animate={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+      exit={{ opacity: 0 }}
+      className="project-card"
+    >
       <div className="project-image">
         <img src={props.img} alt={props.alt} />
         <div className="project-overlay">
@@ -15,7 +22,7 @@ function ProjectCard(props) {
         <h3>{props.title}</h3>
         <SecondaryButton link={props.link} text="Read More" />
       </div>
-    </div>
+    </motion.div>
   );
 }
 

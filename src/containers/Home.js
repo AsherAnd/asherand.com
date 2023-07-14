@@ -14,7 +14,7 @@ function Home(props) {
             me for any service inquiries.
           </p>
           <br />
-          <p>Always looking to collaborate.</p>
+          <p className="text">Always looking to collaborate.</p>
           <div className="showcase-btns">
             <PrimaryButton link="#contact" text="Get in Touch" />
           </div>
