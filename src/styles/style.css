@@ -210,14 +210,8 @@ nav.container {
   color: var(--text-color);
 }
 
-.showcase-area {
-  padding: 120px;
-  width: 100%;
-  overflow: hidden;
-}
-
 .empty .container {
-  height: calc(15vh - 120px);
+  height: calc(15vh - 90px);
 }
 
 .showcase-area .container {
@@ -311,14 +305,18 @@ nav.container {
 }
 
 /* Experience Styles */
-.experience {
-  padding: 120px;
-  width: 100%;
-  overflow: hidden;
-}
 
 .experience-gallery {
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  padding: 60px 0 0 0;
+}
+
+.experience-background {
+  background-color: var(--light-bg);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .experience-card {
@@ -328,43 +326,22 @@ nav.container {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   height: 530px;
   display: grid;
-  grid-template-rows: 1fr auto;
-}
-
-.mySwiper {
-  border-radius: 15px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
-.swiper-button-next:after,
-.swiper-button-prev:after {
-  color: var(--text-color);
+  grid-template-columns: 2fr 0.5fr;
 }
 
 .experience-description {
   padding: 1.1rem 1.6rem;
-  display: flex;
-  justify-content: space-between;
+  overflow: auto;
 }
 
-.experience-description h3 {
-  font-size: 0.95rem;
-  color: var(--secondary-text-color);
+.experience-description h1 {
+  color: var(--text-color);
   font-family: "Product Sans Bold";
   text-transform: capitalize;
 }
 
 .experience-image {
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
-.experience-image img {
-  width: 105%;
+  width: 50%;
 }
 
 /* Projects Styles */
@@ -406,7 +383,7 @@ nav.container {
   overflow: hidden;
   background-color: var(--gradient-start);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  height: 265px;
+  height: 250px;
   display: grid;
   grid-template-rows: 1fr auto;
 }
@@ -467,12 +444,6 @@ nav.container {
   pointer-events: none;
 }
 
-.projects {
-  padding: 120px;
-  width: 100%;
-  overflow: hidden;
-}
-
 .projects-header {
   display: flex;
   align-items: flex-end;
@@ -491,12 +462,6 @@ nav.container {
 }
 
 /* Contact Styles */
-
-.contact {
-  padding: 120px;
-  width: 100%;
-  overflow: hidden;
-}
 
 .contact .container {
   display: grid;
@@ -602,8 +567,18 @@ body.open {
 }
 
 .heading {
-  font-size: 4.5rem;
+  font-size: 4rem;
   line-height: 0.5;
+}
+
+.showcase-area,
+.about,
+.experience,
+.projects,
+.contact {
+  padding: 90px 120px;
+  width: 100%;
+  overflow: hidden;
 }
 
 .sub-heading {
@@ -666,262 +641,5 @@ body.dark {
   }
   50% {
     margin-top: 800px;
-  }
-}
-
-/* 1000px screens */
-@media (max-width: 1000px) {
-  a.amharic {
-    color: var(--text-color);
-    font-size: 1.14rem;
-  }
-
-  .btn {
-    padding: 0.8rem 1.6rem;
-    font-size: 0.8rem;
-    border-radius: 15px;
-    min-width: 100px;
-  }
-
-  .btn.secondary-btn {
-    font-size: 0.85rem;
-  }
-
-  .filter-btn {
-    font-size: 0.7rem;
-  }
-
-  .heading {
-    font-size: 3.5rem;
-  }
-
-  header .name {
-    height: 100px;
-    line-height: 100px;
-  }
-
-  .name {
-    font-size: 1.45rem;
-  }
-
-  .nav-link {
-    font-size: 0.7rem;
-  }
-
-  .showcase-area,
-  .about,
-  .experience,
-  .projects,
-  .contact {
-    padding: 100px 0;
-  }
-
-  .showcase-area .container {
-    grid-template-columns: 1fr 0.5fr;
-  }
-
-  .sub-heading {
-    font-size: 0.75rem;
-  }
-
-  .text {
-    font-size: 0.94rem;
-    margin: 0.1rem 0;
-  }
-}
-
-/* 768 screen */
-@media (max-width: 768px) {
-  .about .container {
-    grid-template-columns: 1fr;
-    justify-items: center;
-    row-gap: 2rem;
-  }
-
-  .about-info {
-    grid-row: 1;
-  }
-
-  body.open header {
-    max-height: 505px;
-    background: linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.1),
-      rgba(255, 255, 255, 0)
-    );
-    background-color: var(--gradient-stop);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-  }
-
-  body.open .overlay {
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  body.open .pages {
-    opacity: 1;
-  }
-
-  body.open .pages::after {
-    opacity: 0.7;
-    width: 100%;
-  }
-
-  .contact i {
-    font-size: 48px;
-  }
-
-  .contact li {
-    padding: 0 1rem;
-  }
-
-  .experience,
-  .projects,
-  .contact {
-    padding: 80px 0px;
-  }
-
-  .hamburger {
-    display: block;
-  }
-
-  header {
-    height: 505px;
-    max-height: 100px;
-    overflow: hidden;
-  }
-
-  header.scrolled {
-    height: 485px;
-    max-height: 80px;
-  }
-
-  header nav {
-    justify-content: space-between;
-  }
-
-  nav.container {
-    flex-wrap: wrap;
-  }
-
-  .nav-link {
-    margin: 1.5rem 0;
-  }
-
-  .overlay {
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    position: fixed;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 10;
-    opacity: 0;
-    transition: 0.3s;
-    pointer-events: none;
-  }
-
-  .pages {
-    position: relative;
-    order: 3;
-    flex-basis: 100%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0.5rem 0 2rem;
-    transition: 0.3s;
-    opacity: 0.3s;
-  }
-
-  .pages::after {
-    content: "";
-    position: absolute;
-    width: 0%;
-    height: 0.5px;
-    background-color: var(--text-color);
-    opacity: 0;
-    top: -0.5rem;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: 0.3s;
-  }
-
-  .projects-header {
-    flex-direction: row-reverse;
-  }
-
-  .projects-title {
-    padding-bottom: 0;
-  }
-
-  .side-buttons {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-evenly;
-  }
-
-  .side-buttons .toggle-btn-container {
-    width: 50px;
-  }
-
-  .showcase-area .container,
-  .contact .container {
-    grid-template-columns: 1fr;
-    justify-items: center;
-    row-gap: 4rem;
-  }
-
-  .showcase-image {
-    max-width: 75%;
-  }
-
-  .showcase-info {
-    width: 100%;
-    margin-top: 1rem;
-  }
-
-  .text {
-    margin: 1rem 0 1.54rem;
-  }
-}
-
-/* 500px screens */
-@media (max-width: 500px) {
-  .container {
-    padding: 0 1rem;
-  }
-
-  .experience-card {
-    height: 257px;
-  }
-
-  .experience-description {
-    padding: 0.8rem 1.4rem;
-    align-items: center;
-  }
-
-  .filter-btns {
-    margin-top: 1rem;
-  }
-
-  .heading {
-    font-size: 2.5rem;
-  }
-
-  .project-description {
-    align-items: center;
-  }
-
-  .projects-header {
-    display: grid;
-  }
-
-  .projects-title {
-    grid-row: 1;
-  }
-
-  .showcase-area .container {
-    row-gap: 4.5rem;
   }
 }
