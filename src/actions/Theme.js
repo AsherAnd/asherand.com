@@ -8,11 +8,17 @@ function Theme() {
 
   useEffect(() => {
     if (theme === "light") {
+      // change tp light theme
       document.querySelector("body").classList.add("light");
       document.querySelector("body").classList.remove("dark");
+
+      // grain theme
+      document.querySelector(".grain").classList.add("light");
     } else {
       document.querySelector("body").classList.add("dark");
       document.querySelector("body").classList.remove("light");
+
+      document.querySelector(".grain").classList.remove("light");
     }
   }, [theme]);
 

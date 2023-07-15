@@ -13,6 +13,7 @@ function App() {
   return (
     <div className="App">
       <div className="overlay" onClick={toggleMenu}></div>
+      <div className="grain"></div>
       <Header theme={theme} changeTheme={changeTheme} toggleMenu={toggleMenu} />
       <Main theme={theme} />
     </div>

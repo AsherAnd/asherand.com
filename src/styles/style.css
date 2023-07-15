@@ -63,6 +63,18 @@ figure {
   text-align: center;
 }
 
+.grain {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: url("../assets/images/grain.gif");
+  z-index: 0;
+  opacity: 0.08;
+  pointer-events: none;
+}
+
 .highlight {
   color: var(--text-color);
   font-family: "Product Sans Black";
@@ -620,6 +632,10 @@ body.open {
     --gradient-start: var(--light-gradient-start);
     --gradient-stop: var(--light-gradient-stop);
   }
+
+  .grain {
+    filter: invert();
+  }
 }
 
 body.light {
@@ -636,6 +652,10 @@ body.dark {
   --gradient-start: var(--dark-gradient-start);
   --gradient-stop: var(--dark-gradient-stop);
   --secondary-text-color: var(--light-bg);
+}
+
+.grain.light {
+  filter: invert();
 }
 
 /* Animations */
