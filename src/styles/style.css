@@ -508,7 +508,7 @@ nav.container {
 }
 
 .project-description h3 {
-  font-size: 0.5rem;
+  font-size: 0.65rem;
   color: var(--secondary-text-color);
   font-family: "Product Sans Bold";
   text-transform: capitalize;
@@ -655,7 +655,7 @@ body.open {
 }
 
 .btn.secondary-btn.sm {
-  font-size: 0.48rem;
+  font-size: 0.55rem;
   border-bottom-width: 2px;
 }
 
