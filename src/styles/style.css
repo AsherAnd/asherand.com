@@ -851,7 +851,7 @@ body.dark {
   }
 
   .empty .container {
-    height: calc(15vh - 50px);
+    height: calc(15vh - 80px);
   }
 
   .heading {
