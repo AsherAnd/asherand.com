@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.806d4cb8.css",
-    "main.js": "/static/js/main.2f73cd43.js",
+    "main.css": "/static/css/main.f389d4b8.css",
+    "main.js": "/static/js/main.ce0aaed1.js",
+    "static/media/grain.gif": "/static/media/grain.a9f9ec6be0f6001c58ed.gif",
     "static/media/Prometheus.png": "/static/media/Prometheus.f702a1ab68a452add103.png",
     "static/media/bg.png": "/static/media/bg.50b29dcdeebfc7119418.png",
     "static/media/FuriousStylesDemo.ttf": "/static/media/FuriousStylesDemo.6dd081e3989b76285043.ttf",
@@ -20,7 +21,6 @@
     "static/media/ProductSans-Medium.ttf": "/static/media/ProductSans-Medium.50b60017b2706bf654f4.ttf",
     "static/media/ProductSans-Bold.ttf": "/static/media/ProductSans-Bold.153c4f86d79ce54c810c.ttf",
     "static/media/ProductSans-Black.ttf": "/static/media/ProductSans-Black.99679fcb879a842df8c5.ttf",
-    "static/media/Coming Soon.png": "/static/media/Coming Soon.78230aceab92fb98c96b.png",
     "static/media/furiousstylesdemo-webfont.woff": "/static/media/furiousstylesdemo-webfont.ee5e8a3dd59c1608b837.woff",
     "static/media/furiousstylesdemo-webfont.woff2": "/static/media/furiousstylesdemo-webfont.1a92d007b1d291a4742f.woff2",
     "static/media/productsans-lightitalic-webfont.woff": "/static/media/productsans-lightitalic-webfont.34daa14e100ce45e1a52.woff",
@@ -49,11 +49,11 @@
     "static/media/productsans-regular-webfont.woff2": "/static/media/productsans-regular-webfont.dbe3f7239b2c4bedf5f0.woff2",
     "static/media/comics_code.png": "/static/media/comics_code.62b96ec43f666616f28d.png",
     "index.html": "/index.html",
-    "main.806d4cb8.css.map": "/static/css/main.806d4cb8.css.map",
-    "main.2f73cd43.js.map": "/static/js/main.2f73cd43.js.map"
+    "main.f389d4b8.css.map": "/static/css/main.f389d4b8.css.map",
+    "main.ce0aaed1.js.map": "/static/js/main.ce0aaed1.js.map"
   },
   "entrypoints": [
-    "static/css/main.806d4cb8.css",
-    "static/js/main.2f73cd43.js"
+    "static/css/main.f389d4b8.css",
+    "static/js/main.ce0aaed1.js"
   ]
 }
