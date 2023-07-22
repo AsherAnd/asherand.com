@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.22af5e6a.css",
-    "main.js": "/static/js/main.49676bd7.js",
+    "main.css": "/static/css/main.789c68cd.css",
+    "main.js": "/static/js/main.0f9fa011.js",
     "static/media/grain.gif": "/static/media/grain.a9f9ec6be0f6001c58ed.gif",
     "static/media/Prometheus.png": "/static/media/Prometheus.f702a1ab68a452add103.png",
     "static/media/bg.png": "/static/media/bg.50b29dcdeebfc7119418.png",
@@ -49,11 +49,11 @@
     "static/media/productsans-regular-webfont.woff2": "/static/media/productsans-regular-webfont.dbe3f7239b2c4bedf5f0.woff2",
     "static/media/comics_code.png": "/static/media/comics_code.62b96ec43f666616f28d.png",
     "index.html": "/index.html",
-    "main.22af5e6a.css.map": "/static/css/main.22af5e6a.css.map",
-    "main.49676bd7.js.map": "/static/js/main.49676bd7.js.map"
+    "main.789c68cd.css.map": "/static/css/main.789c68cd.css.map",
+    "main.0f9fa011.js.map": "/static/js/main.0f9fa011.js.map"
   },
   "entrypoints": [
-    "static/css/main.22af5e6a.css",
-    "static/js/main.49676bd7.js"
+    "static/css/main.789c68cd.css",
+    "static/js/main.0f9fa011.js"
   ]
 }
