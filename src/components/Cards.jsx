@@ -4,10 +4,14 @@ import { motion } from "framer-motion";
 function ProjectCard(props) {
   const openModal = (modal) => {
     document.getElementById(modal).showModal();
+    document.querySelector("body").classList.add("open-modal");
+    document.querySelector("body").classList.remove("close-modal");
   };
 
   const closeModal = (modal) => {
     document.getElementById(modal).close();
+    document.querySelector("body").classList.remove("open-modal");
+    document.querySelector("body").classList.add("close-modal");
   };
 
   return (

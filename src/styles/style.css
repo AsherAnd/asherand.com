@@ -619,7 +619,8 @@ nav.container {
 
 /* Reusable Styles */
 
-body.open {
+body.open,
+body.open-modal {
   overflow: hidden;
 }
 
