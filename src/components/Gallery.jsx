@@ -1,22 +1,25 @@
-import { ProjectCard } from "../components/Cards";
-import { ExperienceCard } from "../components/Cards";
+import { ProjectCard } from "./Cards";
+import { ExperienceCard } from "./Cards";
 import { motion } from "framer-motion";
 
 function ProjectGallery(props) {
   return (
-    <motion.div layout className="projects-gallery">
-      {props.projects?.map((project, i) => {
-        return (
-          <ProjectCard
-            img={project.thumbnail}
-            alt="image"
-            title={project.title}
-            link=""
-            key={i}
-          />
-        );
-      })}
-    </motion.div>
+    <>
+      <motion.div layout className="projects-gallery">
+        {props.projects?.map((project, i) => {
+          return (
+            <ProjectCard
+              img={project.thumbnail}
+              alt="image"
+              title={project.title}
+              largeImg={project.images[0]}
+              link=""
+              key={i}
+            />
+          );
+        })}
+      </motion.div>
+    </>
   );
 }
 

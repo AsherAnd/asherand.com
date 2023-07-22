@@ -93,6 +93,19 @@ body.open .pages::after {
   width: 100%;
 }
 
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+dialog {
+  background-color: transparent;
+  border: none;
+  font-family: "Product Sans Black";
+  color: var(--secondary-text-color);
+  width: 75%;
+  margin: auto;
+}
+
 figure {
   text-align: center;
 }
@@ -229,7 +242,7 @@ header nav {
 .name {
   font-size: 1.45rem;
   color: var(--text-color);
-  font-family: Product Sans Black;
+  font-family: "Product Sans Black";
   letter-spacing: 5px;
   margin-right: 1.5rem;
   transition: 0.3s;
