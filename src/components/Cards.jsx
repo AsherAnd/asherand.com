@@ -2,15 +2,13 @@ import { SecondaryButton } from "./Button";
 import { motion } from "framer-motion";
 
 function ProjectCard(props) {
-  const modalID = "modal-" + props.title.replace(/ /g, "-");
-  const modal = document.getElementById(modalID);
-
-  const openModal = () => {
-    modal.showModal();
+  const openModal = (modal) => {
+    console.log(modal);
+    document.getElementById(modal).showModal();
   };
 
-  const closeModal = () => {
-    modal.close();
+  const closeModal = (modal) => {
+    document.getElementById(modal).close();
   };
 
   return (
@@ -21,7 +19,10 @@ function ProjectCard(props) {
       exit={{ opacity: 0 }}
       className="project-card"
     >
-      <div className="project-image" onClick={openModal}>
+      <div
+        className="project-image"
+        onClick={() => openModal("modal-" + props.title.replace(/ /g, "-"))}
+      >
         <img src={props.img} alt={props.alt} />
         <div className="project-overlay">
           <span className="magnify">
@@ -30,7 +31,11 @@ function ProjectCard(props) {
         </div>
       </div>
 
-      <dialog className="modal" id={modalID} onClick={closeModal}>
+      <dialog
+        className="modal"
+        id={"modal-" + props.title.replace(/ /g, "-")}
+        onClick={() => closeModal("modal-" + props.title.replace(/ /g, "-"))}
+      >
         <figure>
           <img src={props.largeImg} alt="image" className="modal-image" />
           <figcaption>{props.title}</figcaption>
