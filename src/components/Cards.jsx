@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 
 function ProjectCard(props) {
   const openModal = (modal) => {
-    console.log(modal);
     document.getElementById(modal).showModal();
   };
 

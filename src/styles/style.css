@@ -104,6 +104,7 @@ dialog {
   color: var(--secondary-text-color);
   width: 75%;
   margin: auto;
+  outline: none;
 }
 
 figure {
