@@ -56,12 +56,11 @@ function ExperienceGallery(props) {
       >
         {props.experience?.map((experience, i) => {
           return (
-            <SwiperSlide>
+            <SwiperSlide key={i}>
               <ExperienceCard
                 title={experience.title}
                 img={experience.images[0]}
                 alt={experience.title}
-                key={i}
               />
             </SwiperSlide>
           );
