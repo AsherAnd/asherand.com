@@ -49,8 +49,8 @@ function ExperienceGallery(props) {
           disableOnInteraction: true,
         }}
         pagination={pagination}
+        navigation={true}
         loop={true}
-        allowTouchMove={false}
         modules={[Autoplay, Pagination]}
         className="mySwiper"
       >
