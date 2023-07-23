@@ -1,0 +1,20 @@
+.swiper-pagination {
+  position: static;
+  margin-top: 1rem;
+}
+
+.swiper-pagination-bullet {
+  width: 0.5rem;
+  height: 0.5rem;
+  text-align: center;
+  line-height: 0.5rem;
+  font-size: 12px;
+  color: #000;
+  opacity: 1;
+  background: var(--secondary-text-color);
+}
+
+.swiper-pagination-bullet-active {
+  color: #fff;
+  background: var(--text-color);
+}

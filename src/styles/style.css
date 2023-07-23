@@ -102,7 +102,6 @@ dialog {
   border: none;
   font-family: "Product Sans Black";
   color: var(--secondary-text-color);
-  width: 75%;
   margin: auto;
   outline: none;
 }
@@ -884,6 +883,10 @@ body.dark {
 
   .contact .container {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  dialog {
+    width: 75%;
   }
 
   .empty .container {

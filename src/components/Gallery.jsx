@@ -1,6 +1,13 @@
 import { ProjectCard } from "./Cards";
 import { ExperienceCard } from "./Cards";
 import { motion } from "framer-motion";
+import { Autoplay, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "../styles/swiper.css";
 
 function ProjectGallery(props) {
   return (
@@ -24,23 +31,37 @@ function ProjectGallery(props) {
 }
 
 function ExperienceGallery(props) {
+  const pagination = {
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + "" + "</span>";
+    },
+  };
+
   return (
     <div className="experience-gallery">
-      <ExperienceCard
-        title="Test"
-        img="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png"
-        alt="image"
-      />
-      {/* {props.experience?.map((experience, i) => {
-        return (
-          <ExperienceCard
-            title={experience.title}
-            img={experience.images[0]}
-            alt="image"
-            key={i}
-          />
-        );
-      })} */}
+      <Swiper
+        slidesPerView={1}
+        spaceBetween={30}
+        centeredSlides={true}
+        pagination={pagination}
+        loop={true}
+        modules={[Autoplay, Pagination]}
+        className="mySwiper"
+      >
+        {props.experience?.map((experience, i) => {
+          return (
+            <SwiperSlide>
+              <ExperienceCard
+                title={experience.title}
+                img={experience.images[0]}
+                alt={experience.title}
+                key={i}
+              />
+            </SwiperSlide>
+          );
+        })}
+      </Swiper>
     </div>
   );
 }
