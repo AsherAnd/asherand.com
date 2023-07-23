@@ -45,7 +45,7 @@ function ExperienceGallery(props) {
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
-          delay: 500,
+          delay: 2500,
           disableOnInteraction: true,
         }}
         pagination={pagination}
@@ -54,14 +54,6 @@ function ExperienceGallery(props) {
         modules={[Autoplay, Pagination]}
         className="mySwiper"
       >
-        <SwiperSlide>
-          <ExperienceCard
-            title="Test"
-            img="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png"
-            alt="image"
-          />
-        </SwiperSlide>
-
         {props.experience?.map((experience, i) => {
           return (
             <SwiperSlide>
