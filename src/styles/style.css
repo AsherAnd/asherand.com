@@ -147,7 +147,10 @@ img {
 a::selection,
 button::selection,
 span::selection,
-.last-name::selection {
+.last-name::selection,
+.name::selection,
+h1::selection,
+h3::selection {
   background-color: var(--secondary-text-color);
 }
 
