@@ -47,6 +47,7 @@ a.amharic::after {
 .projects,
 .showcase-area {
   padding: 100px 0;
+  filter: blur(0);
 }
 
 .App {
