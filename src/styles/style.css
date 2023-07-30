@@ -450,7 +450,7 @@ nav.container {
   background-color: var(--gradient-start);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   display: grid;
-  aspect-ratio: 3/2;
+  aspect-ratio: 9/13;
 }
 
 .experience-description {
@@ -467,7 +467,10 @@ nav.container {
 }
 
 .experience-image {
-  width: 25%;
+  display: flex;
+  align-items: center;
+  width: 60%;
+  height: 100px;
 }
 
 .experience-gallery {
@@ -773,6 +776,10 @@ body.dark {
     font-size: 1.5rem;
   }
 
+  .experience-image {
+    height: 150px;
+  }
+
   .heading {
     font-size: 3.5rem;
   }
@@ -818,7 +825,8 @@ body.dark {
   }
 
   .experience-image {
-    width: 50%;
+    width: 90%;
+    height: auto;
   }
 
   .filter-btn {
