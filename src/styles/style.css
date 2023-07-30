@@ -33,12 +33,9 @@ a.amharic {
   font-size: 1.14rem;
 }
 
-a.amharic:hover {
+a.amharic:hover,
+a.highlight:hover {
   color: var(--secondary-text-color);
-}
-
-a.amharic::after {
-  content: " ";
 }
 
 .about,

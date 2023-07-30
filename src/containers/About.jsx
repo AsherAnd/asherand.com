@@ -17,16 +17,41 @@ function About() {
           <p className="text">
             <a href="https://en.wikipedia.org/wiki/Amharic" className="amharic">
               ስላም!
-            </a>
+            </a>{" "}
             My name is Asher and I am currently a 3rd year Computer Science
             student at Toronto Metropolitan University. When I'm not forced to
             code at school, I code in my free time, experimenting with new or
-            old topics that intrigue me. Besides being a software developer both
-            professionally and as a hobbiest, I also possess other skills which
-            include but are not limited to
-            <span className="highlight"> Photoshop</span>,
-            <span className="highlight"> 3D Printing</span> and
-            <span className="highlight"> Basic Electronics</span> to name a few.
+            old technologies or topics that intrigue me. Besides being a
+            software developer both professionally and as a hobbiest, I also
+            possess other skills which include but are not limited to
+            <a href="#projects" className="highlight">
+              {" "}
+              Photoshop
+            </a>
+            ,
+            <a href="#projects" className="highlight">
+              {" "}
+              3D Printing
+            </a>{" "}
+            and
+            <a href="#projects" className="highlight">
+              {" "}
+              Basic Electronics
+            </a>{" "}
+            to name a few. I also enjoy reading and taking inspiration from{" "}
+            <a href="https://www.marvel.com/comics" className="highlight">
+              Marvel
+            </a>{" "}
+            and{" "}
+            <a href="https://www.dc.com/comics" className="highlight">
+              DC
+            </a>{" "}
+            comic books (which you can probably tell from the look of this
+            site). So look around, see some of the things I've done, and if you
+            want to chat about something{" "}
+            <a href="#contact" className="highlight">
+              send a message!
+            </a>
           </p>
         </div>
       </div>
