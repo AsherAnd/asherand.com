@@ -4,7 +4,7 @@ import MenuToggle from "./actions/MenuToggle";
 import RouteLayout from "./components/RouteLayout";
 import NotFound from "./components/NotFound";
 import {
-  createBrowserRouter,
+  createHashRouter,
   createRoutesFromElements,
   Route,
   RouterProvider,
@@ -17,7 +17,7 @@ function App() {
   // hamburger menu
   const { _, toggleMenu } = MenuToggle();
 
-  const router = createBrowserRouter(
+  const router = createHashRouter(
     createRoutesFromElements(
       <Route
         path="/"
