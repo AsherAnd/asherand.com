@@ -5,7 +5,7 @@ function NotFound() {
     <>
       <div className="error-page">
         <div className="error-message">404 Not Found</div>
-        <PrimaryButton link="/" text="Home" />
+        <PrimaryButton link="/#projects" text="Home" />
       </div>
     </>
   );

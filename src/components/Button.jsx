@@ -1,16 +1,18 @@
+import { HashLink } from "react-router-hash-link";
+
 function PrimaryButton(props) {
   return (
-    <a href={props.link} className="btn">
+    <HashLink to={props.link} className="btn">
       {props.text}
-    </a>
+    </HashLink>
   );
 }
 
 function SecondaryButton(props) {
   return (
-    <a href={props.link} className="btn secondary-btn sm">
+    <HashLink to={props.link} className="btn secondary-btn sm">
       {props.text}
-    </a>
+    </HashLink>
   );
 }
 
