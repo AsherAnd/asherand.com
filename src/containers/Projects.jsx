@@ -13,12 +13,23 @@ function Projects() {
   }, []);
 
   const fetchProjects = async () => {
-    const data = await fetch(
+    fetch(
       "https://personal-site-51a24-default-rtdb.firebaseio.com/projects.json"
-    );
-    const projectsJson = await data.json();
-    setProjects(projectsJson);
-    setFiltered(projectsJson);
+    )
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setProjects(data);
+        setFiltered(data);
+      });
+
+    // const data = await fetch(
+    //   "https://personal-site-51a24-default-rtdb.firebaseio.com/projects.json"
+    // );
+    // const projectsJson = await data.json();
+    // setProjects(projectsJson);
+    // setFiltered(projectsJson);
   };
 
   return (
@@ -36,7 +47,7 @@ function Projects() {
             <Heading first="What I Did" second="What I Made"></Heading>
           </div>
         </div>
-        <ProjectGallery projects={filtered} />
+        {filtered && <ProjectGallery projects={filtered} />}
       </div>
     </section>
   );

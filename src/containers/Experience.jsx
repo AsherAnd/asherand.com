@@ -3,18 +3,22 @@ import { ExperienceGallery } from "../components/Gallery";
 import { useEffect, useState } from "react";
 
 function Experience() {
-  const [experience, setExperience] = useState([]);
+  const [experience, setExperience] = useState(null);
 
   useEffect(() => {
     fetchExperience();
   }, []);
 
   const fetchExperience = async () => {
-    const data = await fetch(
+    fetch(
       "https://personal-site-51a24-default-rtdb.firebaseio.com/experience.json"
-    );
-    const experienceJson = await data.json();
-    setExperience(experienceJson);
+    )
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setExperience(data);
+      });
   };
 
   return (
@@ -24,7 +28,7 @@ function Experience() {
           <SubHeading text="Experience"></SubHeading>
           <Heading first="What I Learned" second="What I Gained"></Heading>
         </div>
-        <ExperienceGallery experience={experience} />
+        {experience && <ExperienceGallery experience={experience} />}
       </div>
     </section>
   );
