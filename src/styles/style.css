@@ -108,6 +108,12 @@ figure {
   text-align: center;
 }
 
+footer {
+  text-align: center;
+  padding: 3em 1em 2.5em 1em;
+  border-top: 2px solid var(--text-color);
+}
+
 .grain {
   width: 100vw;
   height: 100vh;
@@ -174,7 +180,8 @@ ul {
   height: 24px;
 }
 
-::selection {
+::selection,
+.first-name::selection {
   background-color: var(--text-color);
 }
 

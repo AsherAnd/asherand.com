@@ -23,13 +23,6 @@ function Projects() {
         setProjects(data);
         setFiltered(data);
       });
-
-    // const data = await fetch(
-    //   "https://personal-site-51a24-default-rtdb.firebaseio.com/projects.json"
-    // );
-    // const projectsJson = await data.json();
-    // setProjects(projectsJson);
-    // setFiltered(projectsJson);
   };
 
   return (
