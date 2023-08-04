@@ -1,5 +1,4 @@
 import { Heading, SubHeading } from "../components/Headings";
-import { HashLink } from "react-router-hash-link";
 import Image from "../assets/images/Prometheus.png";
 
 function About() {
@@ -25,20 +24,20 @@ function About() {
             old technologies or topics that intrigue me. Besides being a
             software developer both professionally and as a hobbiest, I also
             possess other skills which include but are not limited to
-            <HashLink to="#projects" className="highlight">
+            <a href="#projects" className="highlight">
               {" "}
               Photoshop
-            </HashLink>
+            </a>
             ,
-            <HashLink to="#projects" className="highlight">
+            <a href="#projects" className="highlight">
               {" "}
               3D Printing
-            </HashLink>{" "}
+            </a>{" "}
             and
-            <HashLink to="#projects" className="highlight">
+            <a href="#projects" className="highlight">
               {" "}
               Basic Electronics
-            </HashLink>{" "}
+            </a>{" "}
             to name a few. I also enjoy reading and taking inspiration from{" "}
             <a href="https://www.marvel.com/comics" className="highlight">
               Marvel
@@ -50,9 +49,9 @@ function About() {
             comic books (which you can probably tell from the look of this
             site). So look around, see some of the things I've done, and if you
             want to chat about something{" "}
-            <HashLink to="#contact" className="highlight">
+            <a href="#contact" className="highlight">
               send a message!
-            </HashLink>
+            </a>
           </p>
         </div>
       </div>

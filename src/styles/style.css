@@ -104,24 +104,6 @@ dialog {
   outline: none;
 }
 
-.error-message {
-  font-family: "Furious Styles";
-  font-size: calc(100px + 5vw);
-  color: var(--text-color);
-}
-
-.error-page {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  display: grid;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-  justify-items: center;
-  text-align: center;
-}
-
 figure {
   text-align: center;
 }
@@ -656,6 +638,7 @@ body.open-modal {
   letter-spacing: 0.4px;
   text-transform: capitalize;
   transition: 0.3s;
+  min-width: 100px;
 }
 
 .btn:hover {

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import ThemeButton from "./ThemeButton";
 import Hamburger from "./Hamburger";
-import { HashLink } from "react-router-hash-link";
 
 function Header(props) {
   var windowWidth = window.innerWidth;
@@ -32,33 +31,29 @@ function Header(props) {
         <div className="name">ASHER</div>
         <ul className="pages">
           <li>
-            <HashLink to="/#home" className="nav-link" onClick={toggleMenu}>
+            <a href="#home" className="nav-link" onClick={toggleMenu}>
               Home
-            </HashLink>
+            </a>
           </li>
           <li>
-            <HashLink to="/#about" className="nav-link" onClick={toggleMenu}>
+            <a href="#about" className="nav-link" onClick={toggleMenu}>
               About
-            </HashLink>
+            </a>
           </li>
           <li>
-            <HashLink
-              to="/#experience"
-              className="nav-link"
-              onClick={toggleMenu}
-            >
+            <a href="#experience" className="nav-link" onClick={toggleMenu}>
               Experience
-            </HashLink>
+            </a>
           </li>
           <li>
-            <HashLink to="/#projects" className="nav-link" onClick={toggleMenu}>
+            <a href="#projects" className="nav-link" onClick={toggleMenu}>
               Projects
-            </HashLink>
+            </a>
           </li>
           <li>
-            <HashLink to="/#contact" className="nav-link" onClick={toggleMenu}>
+            <a href="#contact" className="nav-link" onClick={toggleMenu}>
               Contact
-            </HashLink>
+            </a>
           </li>
         </ul>
         <div className="side-buttons">
