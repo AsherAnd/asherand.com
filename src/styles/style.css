@@ -646,6 +646,7 @@ body.open-modal {
   text-transform: capitalize;
   transition: 0.3s;
   min-width: 100px;
+  cursor: pointer;
 }
 
 .btn:hover {

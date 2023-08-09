@@ -24,12 +24,12 @@ function ComicCover(props) {
             ? CoverImages.AsherDark
             : CoverImages.AsherLight
         }
-        alt="Asher"
+        alt="Portrait of Asher Andargachew"
         className="comic-cover asher"
       />
       <img
         src={CoverImages.ComicsCode}
-        alt="background1"
+        alt="comicscode"
         className="comic-cover comics-code"
       />
       <img
