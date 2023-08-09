@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.84ce8622.css",
-    "main.js": "/static/js/main.9ae49180.js",
+    "main.css": "/static/css/main.02c33dfa.css",
+    "main.js": "/static/js/main.d40ae176.js",
     "static/media/grain.gif": "/static/media/grain.a9f9ec6be0f6001c58ed.gif",
     "static/media/Prometheus.png": "/static/media/Prometheus.f702a1ab68a452add103.png",
     "static/media/bg.png": "/static/media/bg.50b29dcdeebfc7119418.png",
     "static/media/FuriousStylesDemo.ttf": "/static/media/FuriousStylesDemo.6dd081e3989b76285043.ttf",
-    "static/media/subject-2.png": "/static/media/subject-2.28f4fa693a4bf83d87b9.png",
+    "static/media/Asher-Andargachew-light.png": "/static/media/Asher-Andargachew-light.28f4fa693a4bf83d87b9.png",
     "static/media/reflection.png": "/static/media/reflection.ec0e6f7ed55e174ef576.png",
-    "static/media/subject-1.png": "/static/media/subject-1.0d1d7f831bd1cd5c77fe.png",
+    "static/media/Asher-Andargachew-dark.png": "/static/media/Asher-Andargachew-dark.0d1d7f831bd1cd5c77fe.png",
     "static/media/ProductSans-Regular.ttf": "/static/media/ProductSans-Regular.2765c69613690b1b9c03.ttf",
     "static/media/ProductSans-ThinItalic.ttf": "/static/media/ProductSans-ThinItalic.2a6fe185cd27b1f54ec4.ttf",
     "static/media/ProductSans-LightItalic.ttf": "/static/media/ProductSans-LightItalic.289ba20a28ba85d9d7fc.ttf",
@@ -49,11 +49,11 @@
     "static/media/productsans-regular-webfont.woff2": "/static/media/productsans-regular-webfont.dbe3f7239b2c4bedf5f0.woff2",
     "static/media/comics_code.png": "/static/media/comics_code.62b96ec43f666616f28d.png",
     "index.html": "/index.html",
-    "main.84ce8622.css.map": "/static/css/main.84ce8622.css.map",
-    "main.9ae49180.js.map": "/static/js/main.9ae49180.js.map"
+    "main.02c33dfa.css.map": "/static/css/main.02c33dfa.css.map",
+    "main.d40ae176.js.map": "/static/js/main.d40ae176.js.map"
   },
   "entrypoints": [
-    "static/css/main.84ce8622.css",
-    "static/js/main.9ae49180.js"
+    "static/css/main.02c33dfa.css",
+    "static/js/main.d40ae176.js"
   ]
 }
