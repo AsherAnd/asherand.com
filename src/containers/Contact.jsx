@@ -41,6 +41,12 @@ function Contact() {
                 icon="fa-brands fa-github fa-lg"
               />
             </li>
+            <li>
+              <SocialIcon
+                link="https://firebasestorage.googleapis.com/v0/b/personal-site-51a24.appspot.com/o/Asher%20Andargachew%20Resume%202024.pdf?alt=media&token=9d8ba225-146f-469d-83b6-7770cfa8dedd"
+                icon="fa-solid fa-file fa-lg"
+              />
+            </li>
           </ul>
         </div>
       </div>
