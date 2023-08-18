@@ -91,19 +91,6 @@ body.open .pages::after {
   width: 100%;
 }
 
-dialog::backdrop {
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-dialog {
-  background-color: transparent;
-  border: none;
-  font-family: "Product Sans Black";
-  color: var(--secondary-text-color);
-  margin: auto;
-  outline: none;
-}
-
 figure {
   text-align: center;
 }
@@ -728,7 +715,8 @@ body.open-modal {
 /* color theme */
 
 @media (prefers-color-scheme: light) {
-  :root {
+  :root,
+  ::backdrop {
     --background: var(--light-bg);
     --text-color: var(--light-text-color);
     --secondary-text-color: var(--dark-bg);
@@ -901,10 +889,6 @@ body.dark {
 
   .contact .container {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  dialog {
-    width: 25%;
   }
 
   .empty .container {

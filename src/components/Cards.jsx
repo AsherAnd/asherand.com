@@ -2,18 +2,6 @@ import { SecondaryButton } from "./Button";
 import { motion } from "framer-motion";
 
 function ProjectCard(props) {
-  const openModal = (modal) => {
-    document.getElementById(modal).showModal();
-    document.querySelector("body").classList.add("open-modal");
-    document.querySelector("body").classList.remove("close-modal");
-  };
-
-  const closeModal = (modal) => {
-    document.getElementById(modal).close();
-    document.querySelector("body").classList.remove("open-modal");
-    document.querySelector("body").classList.add("close-modal");
-  };
-
   return (
     <motion.div
       layout
@@ -22,32 +10,22 @@ function ProjectCard(props) {
       exit={{ opacity: 0 }}
       className="project-card"
     >
-      <div
-        className="project-image"
-        onClick={() => openModal("modal-" + props.title.replace(/ /g, "-"))}
-      >
+      <a className="project-image" href={props.largeImg} target="_blank">
         <img src={props.img} alt={props.alt} />
         <div className="project-overlay">
           <span className="magnify">
             <i className="fa-solid fa-magnifying-glass-plus fa-lg"></i>
           </span>
         </div>
-      </div>
-
-      <dialog
-        className="modal"
-        id={"modal-" + props.title.replace(/ /g, "-")}
-        onClick={() => closeModal("modal-" + props.title.replace(/ /g, "-"))}
-      >
-        <figure>
-          <img src={props.largeImg} alt="image" className="modal-image" />
-          <figcaption>{props.title}</figcaption>
-        </figure>
-      </dialog>
+      </a>
 
       <div className="project-description">
         <h3>{props.title}</h3>
-        <SecondaryButton link={props.link} text="Read More" />
+        <SecondaryButton
+          link={props.link}
+          text="Read More"
+          modalId={"modal-" + props.title.replace(/ /g, "-")}
+        />
       </div>
     </motion.div>
   );
