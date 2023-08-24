@@ -24,7 +24,11 @@ function Footer() {
   return (
     <h3 className="footer-text">
       <span className="footer-made">Made with</span>{" "}
-      <a className="footer-sentence highlight" href={footSentence.link}>
+      <a
+        className="footer-sentence highlight"
+        href={footSentence.link}
+        target="_blank"
+      >
         {footSentence.text}
       </a>
     </h3>
