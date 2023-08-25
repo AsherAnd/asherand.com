@@ -1,0 +1,143 @@
+{
+    "projects": [
+        {
+            "title": "Photoshop Project 1",
+            "type": "Photoshop",
+            "description": "A Star Wars music album by the <a className='highlight' href='https://www.youtube.com/watch?v=IK_iw5Yps2M&ab_channel=JoBloMovieClips'>Cantina Band</a> from A New Hope. This was one of the many things I made when I was bored during my first (online) year at university. Most of the things I've Photoshopped actually start off as jokes but after pouring some time into them, they start getting serious, and I get something that looks like this. I don't quite remember why I made this album cover (after checking my messages with one of my friends I was apparently bored and wanted to do something and randomly thought of the Cantina Band).\n\nI remember the thought process for making the image though. Besides the obvious “What if Figrin D'an and the Modal Nodes (the Cantina Band) made an album?” it was also “What would the album cover look like?” that was going through my head. First off, it had to be written in <a className='highlight' href='https: //starwars.fandom.com/wiki/Aurebesh'>Aurebsh</a> since it is set in the Star Wars universe. Second, it had to look like an album cover that people at first glance would look at and think this is an album cover. Artists sometimes take victorian portraits of themselves and make an album covers with it, take Ski Mask's <a className='highlight' href='https://ia800703.us.archive.org/25/items/mbid-1111b45b-d7d0-4cea-8ecd-9047ec7d0818/mbid-1111b45b-d7d0-4cea-8ecd-9047ec7d0818-21756197170.jpg'>Stokeley</a> album cover as an example. Lastly, the title of the album had to be good. I like to think I did that. If you want to confirm, translate the album cover and find out for yourself. This wasn't the first music album cover I've made but I would say this was probably my favorite.\n\nOriginal Images used: <a className='highlight' href='https: //free-images.com/display/herman_antonie_de_bloeme_0.html'>Portrait of Herman Antonie De Bloeme</a> and a <a className='highlight' href='https://www.therpf.com/forums/media/star-wars-bith-cantina-band-member-head.37187/'>a Bith head prop</a>",
+            "thumbnail": "https://firebasestorage.googleapis.com/v0/b/personal-site-51a24.appspot.com/o/projects%2Fphotoshop%2Fthumbnails%2FBith%20Music%20Album.png?alt=media&token=beab1149-c19c-4327-877a-573bebd8bda4",
+            "images": [
+                "https://firebasestorage.googleapis.com/v0/b/personal-site-51a24.appspot.com/o/Coming%20Soon.png?alt=media&token=7991e818-764b-41d6-b969-c4e5098f4095"
+            ],
+            "creationDate": "30-12-2021"
+        },
+        {
+            "title": "Tool Project 1",
+            "type": "Tool",
+            "description": "Lorem ipsum dolor sit amet,",
+            "thumbnail": "https://firebasestorage.googleapis.com/v0/b/personal-site-51a24.appspot.com/o/Coming%20Soon.png?alt=media&token=7991e818-764b-41d6-b969-c4e5098f4095",
+            "images": [
+                "https://firebasestorage.googleapis.com/v0/b/personal-site-51a24.appspot.com/o/Coming%20Soon.png?alt=media&token=7991e818-764b-41d6-b969-c4e5098f4095"
+            ],
+            "creationDate": "30-12-2021"
+        },
+        {
+            "title": "Photoshop Project 2",
+            "type": "Photoshop",
+            "description": "Lorem ipsum dolor sit amet,",
+            "thumbnail": "https://firebasestorage.googleapis.com/v0/b/personal-site-51a24.appspot.com/o/Coming%20Soon.png?alt=media&token=7991e818-764b-41d6-b969-c4e5098f4095",
+            "images": [
+                "https://firebasestorage.googleapis.com/v0/b/personal-site-51a24.appspot.com/o/Coming%20Soon.png?alt=media&token=7991e818-764b-41d6-b969-c4e5098f4095"
+            ],
+            "creationDate": "30-12-2021"
+        },
+        {
+            "title": "Web Project 2",
+            "type": "Web",
+            "description": "Lorem ipsum dolor sit amet,",
+            "thumbnail": "https://firebasestorage.googleapis.com/v0/b/personal-site-51a24.appspot.com/o/Coming%20Soon.png?alt=media&token=7991e818-764b-41d6-b969-c4e5098f4095",
+            "images": [
+                "https://firebasestorage.googleapis.com/v0/b/personal-site-51a24.appspot.com/o/Coming%20Soon.png?alt=media&token=7991e818-764b-41d6-b969-c4e5098f4095"
+            ],
+            "creationDate": "30-12-2021"
+        },
+        {
+            "title": "Tool Project 3",
+            "type": "Tool",
+            "description": "Lorem ipsum dolor sit amet,",
+            "thumbnail": "https://firebasestorage.googleapis.com/v0/b/personal-site-51a24.appspot.com/o/Coming%20Soon.png?alt=media&token=7991e818-764b-41d6-b969-c4e5098f4095",
+            "images": [
+                "https://firebasestorage.googleapis.com/v0/b/personal-site-51a24.appspot.com/o/Coming%20Soon.png?alt=media&token=7991e818-764b-41d6-b969-c4e5098f4095"
+            ],
+            "creationDate": "30-12-2021"
+        },
+        {
+            "title": "Photoshop Project 3",
+            "type": "Photoshop",
+            "description": "Lorem ipsum dolor sit amet,",
+            "thumbnail": "https://firebasestorage.googleapis.com/v0/b/personal-site-51a24.appspot.com/o/Coming%20Soon.png?alt=media&token=7991e818-764b-41d6-b969-c4e5098f4095",
+            "images": [
+                "https://firebasestorage.googleapis.com/v0/b/personal-site-51a24.appspot.com/o/Coming%20Soon.png?alt=media&token=7991e818-764b-41d6-b969-c4e5098f4095"
+            ],
+            "creationDate": "30-12-2021"
+        },
+        {
+            "title": "Web Project 3",
+            "type": "Web",
+            "description": "Lorem ipsum dolor sit amet,",
+            "thumbnail": "https://firebasestorage.googleapis.com/v0/b/personal-site-51a24.appspot.com/o/Coming%20Soon.png?alt=media&token=7991e818-764b-41d6-b969-c4e5098f4095",
+            "images": [
+                "https://firebasestorage.googleapis.com/v0/b/personal-site-51a24.appspot.com/o/Coming%20Soon.png?alt=media&token=7991e818-764b-41d6-b969-c4e5098f4095"
+            ],
+            "creationDate": "30-12-2021"
+        },
+        {
+            "title": "Tool Project 4",
+            "type": "Tool",
+            "description": "Lorem ipsum dolor sit amet,",
+            "thumbnail": "https://firebasestorage.googleapis.com/v0/b/personal-site-51a24.appspot.com/o/Coming%20Soon.png?alt=media&token=7991e818-764b-41d6-b969-c4e5098f4095",
+            "images": [
+                "https://firebasestorage.googleapis.com/v0/b/personal-site-51a24.appspot.com/o/Coming%20Soon.png?alt=media&token=7991e818-764b-41d6-b969-c4e5098f4095"
+            ],
+            "creationDate": "30-12-2021"
+        }
+    ],
+    "experience": [
+        {
+            "title": "Google SWE Intern",
+            "description": "Google Software Engineering Internship, take 2 at Waterloo. This internship was a somewhat similar experience as the previous Google internship except I got to work on a new project with a new team. I was a part of the <a href=\"https://cloud.google.com/kubernetes-engine\" class=\"highlight\" target=\"_blank\"> Google Kubernetes Engine EngProd<\/a> team where I got to work on adding customization features to an internal bug filing software.<br><br>Here is a summary of some of the things I've done:<ul class=\"list\"> <li>Spear headed the addition of core program functionality to extensive and detailed code base spread across multiple internal locations for internal use.<\/li><li>Documented reproducible steps necessary to continue work after my leave, saving 45% of time on project ramp up alone.<\/li><li>Made the tool more accessible for use across different teams within the company.<\/li><li>Constructed reusable and maintainable data using Protocol Buffers.<\/li><\/ul><br>Yet again, Google has proven to be a great learning opportunity in terms of software production, communication and team collaboration..<br><br><span class=\"highlight\">Used technologies: <\/span> GoLang, Protocol Buffers, SQL, Google Workspace Suite and numerous internal tools",
+            "images": [
+                "https://firebasestorage.googleapis.com/v0/b/personal-site-51a24.appspot.com/o/experience%2Fgoogle-logo-png-suite-everything-you-need-know-about-google-newest-0.png?alt=media&token=d2097596-ca8e-41f0-a6de-ab7c21b3b1e9"
+            ]
+        },
+        {
+            "title": "DME Instructor",
+            "description": "As part of the Toronto Metropolitan University Library, the <a href=\"https://library.torontomu.ca/dmelab/\" class=\"highlight\" target=\"_blank\"> Digital Media Experience Lab (DME)<\/a>, is where I got to work as many things, but mainly as a coding advisor to students.<br><br>Here is a summary of some of the things I've done:<ul class=\"list\"><li>Assisted students from different faculties and years in different levels of coding in different languages.<\/li><li>Counselled students from different faculties and years on topics related to coding projects, 3D printing and other school related materials.<\/li><li>Managed and approved 3D printing processes sent by students .<\/li><li>Used skills in improving work environment with project creations.<\/li><\/ul><br>The DME has given me an opportunity to not only grow skills outside of my school program but also help fellow students in the process, all while still learning new skills that can be reapplied.<br><br><span class=\"highlight\">Used technologies: <\/span> Python, HTML, CSS, JavaScript, Arduino, Cura, Prusa Slicer, Blender, Fusion360, RealityScan, Adobe Creative Suite and Google Workspace Suite",
+            "images": [
+                "https://firebasestorage.googleapis.com/v0/b/personal-site-51a24.appspot.com/o/experience%2FTMU-Libraries-rgb.png?alt=media&token=2fb07b63-4eb3-4d59-8626-a96acf8f6c36"
+            ]
+        },
+        {
+            "title": "Freelance Developer",
+            "description": "I again got the chance to work with the <a href=\"https://childrenandyouthplanningtable.ca/\" class=\"highlight\" target=\"_blank\">Children and Youth Planning Table<\/a>, now a part of <a href=\"https://www.caminowellbeing.ca/\" class=\"highlight\" target=\"_blank\">Camino Wellbeing + Mental Health<\/a>. My first time working with them as a Youth Connector, I had heard how long it would take for students to get their volunteer letters after participating in the yearly <a href=\"https://childrenandyouthplanningtable.ca/youth-impact-survey/\" class=\"highlight\" target=\"_blank\">Youth Impact Survey<\/a> during one team meeting. With over 400 letters to write and email to individuals I queried in the same meeting why not just program something that can do that for them, saving time. With everyone looking at each other in the room I was asked if I knew someone who can do that to which I replied I can. After the success of the first program and the end of my contract as a Youth Connector, I extended my skills again as a Freelance Developer working on the same program, making it better and more efficient.<br><br>Here is a summary of some of the things I’ve done:<ul class=\"list\"><li> Single handedly created an automated program that was able to email over 1000 people custom documents containing their names and their respective community hours using MS Word and Python.<\/li><li> Optimized code previously written by me a year prior to improve the application’s performance by 85%.<\/li><li> Maintained on call support with client during product usage to assist with bugs and troubleshooting.<\/li><\/ul><br>Working as a Freelance Developer gave me the learning opportunity to not only work independently but independently in a professional environment where I was responsible with real world data in a task that impacted a great number of people. That is something cool I'm glad to say I have done.<br><br><span class=\"highlight\">Used technologies: <\/span> Python, Email Protocols, Microsoft Office Suite",
+            "images": [
+                "https://firebasestorage.googleapis.com/v0/b/personal-site-51a24.appspot.com/o/experience%2Fcamino-horizontal-full-color-rgb-1000px%40144ppi.png?alt=media&token=dcb11984-2a2f-440a-a0f8-53f62ffba4be"
+            ]
+        },
+        {
+            "title": "Google STEP Intern",
+            "description": "I did not expect during my first year of university that I would land my first internship, especially not at Google. During the summer I got to be a Google Student Training in Engineering Program (STEP) Intern which was just a young Software Engineer (SWE) Intern. During this internship I got to work from the Google Waterloo office on the <a href=\"https://cloud.google.com/healthcare-api\" class=\"highlight\" target=\"_blank\">Cloud Healthcare API<\/a> team.<br><br>Here is a summary of some of the things I've done:<ul class=\"list\"><li> Created an internal application using certain Google tools to automate the creation of Health Level 7 medical protocols.<\/li><li> Simplified team testing workflow by 80% by implementing common generated Health Level 7 messages.<\/li><li> Completed internal training, familiarized self with tools and learned Go programming language in 2 weeks.<\/li><li> Familiarized self with internal Google codebase including libraries with several thousand lines of code.<\/li><\/ul><br>This was an amazing experience where I first got to experience what to expect from internships moving forward. I got to learn things I didn’t know existed and met amazing people along the way.<br><br><span class=\"highlight\">Used technologies: <\/span> GoLang, HL7, Google Workspace Suite and numerous internal tools",
+            "images": [
+                "https://firebasestorage.googleapis.com/v0/b/personal-site-51a24.appspot.com/o/experience%2Fgoogle-logo-png-suite-everything-you-need-know-about-google-newest-0.png?alt=media&token=d2097596-ca8e-41f0-a6de-ab7c21b3b1e9"
+            ]
+        },
+        {
+            "title": "Javascript Coding Instructor",
+            "description": "I have been a tutor before, but I think this was the first time I was a coding instructor to multiple people at the same time. I volunteered for this position after being personally asked by <a href=\"https://www.pathwaystoeducation.ca/\" class=\"highlight\" target=\"_blank\">Pathways to Education<\/a> which at the time I was a part of the program as a student. During my time with Pathways, I have had multiple volunteering opportunities ranging from tutoring to video recording and editing but this was the only coding one which was also in partnership with <a href=\"https://ised-isde.canada.ca/site/cancode/en\" class=\"highlight\" target=\"_blank\">CanCode<\/a>.<br><br>Here is a summary of some of the things I’ve done:<ul class=\"list\"><li> Participated in a multi-week programming session through an online environment.<\/li><li> Instructed different high school level students in an introductory level coding curriculum.<\/li><li> Assisted peers in further understanding on how to think programmatically.<\/li><\/ul><br>Pathways has always given me the chance to grow my skills and this opportunity was no different.<br><br><span class=\"highlight\">Used technologies: <\/span> JavaScript",
+            "images": [
+                "https://firebasestorage.googleapis.com/v0/b/personal-site-51a24.appspot.com/o/experience%2FCarizon.975b7826.png?alt=media&token=2e8acfea-e21f-4230-8fa6-7d803e8576d1"
+            ]
+        }
+    ],
+    "footers": [
+        {
+            "text": "Great Power and Responsibility",
+            "link": "https://www.youtube.com/watch?v=guuYU74wU70&ab_channel=TopMovieClips"
+        },
+        {
+            "text": "Box of Scraps in a Cave!",
+            "link": "https://www.youtube.com/watch?v=H4oHU3RXjiM&ab_channel=TopMovieClips"
+        },
+        {
+            "text": "Rizz",
+            "link": "https://www.youtube.com/watch?v=gaPCbAUtvPg&ab_channel=ShortClips"
+        },
+        {
+            "text": "Code",
+            "link": "https://github.com/asherand"
+        },
+        {
+            "text": "the Force",
+            "link": "https://youtu.be/MZK98LVFRH8?t=62"
+        }
+    ]
+}
