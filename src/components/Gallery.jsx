@@ -42,7 +42,7 @@ function ExperienceGallery(props) {
     <div className="experience-gallery">
       <Swiper
         slidesPerView={1}
-        spaceBetween={30}
+        spaceBetween={10}
         centeredSlides={true}
         autoplay={{
           delay: 5000,
@@ -61,6 +61,7 @@ function ExperienceGallery(props) {
                 title={experience.title}
                 img={experience.images[0]}
                 alt={experience.title}
+                desc={experience.description}
               />
             </SwiperSlide>
           );

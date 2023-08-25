@@ -162,6 +162,15 @@ ul {
   list-style: none;
 }
 
+.list {
+  list-style: inside;
+}
+
+.list li::marker {
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
 .toggle-btn-container {
   width: 24px;
   height: 24px;
