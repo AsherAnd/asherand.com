@@ -368,6 +368,10 @@ nav.container {
   -ms-user-select: none;
 }
 
+.showcase-image .full {
+  position: static;
+}
+
 .showcase-image .asher {
   z-index: 2;
 }
