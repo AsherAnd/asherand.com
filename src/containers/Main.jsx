@@ -1,3 +1,4 @@
+import Header from "../components/Header";
 import Home from "./Home";
 import About from "./About";
 import Experience from "./Experience";
@@ -7,6 +8,11 @@ import Contact from "./Contact";
 function Main(props) {
   return (
     <>
+      <Header
+        theme={props.theme}
+        changeTheme={props.changeTheme}
+        toggleMenu={props.toggleMenu}
+      />
       <div className="empty">
         <div className="container"></div>
       </div>

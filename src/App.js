@@ -1,7 +1,15 @@
-import Header from "./components/Header";
 import Main from "./containers/Main";
 import Theme from "./actions/Theme";
 import MenuToggle from "./actions/MenuToggle";
+import NotFound from "./components/NotFound";
+import ProjectDetail from "./containers/projects/ProjectDetail";
+import Projects from "./containers/Projects";
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
 
 function App() {
   // website theme
@@ -10,12 +18,32 @@ function App() {
   // hamburger menu
   const { _, toggleMenu } = MenuToggle();
 
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route errorElement={<NotFound />}>
+        <Route
+          index
+          element={
+            <Main
+              theme={theme}
+              changeTheme={changeTheme}
+              toggleMenu={toggleMenu}
+            />
+          }
+        />
+        <Route path="projects">
+          <Route index element={<Projects />} />
+          <Route path=":id" index element={<ProjectDetail />} />
+        </Route>
+      </Route>
+    )
+  );
+
   return (
     <div className="App">
       <div className="overlay" onClick={toggleMenu}></div>
       <div className="grain"></div>
-      <Header theme={theme} changeTheme={changeTheme} toggleMenu={toggleMenu} />
-      <Main theme={theme} />
+      <RouterProvider router={router} />
     </div>
   );
 }
