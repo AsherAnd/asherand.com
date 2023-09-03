@@ -13,9 +13,7 @@ function Projects() {
   }, []);
 
   const fetchProjects = async () => {
-    fetch(
-      "https://personal-site-51a24-default-rtdb.firebaseio.com/projects.json"
-    )
+    fetch("http://localhost:3050/projects")
       .then((res) => {
         return res.json();
       })

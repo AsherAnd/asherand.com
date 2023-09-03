@@ -11,9 +11,7 @@ function Footer() {
   }, []);
 
   const fetchFooter = async () => {
-    fetch(
-      "https://personal-site-51a24-default-rtdb.firebaseio.com/footers.json"
-    )
+    fetch("http://localhost:3050/footers")
       .then((res) => {
         return res.json();
       })
