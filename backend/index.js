@@ -1,8 +1,11 @@
 import express from "express";
 import mysql from "mysql";
 import cors from "cors";
+import dotenv from "dotenv";
 
-function getJSON(query, res) {
+dotenv.config();
+
+function getJSON(db, query, res) {
   db.query(query, (err, data) => {
     if (err) return res.json(err);
     return res.json(data);
@@ -12,28 +15,40 @@ function getJSON(query, res) {
 const app = express();
 
 const db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "password",
-  database: "asherand",
+  host: process.env.HOST_URL,
+  user: process.env.USER,
+  password: process.env.PASS,
+  database: process.env.DATABASE,
 });
 
 app.use(cors());
 
-app.get("/", (req, res) => {
+app.get("/api", (req, res) => {
   res.json("Welcome to the backend!");
 });
 
-app.get("/experience", (req, res) => {
-  getJSON("SELECT * from experiences ORDER BY `id` desc", res);
+app.get("/api/experience", (req, res) => {
+  getJSON(db, "SELECT * from experiences ORDER BY `id` desc", res);
 });
 
-app.get("/projects", (req, res) => {
-  getJSON("SELECT * FROM projects", res);
+app.get("/api/experience/:id", (req, res) => {
+  getJSON(db, `SELECT * FROM experiences WHERE id= ${req.params.id}`, res);
 });
 
-app.get("/footers", (req, res) => {
-  getJSON("SELECT * FROM footers", res);
+app.get("/api/projects", (req, res) => {
+  getJSON(db, "SELECT * FROM projects", res);
+});
+
+app.get("/api/projects/:title", (req, res) => {
+  getJSON(db, `SELECT * FROM projects WHERE title= "${req.params.title}"`, res);
+});
+
+app.get("/api/footers", (req, res) => {
+  getJSON(db, "SELECT * FROM footers", res);
+});
+
+app.get("/api/footers/:id", (req, res) => {
+  getJSON(db, `SELECT * FROM footers WHERE id= ${req.params.id}`, res);
 });
 
 app.listen(3050, () => {

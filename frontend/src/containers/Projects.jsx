@@ -13,7 +13,7 @@ function Projects() {
   }, []);
 
   const fetchProjects = async () => {
-    fetch("http://localhost:3050/projects")
+    fetch(process.env.REACT_APP_API_URL)
       .then((res) => {
         return res.json();
       })

@@ -11,7 +11,7 @@ function Footer() {
   }, []);
 
   const fetchFooter = async () => {
-    fetch("http://localhost:3050/footers")
+    fetch(process.env.REACT_APP_API_URL)
       .then((res) => {
         return res.json();
       })
