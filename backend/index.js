@@ -51,6 +51,6 @@ app.get("/api/footers/:id", (req, res) => {
   getJSON(db, `SELECT * FROM footers WHERE id= ${req.params.id}`, res);
 });
 
-app.listen(3050, () => {
+app.listen(process.env.PORT, () => {
   console.log("Welcome to the backend!");
 });

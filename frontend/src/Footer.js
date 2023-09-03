@@ -11,7 +11,7 @@ function Footer() {
   }, []);
 
   const fetchFooter = async () => {
-    fetch(process.env.REACT_APP_API_URL)
+    fetch(`${process.env.REACT_APP_API_URL}/footers`)
       .then((res) => {
         return res.json();
       })

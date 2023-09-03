@@ -10,9 +10,8 @@ function Experience() {
   }, []);
 
   const fetchExperience = async () => {
-    fetch(process.env.REACT_APP_API_URL)
+    fetch(`${process.env.REACT_APP_API_URL}/experience`)
       .then((res) => {
-        console.log(res);
         return res.json();
       })
       .then((data) => {

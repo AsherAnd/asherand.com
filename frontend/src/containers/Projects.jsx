@@ -13,7 +13,7 @@ function Projects() {
   }, []);
 
   const fetchProjects = async () => {
-    fetch(process.env.REACT_APP_API_URL)
+    fetch(`${process.env.REACT_APP_API_URL}/projects`)
       .then((res) => {
         return res.json();
       })
