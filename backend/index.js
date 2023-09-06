@@ -22,6 +22,7 @@ const db = mysql.createConnection({
 });
 
 app.use(cors());
+app.use("/assets", express.static("./assets"));
 
 app.get("/api", (req, res) => {
   res.json("Welcome to the backend!");
