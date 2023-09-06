@@ -21,6 +21,11 @@ const db = mysql.createConnection({
   database: process.env.DATABASE,
 });
 
+db.connect(function (err) {
+  if (err) throw err;
+  console.log("Connected!");
+});
+
 app.use(cors());
 app.use("/assets", express.static("./assets"));
 
