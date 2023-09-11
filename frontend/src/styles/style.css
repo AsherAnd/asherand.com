@@ -215,17 +215,11 @@ header {
   height: 505px;
   max-height: 100px;
   overflow: hidden;
+  background-color: var(--gradient-stop);
 }
 
 header.scrolled {
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.1),
-    rgba(255, 255, 255, 0)
-  );
   box-shadow: 0 8px 32px 0.1px rgba(0, 0, 0, 0.37);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   height: 485px;
   max-height: 80px;
 }
