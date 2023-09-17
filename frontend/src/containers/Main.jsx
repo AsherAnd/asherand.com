@@ -4,6 +4,7 @@ import About from "./About";
 import Experience from "./Experience";
 import Projects from "./Projects";
 import Contact from "./Contact";
+import Footer from "./Footer";
 
 function Main(props) {
   return (
@@ -21,6 +22,7 @@ function Main(props) {
       <Experience />
       <Projects />
       <Contact />
+      <Footer />
     </>
   );
 }

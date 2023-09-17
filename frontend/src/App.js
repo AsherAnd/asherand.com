@@ -20,7 +20,7 @@ function App() {
 
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route errorElement={<NotFound />}>
+      <Route errorElement={<NotFound />} status={404}>
         <Route
           index
           element={

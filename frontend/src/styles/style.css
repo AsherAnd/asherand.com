@@ -91,6 +91,23 @@ body.open .pages::after {
   width: 100%;
 }
 
+.error-message {
+  font-family: "Furious Styles";
+  font-size: calc(100px + 5vw);
+  color: var(--text-color);
+}
+
+.error-page {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+}
+
 figure {
   text-align: center;
 }
