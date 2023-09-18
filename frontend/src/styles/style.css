@@ -4,8 +4,8 @@
   --dark-gradient-stop: var(--dark-bg);
   --dark-text-color: rgb(167, 24, 20);
   --light-bg: white;
-  --light-gradient-start: rgba(99, 99, 99, 0.75);
-  --light-gradient-stop: var(--light-bg);
+  --light-gradient-stop: rgb(99, 99, 99);
+  --light-gradient-start: var(--light-bg);
   --light-text-color: rgb(28, 159, 223);
   --background: var(--dark-bg);
   --text-color: var(--dark-text-color);
@@ -232,7 +232,7 @@ header {
   height: 505px;
   max-height: 100px;
   overflow: hidden;
-  background-color: var(--gradient-stop);
+  background-color: var(--background);
 }
 
 header.scrolled {
@@ -465,7 +465,6 @@ nav.container {
   border-radius: 15px;
   overflow: hidden;
   background-color: var(--gradient-start);
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   display: grid;
   aspect-ratio: 9/13;
 }
