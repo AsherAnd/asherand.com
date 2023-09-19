@@ -19,7 +19,7 @@ function ProjectGallery(props) {
               img={project.thumbnail}
               alt="image"
               title={project.title}
-              largeImg={project.images}
+              largeImg={project.image}
               link={"/projects/" + project.title}
               key={i}
             />

@@ -2,7 +2,10 @@ import Main from "./containers/Main";
 import Theme from "./actions/Theme";
 import MenuToggle from "./actions/MenuToggle";
 import NotFound from "./components/NotFound";
-import ProjectDetail from "./containers/projects/ProjectDetail";
+import {
+  ProjectDetail,
+  ProjectDetailLoader,
+} from "./containers/projects/ProjectDetail";
 import Projects from "./containers/Projects";
 import {
   createBrowserRouter,
@@ -33,7 +36,12 @@ function App() {
         />
         <Route path="projects">
           <Route index element={<Projects />} />
-          <Route path=":id" index element={<ProjectDetail />} />
+          <Route
+            path=":id"
+            index
+            element={<ProjectDetail />}
+            loader={ProjectDetailLoader}
+          />
         </Route>
       </Route>
     )

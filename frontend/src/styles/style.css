@@ -615,6 +615,33 @@ nav.container {
   grid-row: 1;
 }
 
+/* Project Detail styles */
+.project-desc-title {
+  font-family: "Furious Styles";
+  color: var(--text-color);
+}
+
+.project-desc-image .container {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  row-gap: 2rem;
+}
+
+.project-desc-images .container {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+  row-gap: 2rem;
+}
+
+.project-desc-image figure,
+.project-desc-images figure {
+  width: 75%;
+  margin: auto;
+}
+
 /* Contact Styles */
 
 .contact .container {
@@ -875,6 +902,11 @@ body.dark {
     flex-basis: auto;
     order: 0;
     padding: 0;
+  }
+
+  .project-desc-images .container {
+    grid-template-columns: 1fr 1fr;
+    justify-items: normal;
   }
 
   .project-description h3 {
