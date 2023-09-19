@@ -6,6 +6,7 @@ import {
   ProjectDetail,
   ProjectDetailLoader,
 } from "./containers/projects/ProjectDetail";
+import ProjectNotFound from "./containers/projects/ProjectNotFound";
 import Projects from "./containers/Projects";
 import {
   createBrowserRouter,
@@ -34,7 +35,7 @@ function App() {
             />
           }
         />
-        <Route path="projects">
+        <Route path="projects" errorElement={<ProjectNotFound />}>
           <Route index element={<Projects />} />
           <Route
             path=":id"

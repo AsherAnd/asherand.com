@@ -7,14 +7,14 @@ function ProjectDetail() {
   const { id } = useParams();
   const project = useLoaderData();
 
-  if (project[0].type == "Photoshop") {
+  if (project[0].type === "Photoshop") {
     return (
       <>
         <PhotoshopDetail project={project[0]} />
         <Footer />
       </>
     );
-  } else if (project[0].type == "Web") {
+  } else if (project[0].type === "Web") {
     return (
       <>
         <WebDetail project={project[0]} />
@@ -30,10 +30,11 @@ const ProjectDetailLoader = async ({ params }) => {
 
   const res = await fetch(`${process.env.REACT_APP_API_URL}/projects/${id}`);
 
-  // if (!res.ok) {
-  //   re;
-  // }
-  return res;
+  if (!res.ok) {
+    throw Error("No such project exists");
+  }
+
+  return res.json();
 };
 
 export { ProjectDetail, ProjectDetailLoader };
