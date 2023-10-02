@@ -205,7 +205,7 @@ ul {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--text-color);
+  background: var(--secondary-text-color);
   border-radius: 5px;
 }
 
