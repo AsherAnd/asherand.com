@@ -51,6 +51,11 @@ a.highlight:hover {
   overflow: hidden;
 }
 
+.back-btn {
+  margin-right: 4rem;
+  display: none;
+}
+
 body {
   background-color: var(--background);
   background-attachment: fixed;
@@ -939,6 +944,10 @@ body.dark {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  .back-btn {
+    display: inline;
+  }
+
   .btn {
     font-size: 0.85rem;
   }

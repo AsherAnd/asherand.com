@@ -3,6 +3,10 @@ function WebDetail(props) {
     <>
       <div className="container">
         <h1 className="project-desc-heading heading">
+          <i
+            className="fa-solid fa-arrow-left back-btn"
+            onClick={props.back}
+          ></i>
           <span className="project-desc-title">{props.project.title}</span>
         </h1>
         <div className="project-desc-image">
