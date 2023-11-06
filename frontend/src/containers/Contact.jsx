@@ -30,13 +30,6 @@ function Contact() {
 
             <li>
               <SocialIcon
-                link="https://www.instagram.com/stark_intern/"
-                icon="fa-brands fa-instagram fa-lg"
-              />
-            </li>
-
-            <li>
-              <SocialIcon
                 link="https://github.com/asherand"
                 icon="fa-brands fa-github fa-lg"
               />
