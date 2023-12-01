@@ -22,21 +22,21 @@ function FilterButtons(props) {
       </button>
       <button
         className="filter-btn"
-        onClick={() => props.setActiveFilter("Web")}
+        onClick={() => props.setActiveFilter("Code")}
       >
-        Web
-      </button>
-      <button
-        className="filter-btn"
-        onClick={() => props.setActiveFilter("Tool")}
-      >
-        Tools
+        Code
       </button>
       <button
         className="filter-btn"
         onClick={() => props.setActiveFilter("Photoshop")}
       >
         Photoshop
+      </button>
+      <button
+        className="filter-btn"
+        onClick={() => props.setActiveFilter("Misc")}
+      >
+        Misc.
       </button>
     </div>
   );

@@ -34,11 +34,11 @@ app.get("/api", (req, res) => {
 });
 
 app.get("/api/experience", (req, res) => {
-  getJSON(db, "SELECT * from experiences ORDER BY `id` desc", res);
+  getJSON(db, "SELECT * from experience ORDER BY `id` desc", res);
 });
 
 app.get("/api/experience/:id", (req, res) => {
-  getJSON(db, `SELECT * FROM experiences WHERE id= ${req.params.id}`, res);
+  getJSON(db, `SELECT * FROM experience WHERE id= ${req.params.id}`, res);
 });
 
 app.get("/api/projects", (req, res) => {
