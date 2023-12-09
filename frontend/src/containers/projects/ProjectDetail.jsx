@@ -19,7 +19,7 @@ function ProjectDetail() {
         <Footer />
       </>
     );
-  } else if (project[0].type === "Web") {
+  } else if (project[0].type === "Code") {
     return (
       <>
         <CodeDetail project={project[0]} back={goBack} />
