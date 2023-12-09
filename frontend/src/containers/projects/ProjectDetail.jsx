@@ -1,6 +1,6 @@
 import { useLoaderData, useParams, useNavigate } from "react-router-dom";
 import PhotoshopDetail from "./PhotoshopDetail";
-import WebDetail from "./WebDetail";
+import CodeDetail from "./CodeDetail";
 import Footer from "../Footer";
 
 function ProjectDetail() {
@@ -22,7 +22,7 @@ function ProjectDetail() {
   } else if (project[0].type === "Web") {
     return (
       <>
-        <WebDetail project={project[0]} back={goBack} />
+        <CodeDetail project={project[0]} back={goBack} />
         <Footer />
       </>
     );

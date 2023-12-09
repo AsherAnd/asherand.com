@@ -1,4 +1,4 @@
-function WebDetail(props) {
+function CodeDetail(props) {
   return (
     <>
       <div className="container">
@@ -37,4 +37,4 @@ function WebDetail(props) {
   );
 }
 
-export default WebDetail;
+export default CodeDetail;
