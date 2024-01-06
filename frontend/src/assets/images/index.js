@@ -7,7 +7,7 @@ const ComicCover = {
   ComicsCode: require("./comics_code.png"),
   Issue: require("./issue_no.png"),
   Plastic: require("./reflection.png"),
-  FullDark: require("./Asher-Andargachew-full-dark.png"),
-  FullLight: require("./Asher-Andargachew-full-light.png"),
+  FullDark: require("./Asher-Andargachew-full-dark.webp"),
+  FullLight: require("./Asher-Andargachew-full-light.webp"),
 };
 export default ComicCover;

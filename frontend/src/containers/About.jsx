@@ -1,5 +1,5 @@
 import { Heading, SubHeading } from "../components/Headings";
-import Image from "../assets/images/Prometheus.png";
+import Image from "../assets/images/Prometheus.webp";
 
 function About() {
   return (
