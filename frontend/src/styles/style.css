@@ -1,3 +1,159 @@
+@font-face {
+  font-family: "Furious Styles";
+  src: url("../assets/fonts/FuriousStyles/fonts/furiousstylesdemo-webfont.woff2")
+      format("woff2"),
+    url("../assets/fonts/FuriousStyles/fonts/furiousstylesdemo-webfont.woff")
+      format("woff"),
+    url("../assets/fonts/FuriousStyles/fonts/FuriousStylesDemo.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Product Sans Black";
+  src: url("../assets/fonts/ProductSans/fonts/productsans-black-webfont.woff2")
+      format("woff2"),
+    url("../assets/fonts/ProductSans/fonts/productsans-black-webfont.woff")
+      format("woff"),
+    url("../assets/fonts/ProductSans/fonts/ProductSans-Black.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Product Sans Black Italic";
+  src: url("../assets/fonts/ProductSans/fonts/productsans-blackitalic-webfont.woff2")
+      format("woff2"),
+    url("../assets/fonts/ProductSans/fonts/productsans-blackitalic-webfont.woff")
+      format("woff"),
+    url("../assets/fonts/ProductSans/fonts/ProductSans-BlackItalic.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Product Sans Bold";
+  src: url("../assets/fonts/ProductSans/fonts/productsans-bold-webfont.woff2")
+      format("woff2"),
+    url("../assets/fonts/ProductSans/fonts/productsans-bold-webfont.woff")
+      format("woff"),
+    url("../assets/fonts/ProductSans/fonts/ProductSans-Bold.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Product Sans Bold Italic";
+  src: url("../assets/fonts/ProductSans/fonts/productsans-bolditalic-webfont.woff2")
+      format("woff2"),
+    url("../assets/fonts/ProductSans/fonts/productsans-bolditalic-webfont.woff")
+      format("woff"),
+    url("../assets/fonts/ProductSans/fonts/ProductSans-BoldItalic.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Product Sans Italic";
+  src: url("../assets/fonts/ProductSans/fonts/productsans-italic-webfont.woff2")
+      format("woff2"),
+    url("../assets/fonts/ProductSans/fonts/productsans-italic-webfont.woff")
+      format("woff"),
+    url("../assets/fonts/ProductSans/fonts/ProductSans-Italic.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Product Sans Light";
+  src: url("../assets/fonts/ProductSans/fonts/productsans-light-webfont.woff2")
+      format("woff2"),
+    url("../assets/fonts/ProductSans/fonts/productsans-light-webfont.woff")
+      format("woff"),
+    url("../assets/fonts/ProductSans/fonts/ProductSans-Light.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Product Sans Light Italic";
+  src: url("../assets/fonts/ProductSans/fonts/productsans-lightitalic-webfont.woff2")
+      format("woff2"),
+    url("../assets/fonts/ProductSans/fonts/productsans-lightitalic-webfont.woff")
+      format("woff"),
+    url("../assets/fonts/ProductSans/fonts/ProductSans-LightItalic.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Product Sans Medium";
+  src: url("../assets/fonts/ProductSans/fonts/productsans-medium-webfont.woff2")
+      format("woff2"),
+    url("../assets/fonts/ProductSans/fonts/productsans-medium-webfont.woff")
+      format("woff"),
+    url("../assets/fonts/ProductSans/fonts/ProductSans-Medium.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Product Sans Medium Italic";
+  src: url("../assets/fonts/ProductSans/fonts/productsans-mediumitalic-webfont.woff2")
+      format("woff2"),
+    url("../assets/fonts/ProductSans/fonts/productsans-mediumitalic-webfont.woff")
+      format("woff"),
+    url("../assets/fonts/ProductSans/fonts/ProductSans-MediumItalic.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Product Sans";
+  src: url("../assets/fonts/ProductSans/fonts/productsans-regular-webfont.woff2")
+      format("woff2"),
+    url("../assets/fonts/ProductSans/fonts/productsans-regular-webfont.woff")
+      format("woff"),
+    url("../assets/fonts/ProductSans/fonts/ProductSans-Regular.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Product Sans Thin";
+  src: url("../assets/fonts/ProductSans/fonts/productsans-thin-webfont.woff2")
+      format("woff2"),
+    url("../assets/fonts/ProductSans/fonts/productsans-thin-webfont.woff")
+      format("woff"),
+    url("../assets/fonts/ProductSans/fonts/ProductSans-Thin.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Product Sans Thin Italic";
+  src: url("../assets/fonts/ProductSans/fonts/productsans-thinitalic-webfont.woff2")
+      format("woff2"),
+    url("../assets/fonts/ProductSans/fonts/productsans-thinitalic-webfont.woff")
+      format("woff"),
+    url("../assets/fonts/ProductSans/fonts/ProductSans-ThinItalic.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --dark-bg: black;
   --dark-gradient-start: hsl(229, 32%, 17%);
@@ -385,6 +541,10 @@ nav.container {
   -ms-user-select: none;
 }
 
+.showcase-image {
+  aspect-ratio: 0.73/1;
+}
+
 .showcase-image .full {
   position: static;
 }
@@ -448,6 +608,7 @@ nav.container {
 
 .about-image {
   width: 75%;
+  aspect-ratio: 1/1;
 }
 
 .about-info {
@@ -851,7 +1012,7 @@ body.dark {
   .experience,
   .projects,
   .showcase-area {
-    padding: 90px 0;
+    padding: 8rem 0;
   }
 
   .about-info {
