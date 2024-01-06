@@ -1,5 +1,6 @@
 import { SecondaryButton } from "./Button";
 import { motion } from "framer-motion";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function ProjectCard(props) {
   return (
@@ -16,7 +17,7 @@ function ProjectCard(props) {
         target="_blank"
         rel="noreferrer"
       >
-        <img src={props.img} alt={props.alt} />
+        <LazyLoadImage src={props.img} alt={props.alt} effect="blur" />
         <div className="project-overlay">
           <span className="magnify">
             <i className="fa-solid fa-magnifying-glass-plus fa-lg"></i>
@@ -48,7 +49,7 @@ function ExperienceCard(props) {
       </div>
       <div className="experience-background">
         <div className="experience-image">
-          <img src={props.img} alt={props.alt} />
+          <LazyLoadImage src={props.img} alt={props.alt} effect="blur" />
         </div>
       </div>
     </div>

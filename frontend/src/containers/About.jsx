@@ -1,5 +1,7 @@
 import { Heading, SubHeading } from "../components/Headings";
-import Image from "../assets/images/Prometheus.webp";
+import PlaceholderImage from "../assets/images/Prometheus-low.jpg";
+import Image from "../assets/images/Prometheus.png";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function About() {
   return (
@@ -7,7 +9,12 @@ function About() {
       <div className="container">
         <div className="about-image">
           <figure>
-            <img src={Image} alt="prometheus" />
+            <LazyLoadImage
+              src={Image}
+              PlaceholderSrc={PlaceholderImage}
+              alt="prometheus"
+              effect="blur"
+            />
             <figcaption>(The Coming of Prometheus by Me)</figcaption>
           </figure>
         </div>
