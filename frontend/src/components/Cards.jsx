@@ -1,6 +1,7 @@
 import { SecondaryButton } from "./Button";
 import { motion } from "framer-motion";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 function ProjectCard(props) {
   return (

@@ -1,7 +1,9 @@
 import { Heading, SubHeading } from "../components/Headings";
-import PlaceholderImage from "../assets/images/Prometheus-low.jpg";
 import Image from "../assets/images/Prometheus.png";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+
+const PlaceholderImage = require("../assets/images/Prometheus-low.jpg");
 
 function About() {
   return (
@@ -11,7 +13,7 @@ function About() {
           <figure>
             <LazyLoadImage
               src={Image}
-              PlaceholderSrc={PlaceholderImage}
+              placeholderSrc={PlaceholderImage}
               alt="prometheus"
               effect="blur"
             />
