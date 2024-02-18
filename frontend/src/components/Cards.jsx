@@ -13,7 +13,9 @@ function ProjectCard(props) {
       className="project-card"
     >
       <a className="project-image" href={props.link}>
-        <LazyLoadImage src={props.img} alt={props.alt} effect="blur" />
+        <div className="project-image-container">
+          <LazyLoadImage src={props.img} alt={props.alt} effect="blur" />
+        </div>
         <div className="project-overlay">
           <span className="magnify">
             <i className="fa-solid fa-magnifying-glass-plus fa-lg"></i>

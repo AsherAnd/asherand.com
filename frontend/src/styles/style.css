@@ -726,10 +726,13 @@ nav.container {
 .project-image {
   position: relative;
   overflow: hidden;
+}
+
+.project-image-container {
+  position: relative;
   display: flex;
-  align-items: center;
   justify-content: center;
-  cursor: pointer;
+  aspect-ratio: 3/2;
 }
 
 .project-image img {
