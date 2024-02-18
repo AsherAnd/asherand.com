@@ -731,12 +731,13 @@ nav.container {
 .project-image-container {
   position: relative;
   display: flex;
-  justify-content: center;
   aspect-ratio: 3/2;
 }
 
 .project-image img {
-  width: 105%;
+  width: 125%;
+  height: 125%;
+  object-fit: cover;
 }
 
 .project-image:hover .magnify {
