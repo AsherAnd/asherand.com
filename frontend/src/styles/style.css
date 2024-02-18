@@ -156,18 +156,20 @@
 
 :root {
   --dark-bg: black;
-  --dark-gradient-start: hsl(229, 32%, 17%);
+  --dark-gradient-start: rgb(29, 35, 57);
   --dark-gradient-stop: var(--dark-bg);
   --dark-text-color: rgb(167, 24, 20);
   --light-bg: white;
   --light-gradient-stop: rgb(99, 99, 99);
   --light-gradient-start: var(--light-bg);
   --light-text-color: rgb(28, 159, 223);
+  --light-slide-color: rgb(99, 99, 99);
   --background: var(--dark-bg);
   --text-color: var(--dark-text-color);
   --gradient-start: var(--dark-gradient-start);
   --gradient-stop: var(--dark-gradient-stop);
   --secondary-text-color: var(--light-bg);
+  --slide-color: var(--light-bg);
 }
 
 /* General Styles */
@@ -618,7 +620,7 @@ nav.container {
 /* Experience Styles */
 
 .experience-background {
-  background-color: var(--light-bg);
+  background-color: var(--slide-color);
   position: relative;
   overflow: hidden;
   display: flex;
@@ -939,6 +941,7 @@ body.open-modal {
     --secondary-text-color: var(--dark-bg);
     --gradient-start: var(--light-gradient-start);
     --gradient-stop: var(--light-gradient-stop);
+    --slide-color: var(--light-bg);
   }
 
   .grain {
@@ -952,6 +955,7 @@ body.light {
   --secondary-text-color: var(--dark-bg);
   --gradient-start: var(--light-gradient-start);
   --gradient-stop: var(--light-gradient-stop);
+  --slide-color: var(--light-gradient-stop);
 }
 
 body.dark {
@@ -960,6 +964,7 @@ body.dark {
   --gradient-start: var(--dark-gradient-start);
   --gradient-stop: var(--dark-gradient-stop);
   --secondary-text-color: var(--light-bg);
+  --slide-color: var(--light-bg);
 }
 
 .grain.light {
