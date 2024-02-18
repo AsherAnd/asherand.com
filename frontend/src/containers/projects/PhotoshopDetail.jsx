@@ -1,3 +1,6 @@
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+
 function PhotoshopDetail(props) {
   return (
     <>
@@ -12,11 +15,19 @@ function PhotoshopDetail(props) {
         <div className="project-desc-images">
           <div className="container">
             <figure>
-              <img src={props.project.image} alt={props.project.title} />
+              <LazyLoadImage
+                src={props.project.image}
+                alt={props.project.title}
+                effect="blur"
+              />
               <figcaption>My edited image</figcaption>
             </figure>
             <figure>
-              <img src={props.project.original} alt="Original image" />
+              <LazyLoadImage
+                src={props.project.original}
+                alt="Original image"
+                effect="blur"
+              />
               <figcaption>{props.project.original_artist}</figcaption>
             </figure>
           </div>

@@ -1,3 +1,6 @@
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+
 function CodeDetail(props) {
   return (
     <>
@@ -12,7 +15,11 @@ function CodeDetail(props) {
         <div className="project-desc-image">
           <div className="container">
             <figure>
-              <img src={props.project.image} alt={props.project.title} />
+              <LazyLoadImage
+                src={props.project.image}
+                alt={props.project.title}
+                effect="blur"
+              />
               <figcaption>
                 {" "}
                 <a
