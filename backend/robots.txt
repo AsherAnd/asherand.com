@@ -1,0 +1,2 @@
+User-agent: *
+Disallow: /assets/Asher Andargachew Resume 2024.pdf

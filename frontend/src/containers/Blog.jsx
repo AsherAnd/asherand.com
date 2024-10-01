@@ -1,4 +1,4 @@
-export default function Experience() {
+export default function Blog() {
   return (
     <div>
       <h1>Asher Andargachew</h1>
