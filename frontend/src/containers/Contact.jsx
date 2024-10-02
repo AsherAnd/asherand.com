@@ -1,7 +1,7 @@
 export default function Contact() {
   return (
-    <div>
-      <h1>Asher Andargachew</h1>
+    <div className="container contact">
+      <h1>Contact</h1>
     </div>
   );
 }
