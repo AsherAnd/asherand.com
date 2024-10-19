@@ -1,20 +1,12 @@
 :root {
   --highlight-text-color: #16b8f3;
   --text-color: white;
+  --debug-color: red;
 }
 
-::-webkit-scrollbar {
-  width: 5px;
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
+::selection {
+  color: var(--text-color);
   background: var(--highlight-text-color);
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--text-color);
 }
 
 *,
@@ -23,6 +15,15 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+.icon {
+  color: var(--highlight-text-color);
+  cursor: pointer;
+  font-size: 32px;
+}
+.icon:hover {
+  color: var(--text-color);
 }
 
 html {
@@ -35,10 +36,12 @@ body {
   background-color: black;
   background-attachment: fixed;
   background-image: url("background test6.png");
-  background-size: fill;
+  background-position: center;
+  background-size: contain;
   overflow-x: hidden;
   color: var(--text-color);
   font-family: "Product Sans";
+  background-size: 200%;
 }
 
 .bg-gradient {
@@ -59,6 +62,10 @@ body {
   margin: 0 16px 0 16px;
 }
 
+ul {
+  list-style: none;
+}
+
 /* md */
 @media (min-width: 768px) {
   .container {
@@ -70,7 +77,6 @@ body {
 @media (min-width: 1024px) {
   body {
     background-size: 95%;
-    background-position: center;
   }
 
   .container {
@@ -79,4 +85,5 @@ body {
 }
 
 /* xl */
-/* @media (min-width: 1280px) {} */
+@media (min-width: 1280px) {
+}
