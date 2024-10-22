@@ -28,6 +28,8 @@
 
 html {
   scroll-behavior: smooth;
+  scrollbar-color:  var(--highlight-text-color) transparent;
+  scrollbar-width: thin;
 }
 
 body {

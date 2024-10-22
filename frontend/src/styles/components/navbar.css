@@ -101,10 +101,6 @@
   background-color: var(--highlight-text-color);
 }
 
-.nav-link:focus {
-  background-color: var(--highlight-text-color);
-}
-
 .nav-padder {
   padding: 44px 0px;
 }
