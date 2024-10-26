@@ -53,7 +53,6 @@ body {
 }
 
 .bg-image{
-  background-size: 200%;
   background-image: url("background test6.png");
   background-position: center;
   background-size: contain;
