@@ -102,7 +102,7 @@
 }
 
 .nav-padder {
-  padding: 44px 0px;
+  padding: 64px 0px;
 }
 
 .nav-padder::after {
@@ -121,6 +121,7 @@
   width: 100%;
   overflow: hidden;
   transition: 0.3s;
+  z-index: 3;
 }
 
 .overlay.open {
@@ -164,7 +165,7 @@
   }
 
   .nav-padder {
-    padding: 48px 0px;
+    padding: 72px 0px;
   }
 
   .hamburger {

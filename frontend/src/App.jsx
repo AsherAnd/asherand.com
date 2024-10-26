@@ -7,7 +7,7 @@ import Contact from "./containers/Contact.jsx";
 
 export default function App() {
   return (
-    <div>
+    <div className="content">
       <Navbar />
       <Home />
       <About />

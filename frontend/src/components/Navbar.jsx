@@ -5,8 +5,6 @@ import "../styles/components/navbar.css";
 export default function Navbar() {
   gsap.registerPlugin(useGSAP, ScrollToPlugin);
 
-  const buttons = document.querySelectorAll(".nav-link")
-
   // Toggle only on devices less than a desktop
   var windowWidth = window.innerWidth;
   const screenSize = 1024;
