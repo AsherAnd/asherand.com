@@ -8,6 +8,15 @@ export default function Home() {
   // gsap cleanup
   const { contextSafe } = useGSAP();
 
+  useGSAP(() => {
+    gsap.to(".intro-title", {
+      duration: 0.5,
+      delay: 1,
+      stagger: 0.25,
+      y: "0",
+    });
+  });
+
   const scrollTo = contextSafe(() => {
     gsap.to(window, {
       duration: 0.25,
