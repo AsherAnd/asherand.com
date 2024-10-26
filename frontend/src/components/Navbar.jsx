@@ -1,14 +1,25 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import { useGSAP } from '@gsap/react';
 import "../styles/components/navbar.css";
 
 export default function Navbar() {
+  gsap.registerPlugin(useGSAP, ScrollToPlugin);
+
+  const buttons = document.querySelectorAll(".nav-link")
+
+  // Toggle only on devices less than a desktop
   var windowWidth = window.innerWidth;
+  const screenSize = 1024;
 
   // Sticky Navbar
   const [fixed, setScroll] = useState(true);
 
   //button state
   const [menuState, setState] = useState("closed");
+
+  // gsap cleanup
+  const navLinks = useRef();
+  const { contextSafe } = useGSAP({scope: navLinks});
 
   window.addEventListener("resize", () => {
     windowWidth = window.innerWidth;
@@ -40,26 +51,36 @@ export default function Navbar() {
     }
   };
 
+  const scrollTo = contextSafe((e) => {
+    const id = e.target.innerText.toLowerCase();
+
+    gsap.to(window, { duration: 0.25, scrollTo: {y: `#${id}`, offsetY:112 }});
+
+    if (windowWidth < screenSize){
+      toggleMenu()
+    };
+});
+
   return (
     <div>
       <nav className={fixed ? "navbar" : "navbar scrolled"}>
         <div className="logo">Asher</div>
-        <div className="nav-links">
+        <div className="nav-links" ref={navLinks}>
           <ul>
             <li>
-              <button className="nav-link">Home</button>
+              <button className="nav-link" onClick={scrollTo}>Home</button>
             </li>
             <li>
-              <button className="nav-link">About</button>
+              <button className="nav-link" onClick={scrollTo}>About</button>
             </li>
             <li>
-              <button className="nav-link">Experience</button>
+              <button className="nav-link" onClick={scrollTo}>Experience</button>
             </li>
             <li>
-              <button className="nav-link">Projects</button>
+              <button className="nav-link" onClick={scrollTo}>Projects</button>
             </li>
             <li>
-              <button className="nav-link">Contact</button>
+              <button className="nav-link" onClick={scrollTo}>Contact</button>
             </li>
             <li>
               <button className="nav-link">Blog</button>

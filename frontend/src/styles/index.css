@@ -27,7 +27,6 @@
 }
 
 html {
-  scroll-behavior: smooth;
   scrollbar-color:  var(--highlight-text-color) transparent;
   scrollbar-width: thin;
 }
@@ -61,7 +60,8 @@ body {
 }
 
 .container {
-  margin: 0 16px 0 16px;
+  /* margin: 0 16px 0 16px; */
+  margin: 0 16px 360px 16px;
 }
 
 ul {
@@ -78,11 +78,12 @@ ul {
 /* lg */
 @media (min-width: 1024px) {
   body {
-    background-size: 95%;
+    background-size: 50%;
   }
 
   .container {
-    margin: 0 160px 0 160px;
+    /* margin: 0 160px 0 160px; */
+    margin: 0 160px 360px 160px;
   }
 }
 

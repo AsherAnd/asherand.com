@@ -1,6 +1,6 @@
 export default function Experience() {
   return (
-    <div className="container experience">
+    <div id="experience" className="container">
       <h1>Experience</h1>
     </div>
   );
