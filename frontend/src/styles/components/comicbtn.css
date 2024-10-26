@@ -1,83 +1,83 @@
 .btn {
-    /* Change position from absolute to relative */
-    position: relative; 
-    background: #000;
-    width: 168px;
-    padding: 16px 8px;
-    border: 2px solid #4ac0ee;
-    color: #fff;
-    font-weight: bold;
-    text-transform: capitalize;
-    text-align: center;
-    -moz-background-clip: padding; 
-    -webkit-background-clip: padding-box;
-    background-clip: padding-box;
-    z-index: 2;
-    transition: all 0.15s 0.15s ease-out;
-    font-family: "Product Sans Bold";
-  
+  /* Change position from absolute to relative */
+  position: relative;
+  background: #000;
+  width: 168px;
+  padding: 16px 8px;
+  border: 2px solid #4ac0ee;
+  color: #fff;
+  font-weight: bold;
+  text-transform: capitalize;
+  text-align: center;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  z-index: 2;
+  transition: all 0.15s 0.15s ease-out;
+  font-family: "Product Sans Bold";
+
+  &:after,
+  &:before {
+    position: absolute;
+    width: 100%;
+    max-width: 100%;
+    top: 100%;
+    left: 0;
+    bottom: -8px;
+    content: "";
+    z-index: 1;
+    transition: all 0.1s 0.1s ease-out;
+  }
+
+  &:before {
+    background: #4ac0ee;
+    top: 4px;
+    left: -8px;
+    height: 100%;
+    width: 8px;
+  }
+
+  &:after {
+    width: 100%;
+    background: #4ac0ee;
+    right: 0px;
+    left: -8px;
+    height: 8px;
+  }
+
+  &:hover {
+    background: #fff;
+    color: #000;
+    margin-left: -7.5px;
+    margin-bottom: -7.5px;
+    cursor: pointer;
+
     &:after,
     &:before {
-        position: absolute;
-        width: 100%;
-        max-width: 100%;
-        top: 100%;
-        left: 0;
-        bottom: -8px;
-        content: '';
-        z-index: 1;
-        transition: all 0.1s 0.1s ease-out;
+      top: 100%;
+      left: 0;
+      bottom: 0;
     }
-  
+
     &:before {
-        background: #4ac0ee;
-        top: 4px;
-        left: -8px;
-        height: 100%;
-        width: 8px;
+      top: 0;
+      left: 0;
+      width: 0;
     }
-  
+
     &:after {
-        width: 100%;
-        background: #4ac0ee;
-        right: 0px;
-        left: -8px;
-        height: 8px;
-    }
-  
-    &:hover {
-      background: #fff;
-      color: #000;
-      margin-left: -7.5px;
-      margin-bottom: -7.5px;
-      cursor: pointer;
-  
-      &:after,
-      &:before {
-          top: 100%;
-          left: 0;
-          bottom: 0;
-      }
-  
-      &:before {
-          top: 0;
-          left: 0;
-          width: 0;
-      }
-  
-      &:after {
-          right: 0;
-          left: 0;
-          height: 0;
-      }
-    }
-  
-    &:active {
-      background: #4ac0ee;
-      color: #fff;
+      right: 0;
+      left: 0;
+      height: 0;
     }
   }
-  
-.comic-btn{
-    height:64px;
+
+  &:active {
+    background: #4ac0ee;
+    color: #fff;
+  }
+}
+
+.comic-btn {
+  height: 64px;
 }

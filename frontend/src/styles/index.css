@@ -27,7 +27,7 @@
 }
 
 html {
-  scrollbar-color:  var(--highlight-text-color) transparent;
+  scrollbar-color: var(--highlight-text-color) transparent;
   scrollbar-width: thin;
 }
 
@@ -52,7 +52,7 @@ body {
   z-index: -1;
 }
 
-.bg-image{
+.bg-image {
   background-image: url("background test6.png");
   background-position: center;
   background-size: contain;

@@ -1,19 +1,19 @@
-header{
-    font-family: "Product Sans Bold";
-    font-size: 20px;
-    display: flex;
+header {
+  font-family: "Product Sans Bold";
+  font-size: 20px;
+  display: flex;
 }
 
-.intro > div:not(:last-child){
-    margin-bottom: 60px;
-}  
-
-.intro-welcome p:not(:last-child){
-    margin-bottom: 40px;
+.intro > div:not(:last-child) {
+  margin-bottom: 60px;
 }
 
-.intro-title:not(:last-child)::after{
-    content:"|";
-    margin: 0 8px;
-    color: var(--highlight-text-color);
+.intro-welcome p:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.intro-title:not(:last-child)::after {
+  content: "|";
+  margin: 0 8px;
+  color: var(--highlight-text-color);
 }
