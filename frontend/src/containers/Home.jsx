@@ -33,7 +33,10 @@ export default function Home() {
             <div className="intro-title">Developer</div>
             <div className="intro-title">Maker</div>
           </header>
-          <div className="intro-name">Asher ANDARGACHEW</div>
+          <div className="intro-name">
+            <div className="first-name">Asher</div>
+            <div className="last-name">Andargachew</div>
+          </div>
         </div>
         <div className="intro-welcome">
           <p>All right. Let’s do this one last time again.</p>
