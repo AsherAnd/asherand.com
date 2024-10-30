@@ -42,6 +42,12 @@ a:hover::after {
   transform-origin: bottom center;
 }
 
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .icon {
   color: var(--highlight-text-color);
   cursor: pointer;
@@ -92,19 +98,21 @@ body {
   margin: 0 16px 360px 16px;
 }
 
+.content {
+  flex: 1;
+}
+
 ul {
   list-style: none;
 }
 
 footer {
-  background: rgb(27, 27, 27);
   background: radial-gradient(
     circle,
     rgba(27, 27, 27, 1) 0%,
     rgba(0, 0, 0, 1) 100%
   );
-  display: flex;
-  justify-content: center;
+  text-align: center;
   border-top: 2px solid var(--highlight-text-color);
   padding: 32px;
 }

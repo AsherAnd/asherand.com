@@ -8,13 +8,17 @@ import Footer from "./components/footer.jsx";
 
 export default function App() {
   return (
-    <div className="content">
-      <Navbar />
-      <Home />
-      <About />
-      <Experience />
-      <Projects />
-      <Contact />
+    <div className="App">
+      <div class="bg-image"></div>
+      <div class="bg-gradient"></div>
+      <div className="content">
+        <Navbar />
+        <Home />
+        <About />
+        <Experience />
+        <Projects />
+        <Contact />
+      </div>
       <Footer />
     </div>
   );
