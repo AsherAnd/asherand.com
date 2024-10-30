@@ -17,6 +17,31 @@
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  color: var(--highlight-text-color);
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--highlight-text-color);
+  transform-origin: bottom center;
+  transition: transform 0.25s ease-out;
+}
+
+a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom center;
+}
+
 .icon {
   color: var(--highlight-text-color);
   cursor: pointer;
@@ -69,6 +94,19 @@ body {
 
 ul {
   list-style: none;
+}
+
+footer {
+  background: rgb(27, 27, 27);
+  background: radial-gradient(
+    circle,
+    rgba(27, 27, 27, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  display: flex;
+  justify-content: center;
+  border-top: 2px solid var(--highlight-text-color);
+  padding: 32px;
 }
 
 /* md */
