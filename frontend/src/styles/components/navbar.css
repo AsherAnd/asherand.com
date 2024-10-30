@@ -175,4 +175,8 @@
 
 /* xl */
 @media (min-width: 1280px) {
+  .navbar {
+    background-color: transparent;
+    padding: 36px 240px;
+  }
 }

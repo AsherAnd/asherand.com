@@ -63,7 +63,7 @@ body {
 }
 
 .container {
-  /* margin: 0 16px 0 16px; */
+  /* margin: 0 16px; */
   margin: 0 16px 360px 16px;
 }
 
@@ -74,7 +74,7 @@ ul {
 /* md */
 @media (min-width: 768px) {
   .container {
-    margin: 0 32px 0 32px;
+    margin: 0 32px;
   }
 }
 
@@ -85,11 +85,15 @@ ul {
   }
 
   .container {
-    /* margin: 0 160px 0 160px; */
+    /* margin: 0 160px; */
     margin: 0 160px 360px 160px;
   }
 }
 
 /* xl */
 @media (min-width: 1280px) {
+  .container {
+    /* margin: 0 240px; */
+    margin: 0 240px 360px 240px;
+  }
 }
