@@ -9,8 +9,8 @@ import Footer from "./components/footer.jsx";
 export default function App() {
   return (
     <div className="App">
-      <div class="bg-image"></div>
-      <div class="bg-gradient"></div>
+      <div className="bg-image"></div>
+      <div className="bg-gradient"></div>
       <div className="content">
         <Navbar />
         <Home />
