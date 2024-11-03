@@ -8,551 +8,30 @@ export default function SvgName() {
     >
       <defs>
         <g id="masks">
-          <g id="last-name">
-            <mask id="m42">
-              <line
-                className="strokeMask"
-                id="mask-and-w3"
-                x1="375.5"
-                y1="85.5"
-                x2="411.5"
-                y2="26.5"
-                fill="none"
-                stroke="#fff"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="10"
-              />
-            </mask>
-            <mask id="m41">
-              <polyline
-                className="strokeMask"
-                id="mask-and-w2"
-                points="354.53 81 384 45 373 85"
-                fill="none"
-                stroke="#fff"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="11"
-              />
-            </mask>
-            <mask id="m40">
-              <line
-                className="strokeMask"
-                id="mask-and-w1"
-                x1="372.8"
-                y1="34.09"
-                x2="353.5"
-                y2="81.5"
-                fill="none"
-                stroke="#fff"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="10"
-              />
-            </mask>
-            <mask id="m39">
-              <line
-                className="strokeMask"
-                id="mask-and-e4"
-                x1="318.73"
-                y1="84.55"
-                x2="347"
-                y2="78"
-                fill="none"
-                stroke="#fff"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="8"
-              />
-            </mask>
-            <mask id="m38">
-              <line
-                className="strokeMask"
-                id="mask-and-e3"
-                x1="326.79"
-                y1="60.93"
-                x2="352"
-                y2="58"
-                fill="none"
-                stroke="#fff"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="8"
-              />
-            </mask>
-            <mask id="m37">
-              <line
-                className="strokeMask"
-                id="mask-and-e2"
-                x1="336.5"
-                y1="41.5"
-                x2="364.5"
-                y2="38.5"
-                fill="none"
-                stroke="#fff"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="8"
-              />
-            </mask>
-            <mask id="m36">
-              <line
-                className="strokeMask"
-                id="mask-and-e1"
-                x1="348"
-                y1="37"
-                x2="317.77"
-                y2="84.55"
-                fill="none"
-                stroke="#fff"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="9"
-              />
-            </mask>
-            <mask id="m35">
-              <line
-                className="strokeMask"
-                id="mask-and-h3"
-                x1="293.5"
-                y1="60.5"
-                x2="321.64"
-                y2="56.92"
-                fill="none"
-                stroke="#fff"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="6"
-              />
-            </mask>
-            <mask id="m34">
-              <line
-                className="strokeMask"
-                id="mask-and-h2"
-                x1="301.5"
-                y1="89.5"
-                x2="331.5"
-                y2="32.5"
-                fill="none"
-                stroke="#fff"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="9"
-              />
-            </mask>
-            <mask id="m33">
-              <line
-                className="strokeMask"
-                id="mask-and-h1"
-                x1="283"
-                y1="86"
-                x2="310"
-                y2="34"
-                fill="none"
-                stroke="#fff"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="9"
-              />
-            </mask>
-            <mask id="m32">
-              <polyline
-                className="strokeMask"
-                id="mask-and-c"
-                points="282 58 289 44 290 39 287 38 275.81 48 269 57 262 69 259 79 261 84 267 84 273 78 282.01 67.5"
-                fill="none"
-                stroke="#fff"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="9"
-              />
-            </mask>
-            <mask id="m31">
-              <line
-                className="strokeMask"
-                id="mask-and-a9"
-                x1="255.5"
-                y1="66.5"
-                x2="222.5"
-                y2="68.5"
-                fill="none"
-                stroke="#fff"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="7"
-              />
-            </mask>
-            <mask id="m30">
-              <line
-                className="strokeMask"
-                id="mask-and-a8"
-                x1="260"
-                y1="32"
-                x2="241"
-                y2="92"
-                fill="none"
-                stroke="#fff"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="9"
-              />
-            </mask>
-            <mask id="m29">
-              <line
-                className="strokeMask"
-                id="mask-and-a7"
-                x1="217.19"
-                y1="88.24"
-                x2="256.61"
-                y2="35.65"
-                fill="none"
-                stroke="#fff"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="8"
-              />
-            </mask>
-            <mask id="m28">
-              <line
-                className="strokeMask"
-                id="mask-and-g2"
-                x1="199"
-                y1="67"
-                x2="224.64"
-                y2="62.1"
-                fill="none"
-                stroke="#fff"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="7"
-              />
-            </mask>
-            <mask id="m27">
-              <path
-                className="strokeMask"
-                id="mask-and-g1"
-                d="m215.06,54.17s4.94-6.17,5.94-8.17,2-7,2-7l-1.26-2.8s-2.9.5-5.42,1.83c-2.81,1.48-5.81,4.48-5.81,4.48l-7.87,8.31-4.53,5.56s-3.6,6.14-4.6,8.14-3,7-4,9-1,5-1,7-.56,4.9.72,5.45,7.28-1.45,7.28-1.45l6-5,5-5,4-5"
-                fill="none"
-                stroke="#fff"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="8"
-              />
-            </mask>
-            <mask id="m26">
-              <path
-                className="strokeMask"
-                id="mask-and-r3"
-                d="m166.19,61.2l3.17,7.3,1.64,3.5,2.26,5.06s5.08,6.02,4.91,5.98"
-                fill="none"
-                stroke="#fff"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="6"
-              />
-            </mask>
-            <mask id="m25">
-              <path
-                className="strokeMask"
-                id="mask-and-r2"
-                d="m166.93,40.39s13.38-1.77,15.98-1.83,6.57.94,7.58,1.44,2.02,4.5,2.02,4.5c0,0-2,3-4,5s-5.89,4-5.89,4l-6.11,4-6.16,4.04-6.5.91"
-                fill="none"
-                stroke="#fff"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="8"
-              />
-            </mask>
-            <mask id="m24">
-              <path
-                className="strokeMask"
-                id="mask-and-r1"
-                d="m177.5,35.5l-30.08,52.5,30.08-52.5Z"
-                fill="none"
-                stroke="#fff"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="10"
-              />
-            </mask>
-            <mask id="m23">
-              <line
-                className="strokeMask"
-                id="mask-and-a6"
-                x1="149.5"
-                y1="66.5"
-                x2="116.5"
-                y2="68.5"
-                fill="none"
-                stroke="#fff"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="8"
-              />
-            </mask>
-            <mask id="m22">
-              <line
-                className="strokeMask"
-                id="mask-and-a5"
-                x1="154"
-                y1="32"
-                x2="135"
-                y2="92"
-                fill="none"
-                stroke="#fff"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="9"
-              />
-            </mask>
-            <mask id="m21">
-              <line
-                className="strokeMask"
-                id="mask-and-a4"
-                x1="111.19"
-                y1="88.24"
-                x2="150.61"
-                y2="35.65"
-                fill="none"
-                stroke="#fff"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="8"
-              />
-            </mask>
-            <mask id="m20">
-              <path
-                className="strokeMask"
-                id="mask-and-d2"
-                d="m97,43l18-4s2.07-1,4.53,0,3.47,1,4.47,3-3.11,9.39-3.11,9.39c0,0-3.89,4.61-4.89,5.61l-6,6-13,11.19-12,6.81"
-                fill="none"
-                stroke="#fff"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="8"
-              />
-            </mask>
-            <mask id="m19">
-              <line
-                className="strokeMask"
-                id="mask-and-d1"
-                x1="80.03"
-                y1="84.4"
-                x2="107"
-                y2="38"
-                fill="none"
-                stroke="#fff"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="8"
-              />
-            </mask>
-            <mask id="m18">
-              <path
-                className="strokeMask"
-                id="mask-and-n"
-                d="m40,88l25-45s2,2,2,4-3,33-2,33,4-1,4-1l23-50"
-                fill="none"
-                stroke="#fff"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="8"
-              />
-            </mask>
-            <mask id="m17">
-              <line
-                className="strokeMask"
-                id="mask-and-a3"
-                x1="42.5"
-                y1="66.5"
-                x2="9.5"
-                y2="68.5"
-                fill="none"
-                stroke="#fff"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="7"
-              />
-            </mask>
-            <mask id="m16">
-              <line
-                className="strokeMask"
-                id="mask-and-a2"
-                x1="47"
-                y1="32"
-                x2="28"
-                y2="92"
-                fill="none"
-                stroke="#fff"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="9"
-              />
-            </mask>
-            <mask id="m15">
-              <line
-                className="strokeMask"
-                id="mask-and-a1"
-                x1="4.19"
-                y1="88.24"
-                x2="43.61"
-                y2="35.65"
-                fill="none"
-                stroke="#fff"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="8"
-              />
-            </mask>
-          </g>
           <g id="first-name">
-            <mask id="m14">
-              <path
-                className="strokeMask"
-                id="mask-asher-r3"
-                d="m131.24,35.6l2.76,6.4s2,4,3,5,2,2,4,3"
-                fill="none"
-                stroke="#fff"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="6"
-              />
-            </mask>
-            <mask id="m13">
-              <path
-                className="strokeMask"
-                id="mask-asher-r2"
-                d="m133.5,17.5l15.96-4s3.02-1,4.03,1.5-2.44,6.02-2.44,6.02l-7.46,6.9-9.09,6.58-4.44,5.89"
-                fill="none"
-                stroke="#fff"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="6"
-              />
-            </mask>
-            <mask id="m12">
+            <mask id="m1">
               <line
                 className="strokeMask"
-                id="mask-asher-r1"
-                x1="118"
-                y1="54.7"
-                x2="141"
-                y2="12"
+                id="mask-asher-a1"
+                x1="4"
+                y1="60"
+                x2="46"
+                y2="5"
                 fill="none"
                 stroke="#fff"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                strokeWidth="7"
+                strokeWidth="8"
               />
             </mask>
-            <mask id="m11">
-              <polyline
-                className="strokeMask"
-                id="mask-asher-e4"
-                points="94 52 106 49 116 46"
-                fill="none"
-                stroke="#fff"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="6"
-              />
-            </mask>
-            <mask id="m10">
+            <mask id="m2">
               <line
                 className="strokeMask"
-                id="mask-asher-e3"
-                x1="100.82"
-                y1="34.58"
-                x2="122"
-                y2="31"
-                fill="none"
-                stroke="#fff"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="6"
-              />
-            </mask>
-            <mask id="m9">
-              <line
-                className="strokeMask"
-                id="mask-asher-e2"
-                x1="109.5"
-                y1="16.5"
-                x2="128.5"
-                y2="13.5"
-                fill="none"
-                stroke="#fff"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="6"
-              />
-            </mask>
-            <mask id="m8">
-              <line
-                className="strokeMask"
-                id="mask-asher-e1"
-                x1="118"
-                y1="11"
-                x2="95.13"
-                y2="53.77"
-                fill="none"
-                stroke="#fff"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="9"
-              />
-            </mask>
-            <mask id="m7">
-              <line
-                className="strokeMask"
-                id="mask-asher-h3"
-                x1="97.12"
-                y1="31.95"
-                x2="70.78"
-                y2="34.45"
-                fill="none"
-                stroke="#fff"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="6"
-              />
-            </mask>
-            <mask id="m6">
-              <line
-                className="strokeMask"
-                id="mask-asher-h2"
-                x1="101.28"
-                y1="11.79"
-                x2="79.5"
-                y2="56.5"
-                fill="none"
-                stroke="#fff"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="7"
-              />
-            </mask>
-            <mask id="m5">
-              <line
-                className="strokeMask"
-                id="mask-asher-h1"
-                x1="88.5"
-                y1="10.5"
-                x2="67.8"
-                y2="54.17"
-                fill="none"
-                stroke="#fff"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="7"
-              />
-            </mask>
-            <mask id="m4">
-              <path
-                className="strokeMask"
-                id="mask-asher-s"
-                d="m72.66,11.48s-18.66,9.52-18.66,12.52c0,4,11,10,11,10,0,0,.25,5.1-1.5,6.5-5,4-23,13-23,13"
+                id="mask-asher-a2"
+                x1="47"
+                y1="4"
+                x2="28"
+                y2="63"
                 fill="none"
                 stroke="#fff"
                 strokeLinecap="round"
@@ -575,14 +54,11 @@ export default function SvgName() {
                 strokeWidth="7"
               />
             </mask>
-            <mask id="m2">
-              <line
+            <mask id="m4">
+              <path
                 className="strokeMask"
-                id="mask-asher-a2"
-                x1="47"
-                y1="4"
-                x2="28"
-                y2="63"
+                id="mask-asher-s"
+                d="m72.66,11.48s-18.66,9.52-18.66,12.52c0,4,11,10,11,10,0,0,.25,5.1-1.5,6.5-5,4-23,13-23,13"
                 fill="none"
                 stroke="#fff"
                 strokeLinecap="round"
@@ -590,19 +66,545 @@ export default function SvgName() {
                 strokeWidth="8"
               />
             </mask>
-            <mask id="m1">
+            <mask id="m5">
               <line
                 className="strokeMask"
-                id="mask-asher-a1"
-                x1="4"
-                y1="60"
-                x2="46"
-                y2="5"
+                id="mask-asher-h1"
+                x1="88.5"
+                y1="10.5"
+                x2="67.8"
+                y2="54.17"
+                fill="none"
+                stroke="#fff"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="7"
+              />
+            </mask>
+            <mask id="m6">
+              <line
+                className="strokeMask"
+                id="mask-asher-h2"
+                x1="101.28"
+                y1="11.79"
+                x2="79.5"
+                y2="56.5"
+                fill="none"
+                stroke="#fff"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="7"
+              />
+            </mask>
+            <mask id="m7">
+              <line
+                className="strokeMask"
+                id="mask-asher-h3"
+                x1="97.12"
+                y1="31.95"
+                x2="70.78"
+                y2="34.45"
+                fill="none"
+                stroke="#fff"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="6"
+              />
+            </mask>
+            <mask id="m8">
+              <line
+                className="strokeMask"
+                id="mask-asher-e1"
+                x1="118"
+                y1="11"
+                x2="95.13"
+                y2="53.77"
+                fill="none"
+                stroke="#fff"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="9"
+              />
+            </mask>
+            <mask id="m9">
+              <line
+                className="strokeMask"
+                id="mask-asher-e2"
+                x1="109.5"
+                y1="16.5"
+                x2="128.5"
+                y2="13.5"
+                fill="none"
+                stroke="#fff"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="6"
+              />
+            </mask>
+            <mask id="m10">
+              <line
+                className="strokeMask"
+                id="mask-asher-e3"
+                x1="100.82"
+                y1="34.58"
+                x2="122"
+                y2="31"
+                fill="none"
+                stroke="#fff"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="6"
+              />
+            </mask>
+            <mask id="m11">
+              <polyline
+                className="strokeMask"
+                id="mask-asher-e4"
+                points="94 52 106 49 116 46"
+                fill="none"
+                stroke="#fff"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="6"
+              />
+            </mask>
+            <mask id="m12">
+              <line
+                className="strokeMask"
+                id="mask-asher-r1"
+                x1="118"
+                y1="54.7"
+                x2="141"
+                y2="12"
+                fill="none"
+                stroke="#fff"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="7"
+              />
+            </mask>
+            <mask id="m13">
+              <path
+                className="strokeMask"
+                id="mask-asher-r2"
+                d="m133.5,17.5l15.96-4s3.02-1,4.03,1.5-2.44,6.02-2.44,6.02l-7.46,6.9-9.09,6.58-4.44,5.89"
+                fill="none"
+                stroke="#fff"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="6"
+              />
+            </mask>
+            <mask id="m14">
+              <path
+                className="strokeMask"
+                id="mask-asher-r3"
+                d="m131.24,35.6l2.76,6.4s2,4,3,5,2,2,4,3"
+                fill="none"
+                stroke="#fff"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="6"
+              />
+            </mask>
+          </g>
+          <g id="last-name">
+            <mask id="m15">
+              <line
+                className="strokeMask"
+                id="mask-and-a1"
+                x1="4.19"
+                y1="88.24"
+                x2="43.61"
+                y2="35.65"
                 fill="none"
                 stroke="#fff"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="8"
+              />
+            </mask>
+            <mask id="m16">
+              <line
+                className="strokeMask"
+                id="mask-and-a2"
+                x1="47"
+                y1="32"
+                x2="28"
+                y2="92"
+                fill="none"
+                stroke="#fff"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="9"
+              />
+            </mask>
+            <mask id="m17">
+              <line
+                className="strokeMask"
+                id="mask-and-a3"
+                x1="42.5"
+                y1="66.5"
+                x2="9.5"
+                y2="68.5"
+                fill="none"
+                stroke="#fff"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="7"
+              />
+            </mask>
+            <mask id="m18">
+              <path
+                className="strokeMask"
+                id="mask-and-n"
+                d="m40,88l25-45s2,2,2,4-3,33-2,33,4-1,4-1l23-50"
+                fill="none"
+                stroke="#fff"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="8"
+              />
+            </mask>
+            <mask id="m19">
+              <line
+                className="strokeMask"
+                id="mask-and-d1"
+                x1="80.03"
+                y1="84.4"
+                x2="107"
+                y2="38"
+                fill="none"
+                stroke="#fff"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="8"
+              />
+            </mask>
+            <mask id="m20">
+              <path
+                className="strokeMask"
+                id="mask-and-d2"
+                d="m97,43l18-4s2.07-1,4.53,0,3.47,1,4.47,3-3.11,9.39-3.11,9.39c0,0-3.89,4.61-4.89,5.61l-6,6-13,11.19-12,6.81"
+                fill="none"
+                stroke="#fff"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="8"
+              />
+            </mask>
+            <mask id="m21">
+              <line
+                className="strokeMask"
+                id="mask-and-a4"
+                x1="111.19"
+                y1="88.24"
+                x2="150.61"
+                y2="35.65"
+                fill="none"
+                stroke="#fff"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="8"
+              />
+            </mask>
+            <mask id="m22">
+              <line
+                className="strokeMask"
+                id="mask-and-a5"
+                x1="154"
+                y1="32"
+                x2="135"
+                y2="92"
+                fill="none"
+                stroke="#fff"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="9"
+              />
+            </mask>
+            <mask id="m23">
+              <line
+                className="strokeMask"
+                id="mask-and-a6"
+                x1="149.5"
+                y1="66.5"
+                x2="116.5"
+                y2="68.5"
+                fill="none"
+                stroke="#fff"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="8"
+              />
+            </mask>
+            <mask id="m24">
+              <path
+                className="strokeMask"
+                id="mask-and-r1"
+                d="m177.5,35.5l-30.08,52.5,30.08-52.5Z"
+                fill="none"
+                stroke="#fff"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="10"
+              />
+            </mask>
+            <mask id="m25">
+              <path
+                className="strokeMask"
+                id="mask-and-r2"
+                d="m166.93,40.39s13.38-1.77,15.98-1.83,6.57.94,7.58,1.44,2.02,4.5,2.02,4.5c0,0-2,3-4,5s-5.89,4-5.89,4l-6.11,4-6.16,4.04-6.5.91"
+                fill="none"
+                stroke="#fff"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="8"
+              />
+            </mask>
+            <mask id="m26">
+              <path
+                className="strokeMask"
+                id="mask-and-r3"
+                d="m166.19,61.2l3.17,7.3,1.64,3.5,2.26,5.06s5.08,6.02,4.91,5.98"
+                fill="none"
+                stroke="#fff"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="6"
+              />
+            </mask>
+            <mask id="m27">
+              <path
+                className="strokeMask"
+                id="mask-and-g1"
+                d="m215.06,54.17s4.94-6.17,5.94-8.17,2-7,2-7l-1.26-2.8s-2.9.5-5.42,1.83c-2.81,1.48-5.81,4.48-5.81,4.48l-7.87,8.31-4.53,5.56s-3.6,6.14-4.6,8.14-3,7-4,9-1,5-1,7-.56,4.9.72,5.45,7.28-1.45,7.28-1.45l6-5,5-5,4-5"
+                fill="none"
+                stroke="#fff"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="8"
+              />
+            </mask>
+            <mask id="m28">
+              <line
+                className="strokeMask"
+                id="mask-and-g2"
+                x1="199"
+                y1="67"
+                x2="224.64"
+                y2="62.1"
+                fill="none"
+                stroke="#fff"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="7"
+              />
+            </mask>
+
+            <mask id="m29">
+              <line
+                className="strokeMask"
+                id="mask-and-a7"
+                x1="217.19"
+                y1="88.24"
+                x2="256.61"
+                y2="35.65"
+                fill="none"
+                stroke="#fff"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="8"
+              />
+            </mask>
+
+            <mask id="m30">
+              <line
+                className="strokeMask"
+                id="mask-and-a8"
+                x1="260"
+                y1="32"
+                x2="241"
+                y2="92"
+                fill="none"
+                stroke="#fff"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="9"
+              />
+            </mask>
+            <mask id="m31">
+              <line
+                className="strokeMask"
+                id="mask-and-a9"
+                x1="255.5"
+                y1="66.5"
+                x2="222.5"
+                y2="68.5"
+                fill="none"
+                stroke="#fff"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="7"
+              />
+            </mask>
+            <mask id="m32">
+              <polyline
+                className="strokeMask"
+                id="mask-and-c"
+                points="282 58 289 44 290 39 287 38 275.81 48 269 57 262 69 259 79 261 84 267 84 273 78 282.01 67.5"
+                fill="none"
+                stroke="#fff"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="9"
+              />
+            </mask>
+            <mask id="m33">
+              <line
+                className="strokeMask"
+                id="mask-and-h1"
+                x1="283"
+                y1="86"
+                x2="310"
+                y2="34"
+                fill="none"
+                stroke="#fff"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="9"
+              />
+            </mask>
+            <mask id="m34">
+              <line
+                className="strokeMask"
+                id="mask-and-h2"
+                x1="301.5"
+                y1="89.5"
+                x2="331.5"
+                y2="32.5"
+                fill="none"
+                stroke="#fff"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="9"
+              />
+            </mask>
+            <mask id="m35">
+              <line
+                className="strokeMask"
+                id="mask-and-h3"
+                x1="293.5"
+                y1="60.5"
+                x2="321.64"
+                y2="56.92"
+                fill="none"
+                stroke="#fff"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="6"
+              />
+            </mask>
+            <mask id="m36">
+              <line
+                className="strokeMask"
+                id="mask-and-e1"
+                x1="348"
+                y1="37"
+                x2="317.77"
+                y2="84.55"
+                fill="none"
+                stroke="#fff"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="9"
+              />
+            </mask>
+            <mask id="m37">
+              <line
+                className="strokeMask"
+                id="mask-and-e2"
+                x1="336.5"
+                y1="41.5"
+                x2="364.5"
+                y2="38.5"
+                fill="none"
+                stroke="#fff"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="8"
+              />
+            </mask>
+            <mask id="m38">
+              <line
+                className="strokeMask"
+                id="mask-and-e3"
+                x1="326.79"
+                y1="60.93"
+                x2="352"
+                y2="58"
+                fill="none"
+                stroke="#fff"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="8"
+              />
+            </mask>
+            <mask id="m39">
+              <line
+                className="strokeMask"
+                id="mask-and-e4"
+                x1="318.73"
+                y1="84.55"
+                x2="347"
+                y2="78"
+                fill="none"
+                stroke="#fff"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="8"
+              />
+            </mask>
+            <mask id="m40">
+              <line
+                className="strokeMask"
+                id="mask-and-w1"
+                x1="372.8"
+                y1="34.09"
+                x2="353.5"
+                y2="81.5"
+                fill="none"
+                stroke="#fff"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="10"
+              />
+            </mask>
+            <mask id="m41">
+              <polyline
+                className="strokeMask"
+                id="mask-and-w2"
+                points="354.53 81 384 45 373 85"
+                fill="none"
+                stroke="#fff"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="11"
+              />
+            </mask>
+            <mask id="m42">
+              <line
+                className="strokeMask"
+                id="mask-and-w3"
+                x1="375.5"
+                y1="85.5"
+                x2="411.5"
+                y2="26.5"
+                fill="none"
+                stroke="#fff"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="10"
               />
             </mask>
           </g>

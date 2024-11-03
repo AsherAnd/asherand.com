@@ -4,20 +4,44 @@ import SvgName from "../components/SvgName";
 import "../styles/home.css";
 
 export default function Home() {
-  gsap.registerPlugin(useGSAP, ScrollToPlugin);
+  gsap.registerPlugin(useGSAP, ScrollToPlugin, DrawSVGPlugin);
 
   // gsap cleanup
   const { contextSafe } = useGSAP();
 
   useGSAP(() => {
-    gsap.to(".intro-title", {
+    const masks = gsap.utils.toArray(".strokeMask");
+
+    gsap.set(".intro-title", { y: "50px" });
+    gsap.set(".strokeMask", { drawSVG: 0 });
+
+    // gsap timeline
+    const tl = gsap.timeline({});
+
+    // svg name animation
+    tl.to("#masks", { autoAlpha: 1 });
+    tl.fromTo(
+      "#first-name .strokeMask",
+      { drawSVG: "0% 0%" },
+      { drawSVG: true, duration: 0.2, stagger: 0.1 }
+    );
+
+    tl.fromTo(
+      "#last-name .strokeMask",
+      { drawSVG: "0% 0%" },
+      { drawSVG: true, duration: 0.2, stagger: 0.05 },
+      "<"
+    );
+
+    // top title animation
+    tl.to(".intro-title", {
       duration: 0.5,
-      delay: 1,
       stagger: 0.25,
       y: "0",
     });
   });
 
+  // scroll to animation
   const scrollTo = contextSafe(() => {
     gsap.to(window, {
       duration: 0.25,
@@ -37,7 +61,7 @@ export default function Home() {
           <SvgName />
         </div>
         <div className="intro-welcome">
-          <p>All right. Let’s do this one last time again.</p>
+          <p>All right. Let’s do this again.</p>
           <p>
             Welcome to my personal website. Feel free to look around and contact
             me for any service inquiries.

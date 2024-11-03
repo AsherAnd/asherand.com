@@ -13,10 +13,6 @@ header {
   margin-bottom: 40px;
 }
 
-.intro-title {
-  transform: translateY(50px);
-}
-
 .intro-title:not(:last-child)::after {
   content: "|";
   margin: 0 8px;
