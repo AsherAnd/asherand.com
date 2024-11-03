@@ -1,5 +1,6 @@
 import { useGSAP } from "@gsap/react";
 import ComicButton from "../components/ComicButton";
+import SvgName from "../components/SvgName";
 import "../styles/home.css";
 
 export default function Home() {
@@ -27,16 +28,13 @@ export default function Home() {
   return (
     <div id="home" className="container">
       <div className="intro">
-        <div>
-          <header>
-            <div className="intro-title">Coder</div>
-            <div className="intro-title">Developer</div>
-            <div className="intro-title">Maker</div>
-          </header>
-          <div className="intro-name">
-            <div className="first-name">Asher</div>
-            <div className="last-name">Andargachew</div>
-          </div>
+        <header>
+          <div className="intro-title">Coder</div>
+          <div className="intro-title">Developer</div>
+          <div className="intro-title">Maker</div>
+        </header>
+        <div className="intro-name">
+          <SvgName />
         </div>
         <div className="intro-welcome">
           <p>All right. Let’s do this one last time again.</p>

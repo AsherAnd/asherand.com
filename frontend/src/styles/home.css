@@ -1,12 +1,12 @@
 header {
   font-family: "Product Sans Bold";
-  font-size: 24px;
+  font-size: 18px;
   display: flex;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
 .intro > div:not(:last-child) {
-  margin-bottom: 60px;
+  margin-bottom: 24px;
 }
 
 .intro-welcome p:not(:last-child) {
@@ -23,50 +23,41 @@ header {
   color: var(--highlight-text-color);
 }
 
-.first-name,
-.last-name {
-  font-family: "Furious Styles";
-  font-size: 48px;
+.intro-name {
+  padding: 16px 0 0 0;
 }
 
-.last-name {
-  color: var(--highlight-text-color);
-  text-transform: uppercase;
-  margin-top: -32px;
+#svg-name {
+  width: 100%;
+  height: auto;
+}
+
+#svg-name #first-name-path {
+  fill: var(--text-color);
+}
+
+#svg-name #last-name-path {
+  fill: var(--highlight-text-color);
 }
 
 /* md */
 @media (min-width: 768px) {
-  .first-name,
-  .last-name {
-    font-size: 80px;
-  }
-
-  .last-name {
-    margin-top: -56px;
-  }
 }
 
 /* lg */
 @media (min-width: 1024px) {
-  .first-name,
-  .last-name {
-    font-size: 88px;
+  .intro > div:not(:last-child) {
+    margin-bottom: 48px;
   }
 
-  .last-name {
-    margin-top: -64px;
+  #svg-name {
+    width: 75%;
   }
 }
 
 /* xl */
 @media (min-width: 1280px) {
-  .first-name,
-  .last-name {
-    font-size: 96px;
-  }
-
-  .last-name {
-    margin-top: -72px;
+  #svg-name {
+    width: 50%;
   }
 }
