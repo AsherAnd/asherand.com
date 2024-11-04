@@ -1,6 +1,7 @@
 .hamburger {
   color: var(--highlight-text-color);
-  font-size: 24px;
+  font-size: 2rem;
+  transition: color 0.3s;
 }
 
 .hamburger:hover {
@@ -21,12 +22,11 @@
   left: 0;
   width: 100%;
   z-index: 99;
-  height: 400px;
   max-height: 100px;
 }
 
 .navbar.open {
-  padding: 40px 16px 8px;
+  padding: 2.5rem 1rem 0.5rem;
   max-height: 400px;
 }
 
@@ -40,8 +40,8 @@
 }
 
 .logo {
-  font-size: 32px;
-  font-family: "Product Sans Black";
+  font-size: 2rem;
+  font-family: "Product Sans Black", sans-serif;
   color: var(--highlight-text-color);
   text-transform: uppercase;
   pointer-events: none;
@@ -92,7 +92,7 @@
   border: none;
   color: var(--text-color);
   background-color: transparent;
-  font-family: "Product Sans Bold";
+  font-family: "Product Sans Bold", sans-serif;
   height: 48px;
   width: 100%;
 }
@@ -126,18 +126,18 @@
 
 .overlay.open {
   opacity: 0.7;
-  display: initial;
+  display: block;
 }
 
 /* md */
-@media (min-width: 768px) {
+@media (min-width: 48em) {
   .navbar {
     padding: 36px 32px;
   }
 }
 
 /* lg */
-@media (min-width: 1024px) {
+@media (min-width: 64em) {
   .navbar {
     background-color: transparent;
     padding: 36px 160px;
@@ -174,7 +174,7 @@
 }
 
 /* xl */
-@media (min-width: 1280px) {
+@media (min-width: 80em) {
   .navbar {
     background-color: transparent;
     padding: 36px 240px;

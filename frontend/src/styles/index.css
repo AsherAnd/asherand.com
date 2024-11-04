@@ -2,6 +2,27 @@
   --highlight-text-color: #16b8f3;
   --text-color: white;
   --debug-color: red;
+
+  /* Responsive root font sizes */
+  font-size: 16px; /* Default */
+}
+
+@media (min-width: 48em) {
+  :root {
+    font-size: 17px; /* Medium screens */
+  }
+}
+
+@media (min-width: 64em) {
+  :root {
+    font-size: 18px; /* Large screens */
+  }
+}
+
+@media (min-width: 80em) {
+  :root {
+    font-size: 19px; /* Extra-large screens */
+  }
 }
 
 ::selection {
@@ -22,6 +43,7 @@ a {
   display: inline-block;
   position: relative;
   color: var(--highlight-text-color);
+  transition: color 0.25s ease-out;
 }
 
 a::after {
@@ -37,9 +59,12 @@ a::after {
   transition: transform 0.25s ease-out;
 }
 
+a:hover {
+  color: var(--text-color);
+}
+
 a:hover::after {
   transform: scaleX(1);
-  transform-origin: bottom center;
 }
 
 .App {
@@ -51,8 +76,9 @@ a:hover::after {
 .icon {
   color: var(--highlight-text-color);
   cursor: pointer;
-  font-size: 32px;
+  font-size: 2rem;
 }
+
 .icon:hover {
   color: var(--text-color);
 }
@@ -66,7 +92,7 @@ body {
   background-color: black;
   overflow-x: hidden;
   color: var(--text-color);
-  font-family: "Product Sans";
+  font-family: "Product Sans", sans-serif;
 }
 
 .bg-gradient {
@@ -94,8 +120,7 @@ body {
 }
 
 .container {
-  /* margin: 0 16px; */
-  margin: 0 16px 360px 16px;
+  margin: 0 16px 360px;
 }
 
 .content {
@@ -114,32 +139,30 @@ footer {
   );
   text-align: center;
   border-top: 2px solid var(--highlight-text-color);
-  padding: 32px;
+  padding: 2rem;
 }
 
 /* md */
-@media (min-width: 768px) {
+@media (min-width: 48em) {
   .container {
     margin: 0 32px;
   }
 }
 
 /* lg */
-@media (min-width: 1024px) {
+@media (min-width: 64em) {
   .bg-image {
     background-size: 50%;
   }
 
   .container {
-    /* margin: 0 160px; */
-    margin: 0 160px 360px 160px;
+    margin: 0 160px 360px;
   }
 }
 
 /* xl */
-@media (min-width: 1280px) {
+@media (min-width: 80em) {
   .container {
-    /* margin: 0 240px; */
-    margin: 0 240px 360px 240px;
+    margin: 0 240px 360px;
   }
 }
