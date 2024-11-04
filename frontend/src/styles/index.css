@@ -132,11 +132,7 @@ ul {
 }
 
 footer {
-  background: radial-gradient(
-    circle,
-    rgba(27, 27, 27, 1) 0%,
-    rgba(0, 0, 0, 1) 100%
-  );
+  background: #151515;
   text-align: center;
   border-top: 2px solid var(--highlight-text-color);
   padding: 2rem;
