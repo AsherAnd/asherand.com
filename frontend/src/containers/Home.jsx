@@ -10,8 +10,6 @@ export default function Home() {
   const { contextSafe } = useGSAP();
 
   useGSAP(() => {
-    const masks = gsap.utils.toArray(".strokeMask");
-
     gsap.set(".intro-title", { y: "50px" });
     gsap.set(".strokeMask", { drawSVG: 0 });
 
