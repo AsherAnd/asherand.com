@@ -2,9 +2,9 @@ import { useState, useEffect, useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import "../styles/components/navbar.css";
 
-export default function Navbar() {
-  gsap.registerPlugin(useGSAP, ScrollToPlugin);
+gsap.registerPlugin(useGSAP, ScrollToPlugin);
 
+export default function Navbar() {
   // Toggle only on devices less than a desktop
   var windowWidth = window.innerWidth;
   const screenSize = 1024;
