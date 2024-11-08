@@ -11,8 +11,8 @@ export default function App() {
     <div className="App">
       <div className="bg-image"></div>
       <div className="bg-gradient"></div>
+      <Navbar />
       <div className="content">
-        <Navbar />
         <Home />
         <About />
         <Experience />

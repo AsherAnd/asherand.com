@@ -44,6 +44,7 @@ a {
   position: relative;
   color: var(--highlight-text-color);
   transition: color 0.25s ease-out;
+  cursor: pointer;
 }
 
 a::after {
@@ -120,7 +121,16 @@ body {
 }
 
 .container {
-  margin: 0 16px 360px;
+  margin: 0 1rem 360px;
+}
+
+.container:nth-of-type(even) {
+  background: rgba(0, 0, 0, 0.41);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.7px);
+  -webkit-backdrop-filter: blur(7.7px);
+  padding: 16px;
 }
 
 .content {
@@ -141,7 +151,7 @@ footer {
 /* md */
 @media (min-width: 48em) {
   .container {
-    margin: 0 32px;
+    margin: 0 2rem;
   }
 }
 
@@ -152,13 +162,21 @@ footer {
   }
 
   .container {
-    margin: 0 160px 360px;
+    margin: 0 8rem 360px;
+  }
+
+  .container:nth-of-type(even) {
+    padding: 32px;
   }
 }
 
 /* xl */
 @media (min-width: 80em) {
   .container {
-    margin: 0 240px 360px;
+    margin: 0 8rem 360px;
+  }
+
+  .container:nth-of-type(even) {
+    padding: 64px;
   }
 }

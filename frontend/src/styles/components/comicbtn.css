@@ -1,11 +1,11 @@
 .btn {
   position: relative;
-  background: #000;
+  background: black;
   width: 100%; /* Full-width on smaller screens */
   max-width: 10.5rem; /* Limit max width */
   padding: 1rem; /* Responsive padding */
-  border: 2px solid #4ac0ee;
-  color: #fff;
+  border: 2px solid var(--highlight-text-color);
+  color: white;
   font-weight: bold;
   text-transform: capitalize;
   text-align: center;
