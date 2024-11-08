@@ -4,6 +4,10 @@
   gap: 4rem;
 }
 
+.about-text > div:not(:last-child) {
+  margin-bottom: clamp(16px, 2vw, 24px);
+}
+
 .about-image {
   max-width: 90%;
   height: auto;
