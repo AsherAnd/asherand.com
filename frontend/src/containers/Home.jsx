@@ -3,9 +3,9 @@ import ComicButton from "../components/ComicButton";
 import SvgName from "../components/SvgName";
 import "../styles/home.css";
 
-export default function Home() {
-  gsap.registerPlugin(useGSAP, ScrollToPlugin, DrawSVGPlugin);
+gsap.registerPlugin(useGSAP, ScrollToPlugin, DrawSVGPlugin);
 
+export default function Home() {
   // gsap cleanup
   const { contextSafe } = useGSAP();
 

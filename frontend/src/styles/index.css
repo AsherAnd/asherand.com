@@ -9,19 +9,19 @@
 
 @media (min-width: 48em) {
   :root {
-    font-size: 17px; /* Medium screens */
+    font-size: 18px; /* Medium screens */
   }
 }
 
 @media (min-width: 64em) {
   :root {
-    font-size: 18px; /* Large screens */
+    font-size: 20px; /* Large screens */
   }
 }
 
 @media (min-width: 80em) {
   :root {
-    font-size: 19px; /* Extra-large screens */
+    font-size: 24px; /* Extra-large screens */
   }
 }
 
@@ -146,6 +146,19 @@ footer {
   text-align: center;
   border-top: 2px solid var(--highlight-text-color);
   padding: 2rem;
+}
+
+#subtitle {
+  width: 15rem;
+  height: auto;
+}
+
+#subtitle #part1 {
+  fill: var(--text-color);
+}
+
+#subtitle #part2 {
+  fill: var(--highlight-text-color);
 }
 
 /* md */

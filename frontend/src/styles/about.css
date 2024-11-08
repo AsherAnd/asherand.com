@@ -1,19 +1,19 @@
 #about {
   display: grid;
   justify-items: center;
-  align-items: center;
+  gap: 4rem;
 }
 
 .about-image {
   max-width: 90%;
   height: auto;
   object-fit: contain;
+  align-self: center;
 }
 
 /* lg */
 @media (min-width: 64em) {
   #about {
     grid-template-columns: 1fr 1fr;
-    gap: 76px;
   }
 }
