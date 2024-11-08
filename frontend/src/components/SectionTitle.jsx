@@ -1,22 +1,30 @@
 import "../styles/components/Sectiontitle.css";
+import { useRef } from "react";
+
+gsap.registerPlugin(useGSAP, ScrollTrigger);
+
 export default function SectionTitle(props) {
-  gsap.registerPlugin(useGSAP, ScrollTrigger);
+  const titleRef = useRef(null);
 
   useGSAP(() => {
-    gsap.set(".section-title", {
+    gsap.set(titleRef.current, {
       clipPath: "polygon(0 0, 5% 0, 5% 100%, 0 100%)",
     });
 
     // swipe reveal animation
-    gsap.to(".section-title", {
+    gsap.to(titleRef.current, {
       scrollTrigger: {
-        trigger: ".section-title",
+        trigger: titleRef.current,
         start: "top 80%",
-        toggleActions: "restart none none reverse",
-        markers: true,
+        end: "bottom 15%",
+        toggleActions: "restart reverse restart reverse",
       },
       clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
     });
   });
-  return <div className="section-title">{props.title}</div>;
+  return (
+    <div ref={titleRef} className="section-title">
+      {props.title}
+    </div>
+  );
 }
