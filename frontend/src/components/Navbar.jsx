@@ -99,7 +99,12 @@ export default function Navbar() {
           </ul>
         </div>
         <div className="hamburger">
-          <i className={"fa-solid fa-bars fa-lg"} onClick={toggleMenu}></i>
+          <i
+            className={`fa-solid ${
+              menuState === "open" ? "fa-xmark" : "fa-bars"
+            } fa-lg`}
+            onClick={toggleMenu}
+          ></i>
         </div>
       </nav>
       <div className="nav-padder"></div>

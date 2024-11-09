@@ -2,6 +2,8 @@
   color: var(--highlight-text-color);
   font-size: 2rem;
   transition: color 0.3s;
+  width: 2rem;
+  height: auto;
 }
 
 .hamburger:hover {
