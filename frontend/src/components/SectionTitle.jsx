@@ -16,7 +16,7 @@ export default function SectionTitle(props) {
       scrollTrigger: {
         trigger: titleRef.current,
         start: "top 80%",
-        end: "bottom 15%",
+        end: "100px 15%",
         toggleActions: "restart reverse restart reverse",
       },
       clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",

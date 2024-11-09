@@ -60,7 +60,7 @@ export default function About() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              ስላም!
+              ሰላም!
             </a>{" "}
             My name is Asher Andargachew, Computer Science major and soon to be
             graduate from Toronto Metropolitan University. When I'm not coding

@@ -1,0 +1,15 @@
+#contact > div:not(:last-child) {
+  margin-bottom: clamp(16px, 2vw, 24px);
+}
+
+.icons-list {
+  margin-top: 4rem;
+}
+
+.icons-list ul {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-evenly;
+  font-size: 2rem;
+}
