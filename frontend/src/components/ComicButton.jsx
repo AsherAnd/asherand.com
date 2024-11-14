@@ -4,7 +4,7 @@ export default function ComicButton(props) {
   return (
     <div className="comic-btn">
       <button className="btn" onClick={props.onClick}>
-        Get in touch
+        {props.text}
       </button>
     </div>
   );
