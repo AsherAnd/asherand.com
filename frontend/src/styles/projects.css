@@ -1,0 +1,30 @@
+.filter-btn {
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  color: var(--text-color);
+  background-color: transparent;
+  font-family: "Product Sans Bold", sans-serif;
+  font-size: 0.85rem;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+
+#projects > div:not(:last-child) {
+  margin-bottom: clamp(16px, 2vw, 24px);
+}
+
+.projects-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  grid-gap: 1rem;
+  justify-items: center;
+}
+
+@media (min-width: 64em) {
+  .side-text {
+    display: grid;
+    justify-items: start;
+    justify-content: end;
+  }
+}
