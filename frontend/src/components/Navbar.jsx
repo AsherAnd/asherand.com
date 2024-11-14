@@ -13,7 +13,7 @@ export default function Navbar() {
   const [fixed, setScroll] = useState(true);
 
   //button state
-  const [menuState, setState] = useState("closed");
+  const [menuState, setMenuState] = useState("closed");
 
   // gsap cleanup
   const navLinks = useRef();
@@ -23,30 +23,24 @@ export default function Navbar() {
     windowWidth = window.innerWidth;
   });
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 0) {
-      setScroll(false);
-    } else {
-      setScroll(true);
-    }
-  });
-
   useEffect(() => {
-    if (menuState === "open") {
-      document.querySelector(".navbar").classList.add("open");
-      document.querySelector(".overlay").classList.add("open");
-    } else {
-      document.querySelector(".navbar").classList.remove("open");
-      document.querySelector(".overlay").classList.remove("open");
-    }
-  }, [menuState]);
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScroll(false);
+      } else {
+        setScroll(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const toggleMenu = () => {
-    if (menuState === "open") {
-      setState("closed");
-    } else {
-      setState("open");
-    }
+    setMenuState((prevState) => (prevState === "open" ? "closed" : "open"));
   };
 
   const scrollTo = contextSafe((e) => {
@@ -64,7 +58,11 @@ export default function Navbar() {
 
   return (
     <div>
-      <nav className={fixed ? "navbar" : "navbar scrolled"}>
+      <nav
+        className={`navbar${fixed ? "" : " scrolled"}${
+          menuState === "open" ? " open" : ""
+        }`}
+      >
         <div className="logo">Asher</div>
         <div className="nav-links" ref={navLinks}>
           <ul>
@@ -108,7 +106,10 @@ export default function Navbar() {
         </div>
       </nav>
       <div className="nav-padder"></div>
-      <div className="overlay" onClick={toggleMenu}></div>
+      <div
+        className={`overlay${menuState === "open" ? " open" : ""}`}
+        onClick={toggleMenu}
+      ></div>
     </div>
   );
 }
