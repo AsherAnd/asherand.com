@@ -21,7 +21,7 @@
 
 @media (min-width: 80em) {
   :root {
-    font-size: 24px; /* Extra-large screens */
+    font-size: 22px; /* Extra-large screens */
   }
 }
 
@@ -121,7 +121,7 @@ body {
 }
 
 .container {
-  margin: 0 1rem 360px;
+  margin: 0 1rem 200px;
 }
 
 .container:nth-of-type(even) {
@@ -161,6 +161,11 @@ footer {
   fill: var(--highlight-text-color);
 }
 
+.section-title,
+svg {
+  margin-bottom: clamp(16px, 2vw, 24px);
+}
+
 /* md */
 @media (min-width: 48em) {
   .container {
@@ -175,7 +180,7 @@ footer {
   }
 
   .container {
-    margin: 0 8rem 360px;
+    margin: 0 8rem 200px;
   }
 
   .container:nth-of-type(even) {
@@ -186,7 +191,7 @@ footer {
 /* xl */
 @media (min-width: 80em) {
   .container {
-    margin: 0 8rem 360px;
+    margin: 0 8rem 200px;
   }
 
   .container:nth-of-type(even) {

@@ -66,7 +66,7 @@ export default function Home() {
           </p>
           <p>Always looking to collaborate.</p>
         </div>
-        <ComicButton onClick={scrollTo} />
+        <ComicButton text="Get in touch" onClick={scrollTo} />
       </div>
       <div className="comic-book"></div>
     </div>

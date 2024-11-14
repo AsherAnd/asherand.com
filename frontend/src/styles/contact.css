@@ -1,7 +1,3 @@
-#contact > div:not(:last-child) {
-  margin-bottom: clamp(16px, 2vw, 24px);
-}
-
 .icons-list {
   margin-top: 4rem;
 }
