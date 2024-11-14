@@ -43,6 +43,11 @@
   &:hover {
     background: #fff;
     color: #000;
+  }
+
+  &:active {
+    background: #4ac0ee;
+    color: #fff;
     margin-left: -7.5px;
     margin-bottom: -7.5px;
     cursor: pointer;
@@ -61,11 +66,6 @@
     &::after {
       height: 0;
     }
-  }
-
-  &:active {
-    background: #4ac0ee;
-    color: #fff;
   }
 }
 
