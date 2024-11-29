@@ -45,41 +45,41 @@ export default function Contact() {
           <li>
             <a
               href="mailto:ashertew@gmail.com"
-              class="social-link"
+              className="social-link"
               target="_blank"
               rel="noreferrer"
             >
-              <i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i>
+              <i className="fa-solid fa-envelope fa-lg" aria-hidden="true"></i>
             </a>{" "}
           </li>
           <li>
             <a
               href="https://www.linkedin.com/in/asher-andargachew"
-              class="social-link"
+              className="social-link"
               target="_blank"
               rel="noreferrer"
             >
-              <i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
+              <i className="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
             </a>
           </li>
           <li>
             <a
               href="https://github.com/asherand"
-              class="social-link"
+              className="social-link"
               target="_blank"
               rel="noreferrer"
             >
-              <i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+              <i className="fa-brands fa-github fa-lg" aria-hidden="true"></i>
             </a>
           </li>
           <li>
             <a
               href="https://api.asherand.com/assets/Asher%20Andargachew%20Resume%202024.pdf"
-              class="social-link"
+              className="social-link"
               target="_blank"
               rel="noreferrer"
             >
-              <i class="fa-solid fa-file fa-lg" aria-hidden="true"></i>
+              <i className="fa-solid fa-file fa-lg" aria-hidden="true"></i>
             </a>
           </li>
         </ul>

@@ -124,6 +124,10 @@ body {
   margin: 0 1rem 200px;
 }
 
+.container:nth-of-type(odd) {
+  padding-top: 1rem;
+}
+
 .container:nth-of-type(even) {
   background: rgba(0, 0, 0, 0.41);
   border-radius: 16px;

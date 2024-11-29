@@ -1,26 +1,31 @@
 header {
   font-family: "Product Sans Bold", sans-serif;
-  font-size: clamp(16px, 2vw + 1rem, 20px); /* Responsive font size */
+  font-size: 1rem;
+  font-size: clamp(
+    1rem,
+    0.9772727272727273rem + 0.11363636363636363vw,
+    1.25rem
+  );
   display: flex;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
 .intro > div:not(:last-child) {
-  margin-bottom: clamp(16px, 2vw, 24px); /* Fluid margin */
+  margin-bottom: clamp(16px, 2vw, 24px);
 }
 
 .intro-welcome p:not(:last-child) {
-  margin-bottom: clamp(24px, 3vw, 40px); /* Responsive margin */
+  margin-bottom: clamp(24px, 3vw, 40px);
 }
 
 .intro-title:not(:last-child)::after {
   content: "|";
-  margin: 0 10px; /* Slightly increased margin for better spacing */
+  margin: 0 10px;
   color: var(--highlight-text-color);
 }
 
 .intro-name {
-  padding: 20px 0 0; /* Increased top padding for better separation */
+  padding: 20px 0 0;
 }
 
 #svg-name {
@@ -56,10 +61,6 @@ header {
 
 /* xl */
 @media (min-width: 80em) {
-  header {
-    font-size: clamp(20px, 3vw + 1rem, 24px);
-  }
-
   #svg-name {
     width: 50%;
   }
