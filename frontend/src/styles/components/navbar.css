@@ -170,10 +170,6 @@
     cursor: pointer;
   }
 
-  .nav-padder {
-    padding: 3rem 0;
-  }
-
   .hamburger {
     display: none;
   }

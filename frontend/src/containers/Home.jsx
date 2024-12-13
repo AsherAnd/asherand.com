@@ -1,5 +1,6 @@
 import { useGSAP } from "@gsap/react";
 import ComicButton from "../components/ComicButton";
+import ComicBookEnvironment from "../components/ComicBookEnvironment";
 import SvgName from "../components/SvgName";
 import "../styles/home.css";
 
@@ -49,6 +50,9 @@ export default function Home() {
 
   return (
     <div id="home" className="container">
+      <div className="comic-book">
+        <ComicBookEnvironment />
+      </div>
       <div className="intro">
         <header>
           <div className="intro-title">Coder</div>
@@ -68,7 +72,6 @@ export default function Home() {
         </div>
         <ComicButton text="Get in touch" onClick={scrollTo} />
       </div>
-      <div className="comic-book"></div>
     </div>
   );
 }

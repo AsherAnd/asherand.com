@@ -1,3 +1,15 @@
+canvas {
+  max-width: 100%;
+}
+
+.comic-book {
+  height: clamp(
+    19.8125rem,
+    14.397727272727273rem + 27.073863636363637vw,
+    79.375rem
+  );
+}
+
 header {
   font-family: "Product Sans Bold", sans-serif;
   font-size: 1rem;
@@ -8,6 +20,11 @@ header {
   );
   display: flex;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+#home {
+  position: relative;
+  display: grid;
 }
 
 .intro > div:not(:last-child) {
@@ -46,10 +63,26 @@ header {
   header {
     font-size: clamp(18px, 2.5vw + 1rem, 22px);
   }
+
+  #home {
+    grid-template-columns: 1fr auto;
+  }
+
+  .intro {
+    grid-row: 1;
+  }
 }
 
 /* lg */
 @media (min-width: 64em) {
+  .comic-book {
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    width: 50vw;
+  }
+
   .intro > div:not(:last-child) {
     margin-bottom: clamp(32px, 3vw, 48px);
   }
