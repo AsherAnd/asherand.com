@@ -121,7 +121,7 @@ body {
 }
 
 .container {
-  margin: 0 1rem 200px;
+  margin: 0 1rem 150px;
 }
 
 .container:nth-of-type(odd) {
@@ -173,7 +173,7 @@ svg {
 /* md */
 @media (min-width: 48em) {
   .container {
-    margin: 0 2rem;
+    margin: 0 2rem 200px;
   }
 }
 

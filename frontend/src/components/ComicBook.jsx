@@ -251,19 +251,6 @@ export default function ComicBook() {
     },
   });
 
-  // useEffect(() => {
-  //   if (page === 0) {
-  //     comicRef.current.position.x = 0;
-  //   } else {
-  //     comicRef.current.position.x = PAGE_WIDTH / 2;
-  //   }
-  // }, [page]);
-
-  const [windowSize, setWindowSize] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight,
-  });
-
   useFrame((_, delta) => {
     let targetPosition = 0;
 
@@ -282,11 +269,7 @@ export default function ComicBook() {
   }
 
   return (
-    <group
-      ref={comicRef}
-      rotation-y={-Math.PI / 2}
-      // position={[controls.position, 0, 0]}
-    >
+    <group ref={comicRef} rotation-y={-Math.PI / 2}>
       {pageImages.map((image, i) => (
         <Page
           key={i}

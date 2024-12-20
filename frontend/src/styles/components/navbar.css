@@ -103,7 +103,7 @@
 }
 
 .nav-padder {
-  padding: 4rem 0;
+  padding: 2rem 0;
 }
 
 .nav-padder::after {
@@ -147,6 +147,10 @@
     background-color: transparent;
     padding: 1.5rem 8rem;
     flex-wrap: nowrap;
+  }
+
+  .nav-padder {
+    padding: 4rem 0;
   }
 
   .navbar.scrolled {
