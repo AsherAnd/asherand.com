@@ -49,29 +49,33 @@ export default function Home() {
   });
 
   return (
-    <div id="home" className="container">
-      <div className="comic-book">
-        <ComicBookEnvironment />
-      </div>
-      <div className="intro">
-        <header>
-          <div className="intro-title">Coder</div>
-          <div className="intro-title">Developer</div>
-          <div className="intro-title">Maker</div>
-        </header>
-        <div className="intro-name">
-          <SvgName />
+    <>
+      <div id="home">
+        <div className="comic-book">
+          <ComicBookEnvironment />
         </div>
-        <div className="intro-welcome">
-          <p>All right. Let’s do this again.</p>
-          <p>
-            Welcome to my personal website. Feel free to look around and contact
-            me for any service inquiries.
-          </p>
-          <p>Always looking to collaborate.</p>
+        <div className="container">
+          <div className="intro">
+            <header>
+              <div className="intro-title">Coder</div>
+              <div className="intro-title">Developer</div>
+              <div className="intro-title">Maker</div>
+            </header>
+            <div className="intro-name">
+              <SvgName />
+            </div>
+            <div className="intro-welcome">
+              <p>All right. Let’s do this again.</p>
+              <p>
+                Welcome to my personal website. Feel free to look around and
+                contact me for any service inquiries.
+              </p>
+              <p>Always looking to collaborate.</p>
+            </div>
+            <ComicButton text="Get in touch" onClick={scrollTo} />
+          </div>
         </div>
-        <ComicButton text="Get in touch" onClick={scrollTo} />
       </div>
-    </div>
+    </>
   );
 }

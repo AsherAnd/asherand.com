@@ -1,4 +1,4 @@
-import { useMemo, useRef, useState, useEffect } from "react";
+import { useMemo, useRef, useState } from "react";
 import { useTexture, useHelper } from "@react-three/drei";
 import { useControls } from "leva";
 import { useFrame } from "@react-three/fiber";
@@ -164,7 +164,7 @@ const Page = ({ front, back, onPage, pageNumber, setPage }) => {
   //   useHelper(skinnedMeshRef, SkeletonHelper, "red");
 
   useFrame((_, delta) => {
-    if (!skinnedMeshRef.current || !skinnedMeshRef.current.skeleton) return;
+    if (!skinnedMeshRef.current || !skinnedMeshRef.current?.skeleton) return;
 
     // Calculate the page rotation based on the current page and its position
     let pageRotation = onPage > pageNumber ? -Math.PI / 2 : Math.PI / 2;
@@ -176,7 +176,7 @@ const Page = ({ front, back, onPage, pageNumber, setPage }) => {
       pageRotation += degToRad(pageNumber * 0.8);
     }
 
-    const bones = skinnedMeshRef.current.skeleton.bones;
+    const bones = skinnedMeshRef.current?.skeleton.bones;
 
     // Animate bones (e.g., simulate page flipping or bending)
     for (let i = 0; i < bones.length; i++) {
@@ -185,8 +185,6 @@ const Page = ({ front, back, onPage, pageNumber, setPage }) => {
         i < 8 ? Math.sin(i * controls.insideCurveEnd + 0.45) : 0;
       const outsideCurveIntensity =
         i >= 8 ? Math.cos(i * controls.outsideCurveStart + 0.09) : 0;
-      const foldAngleIntensity =
-        i > 8 ? Math.sin(i * Math.PI * (1 / bones.length) - 0.5) * delta : 0;
       let rotationAngle = 0;
       let foldAngle = 0;
 
@@ -210,14 +208,6 @@ const Page = ({ front, back, onPage, pageNumber, setPage }) => {
         easingFactor,
         delta
       );
-
-      //   easing.dampAngle(
-      //     target.rotation,
-      //     "x",
-      //     foldAngle * foldAngleIntensity,
-      //     easingFactor,
-      //     delta
-      //   );
     }
   });
 
@@ -242,24 +232,16 @@ const Page = ({ front, back, onPage, pageNumber, setPage }) => {
 export default function ComicBook() {
   const [page, setPage] = useState(0);
   const comicRef = useRef();
-  const controls = useControls({
-    position: {
-      value: 0,
-      step: 0.01,
-      min: 0,
-      max: 1,
-    },
-  });
 
   useFrame((_, delta) => {
-    let targetPosition = 0;
+    let targetPosition = -PAGE_WIDTH / 2;
 
-    if (page === 0) {
-      targetPosition = -PAGE_WIDTH / 2;
-    } else if (page === 13) {
+    if (page === 13) {
       targetPosition = PAGE_WIDTH / 2;
+    } else if (page > 0) {
+      targetPosition = 0;
     }
-    easing.damp(comicRef.current.position, "x", targetPosition, 0.5, delta);
+    easing.damp(comicRef.current?.position, "x", targetPosition, 0.5, delta);
   });
 
   // Prepare page images, handling odd numbers of images
@@ -269,17 +251,19 @@ export default function ComicBook() {
   }
 
   return (
-    <group ref={comicRef} rotation-y={-Math.PI / 2}>
-      {pageImages.map((image, i) => (
-        <Page
-          key={i}
-          pageNumber={i}
-          onPage={page}
-          front={image[0]}
-          back={image[1]}
-          setPage={setPage}
-        />
-      ))}
-    </group>
+    <>
+      <group ref={comicRef} rotation-y={-Math.PI / 2}>
+        {pageImages.map((image, i) => (
+          <Page
+            key={i}
+            pageNumber={i}
+            onPage={page}
+            front={image[0]}
+            back={image[1]}
+            setPage={setPage}
+          />
+        ))}
+      </group>
+    </>
   );
 }

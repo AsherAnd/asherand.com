@@ -16,7 +16,7 @@ export default function About() {
     });
   });
   return (
-    <div id="about" className="container">
+    <div id="about" className="container glass-container">
       <img
         className="about-image"
         src={image}

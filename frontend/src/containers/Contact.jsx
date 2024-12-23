@@ -2,7 +2,7 @@ import SectionTitle from "../components/SectionTitle";
 import "../styles/contact.css";
 export default function Contact() {
   return (
-    <div id="contact" className="container">
+    <div id="contact" className="container glass-container">
       <SectionTitle title="Contact" />
       <div>
         <svg

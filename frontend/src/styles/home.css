@@ -1,9 +1,10 @@
 canvas {
   max-width: 100%;
+  touch-action: none;
 }
 
 .comic-book {
-  height: 50vh;
+  height: 333px;
   width: 100%;
 }
 
@@ -17,11 +18,6 @@ header {
   );
   display: flex;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-}
-
-#home {
-  position: relative;
-  display: grid;
 }
 
 .intro {
@@ -64,15 +60,21 @@ header {
   header {
     font-size: clamp(18px, 2.5vw + 1rem, 22px);
   }
+
+  .comic-book {
+    height: 62.5vh;
+  }
 }
 
 /* lg */
 @media (min-width: 64em) {
   .comic-book {
     position: absolute;
-    left: 60%;
-    height: 60vh;
-    width: 50%;
+    top: 50%;
+    right: 0%;
+    transform: translate(0%, -50%);
+    height: 75vh;
+    width: 60%;
   }
 
   .intro {
@@ -94,4 +96,7 @@ header {
 
 /* xl */
 @media (min-width: 80em) {
+  .comic-book {
+    height: 90vh;
+  }
 }
