@@ -4,8 +4,10 @@ canvas {
 }
 
 .comic-book {
-  height: 333px;
-  width: 100%;
+  height: 45vh;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  width: 100vw;
 }
 
 header {
@@ -75,6 +77,8 @@ header {
     transform: translate(0%, -50%);
     height: 75vh;
     width: 60%;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .intro {

@@ -2,19 +2,35 @@
   text-align: center;
 }
 
+.project-card div {
+  margin-bottom: 0.25rem;
+}
+
+.project-link:hover .project-image {
+  box-shadow: 0 0 100px rgba(255, 255, 255, 0.3);
+  filter: grayscale(75%);
+  transition: all 0.25s;
+}
+
 .project-image {
   width: 8rem;
   height: auto;
   aspect-ratio: 8/11;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 .project-image img {
   height: 100%;
-  width: 100%;
-  object-fit: cover;
 }
 
 .project-title {
-  color: var(--highlight-text-color);
   text-transform: capitalize;
+}
+
+.sub-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
 }

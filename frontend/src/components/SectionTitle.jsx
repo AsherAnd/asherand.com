@@ -17,6 +17,7 @@ export default function SectionTitle(props) {
         trigger: titleRef.current,
         start: "top 80%",
         end: "100px 15%",
+        markers: true,
         toggleActions: "restart reverse restart reverse",
       },
       clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",

@@ -1,4 +1,4 @@
-#about {
+#about > .container {
   display: grid;
   justify-items: center;
   gap: 4rem;
@@ -9,7 +9,7 @@
 }
 
 .about-image {
-  width: 90%;
+  width: 75%;
   height: auto;
   object-fit: contain;
   align-self: center;
@@ -22,7 +22,7 @@
 
 /* lg */
 @media (min-width: 64em) {
-  #about {
+  #about > .container {
     grid-template-columns: 1fr 1fr;
   }
 }

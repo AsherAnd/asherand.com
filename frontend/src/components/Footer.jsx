@@ -3,7 +3,10 @@ export default function Footer() {
     <footer>
       <h3 className="footer-text">
         <div>
-          Made with <a href="">Test</a>
+          Made with{" "}
+          <a href="" className="link">
+            Test
+          </a>
         </div>
       </h3>
     </footer>

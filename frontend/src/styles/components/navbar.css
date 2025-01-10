@@ -103,7 +103,7 @@
 }
 
 .nav-padder {
-  padding: 2rem 0;
+  padding: 3rem 0;
 }
 
 .nav-padder::after {
@@ -139,6 +139,10 @@
   .navbar.open {
     padding: 2rem 1.6rem 0.5rem;
   }
+
+  .nav-padder {
+    padding: 2rem 0;
+  }
 }
 
 /* lg */
@@ -150,7 +154,7 @@
   }
 
   .nav-padder {
-    padding: 4rem 0;
+    padding: 0;
   }
 
   .navbar.scrolled {

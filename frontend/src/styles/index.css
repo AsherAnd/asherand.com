@@ -40,32 +40,25 @@
 
 a {
   text-decoration: none;
-  display: inline-block;
-  position: relative;
   color: var(--highlight-text-color);
-  transition: color 0.25s ease-out;
   cursor: pointer;
-}
-
-a::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: var(--highlight-text-color);
-  transform-origin: bottom center;
-  transition: transform 0.25s ease-out;
 }
 
 a:hover {
   color: var(--text-color);
 }
 
-a:hover::after {
-  transform: scaleX(1);
+#about,
+#contact,
+#experience,
+#home,
+#projects {
+  margin: 0 1rem;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .App {
@@ -111,7 +104,7 @@ body {
 }
 
 .bg-image {
-  background-image: url("background test6.png");
+  background-image: url("background.png");
   background-position: center;
   background-size: contain;
   height: 100vh;
@@ -120,16 +113,8 @@ body {
   z-index: -1;
 }
 
-.container:not(:last-child) {
-  margin: 0 1rem 125px;
-}
-
-.container:last-child {
-  margin: 0 1rem 75px;
-}
-
 .container {
-  padding-top: 1rem;
+  width: 100%;
 }
 
 .glass-container {
@@ -150,10 +135,36 @@ ul {
 }
 
 footer {
-  background: #151515;
   text-align: center;
   border-top: 2px solid var(--highlight-text-color);
   padding: 2rem;
+}
+
+.highlight {
+  color: var(--highlight-text-color);
+}
+
+.link {
+  display: inline-block;
+  position: relative;
+  transition: var(--highlight-text-color) 0.25s ease-out;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--highlight-text-color);
+  transform-origin: bottom center;
+  transition: transform 0.25s ease-out;
+}
+
+.link:hover::after {
+  transform: scaleX(1);
 }
 
 #subtitle {
@@ -174,14 +185,27 @@ svg {
   margin-bottom: clamp(16px, 2vw, 24px);
 }
 
+.sub-category {
+  background: rgba(0, 0, 0, 0.41);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.7px);
+  -webkit-backdrop-filter: blur(7.7px);
+  color: var(--highlight-text-color);
+  padding: 2px 8px;
+  width: fit-content;
+  outline: var(--highlight-text-color) outset 0.5px;
+  cursor: default;
+}
+
 /* md */
 @media (min-width: 48em) {
-  .container:not(:last-child) {
-    margin: 0 2rem 200px;
-  }
-
-  .container:last-child {
-    margin: 0 2rem 100px;
+  #about,
+  #contact,
+  #experience,
+  #home,
+  #projects {
+    margin: 0 2rem;
   }
 }
 
@@ -191,12 +215,12 @@ svg {
     background-size: 50%;
   }
 
-  .container:not(:last-child) {
-    margin: 0 8rem 200px;
-  }
-
-  .container:last-child {
-    margin: 0 8rem 100px;
+  #about,
+  #contact,
+  #experience,
+  #home,
+  #projects {
+    margin: 0 8rem;
   }
 
   .glass-container {
