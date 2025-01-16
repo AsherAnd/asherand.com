@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { PresentationControls } from "@react-three/drei";
 import ComicBook from "./ComicBook";
@@ -40,7 +40,9 @@ function ComicBookEnvironment() {
           polar={[-Math.PI / 2, Math.PI / 2]}
           azimuth={[-Math.PI / 3, Math.PI / 3]}
         >
-          <ComicBook />
+          <Suspense>
+            <ComicBook />
+          </Suspense>
         </PresentationControls>
       </Canvas>
     </>

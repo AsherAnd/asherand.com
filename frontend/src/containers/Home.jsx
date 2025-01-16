@@ -1,12 +1,9 @@
-import { useGSAP } from "@gsap/react";
 import ComicButton from "../components/ComicButton";
 import ComicBookEnvironment from "../components/ComicBookEnvironment";
 import SvgName from "../components/SvgName";
 import "../styles/home.css";
 
-gsap.registerPlugin(useGSAP, ScrollToPlugin, DrawSVGPlugin);
-
-export default function Home() {
+export default function Home({ gsapTimeline }) {
   // gsap cleanup
   const { contextSafe } = useGSAP();
 
@@ -14,31 +11,31 @@ export default function Home() {
     gsap.set(".intro-title", { y: "50px" });
     gsap.set(".strokeMask", { drawSVG: 0 });
 
-    // gsap timeline
-    const tl = gsap.timeline({});
-
     // svg name animation
-    tl.to("#masks", { autoAlpha: 1 });
-    tl.fromTo(
-      "#first-name .strokeMask",
-      { drawSVG: "0% 0%" },
-      { drawSVG: true, duration: 0.2, stagger: 0.1 }
-    );
+    gsapTimeline && gsapTimeline.to("#masks", { autoAlpha: 1 });
+    gsapTimeline &&
+      gsapTimeline.fromTo(
+        "#first-name .strokeMask",
+        { drawSVG: "0% 0%" },
+        { drawSVG: true, duration: 0.2, stagger: 0.1 }
+      );
 
-    tl.fromTo(
-      "#last-name .strokeMask",
-      { drawSVG: "0% 0%" },
-      { drawSVG: true, duration: 0.2, stagger: 0.05 },
-      "<"
-    );
+    gsapTimeline &&
+      gsapTimeline.fromTo(
+        "#last-name .strokeMask",
+        { drawSVG: "0% 0%" },
+        { drawSVG: true, duration: 0.2, stagger: 0.05 },
+        "<"
+      );
 
     // top title animation
-    tl.to(".intro-title", {
-      duration: 0.5,
-      stagger: 0.25,
-      y: "0",
-    });
-  });
+    gsapTimeline &&
+      gsapTimeline.to(".intro-title", {
+        duration: 0.5,
+        stagger: 0.25,
+        y: "0",
+      });
+  }, [gsapTimeline]);
 
   // scroll to animation
   const scrollTo = contextSafe(() => {
