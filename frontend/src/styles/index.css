@@ -144,6 +144,18 @@ footer {
   color: var(--highlight-text-color);
 }
 
+.error-message {
+  font-size: 10vw;
+}
+
+.error-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .link {
   display: inline-block;
   position: relative;

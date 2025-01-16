@@ -1,0 +1,5 @@
+.blog-layout {
+  display: grid;
+  gap: 2.6rem 1.9rem;
+  grid-template-columns: repeat(4, 1fr);
+}
