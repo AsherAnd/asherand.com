@@ -149,7 +149,8 @@ footer {
   color: var(--highlight-text-color);
 }
 
-.error-message {
+.error-message,
+.loader-message {
   font-size: 10vw;
 }
 
@@ -194,6 +195,10 @@ footer {
   overflow: hidden;
   z-index: 100;
   pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 #subtitle {

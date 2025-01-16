@@ -4,6 +4,7 @@ import { useProgress } from "@react-three/drei";
 export default function PageLoader({ gsapTimeline }) {
   const { progress } = useProgress();
   const [load, setLoad] = useState(false);
+  const [textIndex, setIndex] = useState(0);
   const textRoll = ["Loading", "Coding", "Reading"];
 
   // hide scrollbar when loading
@@ -19,6 +20,8 @@ export default function PageLoader({ gsapTimeline }) {
         gsapTimeline && gsapTimeline.play();
       }, 500);
     }
+
+    setIndex((textIndex + 1) % textRoll.length);
   }, [progress]);
 
   useGSAP(() => {
@@ -32,8 +35,11 @@ export default function PageLoader({ gsapTimeline }) {
 
   return (
     <div className="page-loader">
-      <p>#{Math.round(progress)}</p>
-      <p>{textRoll[0]}...</p>
+      <div className="loader-message">
+        <span>
+          #{Math.round(progress)} {textRoll[textIndex]}...
+        </span>
+      </div>
     </div>
   );
 }
