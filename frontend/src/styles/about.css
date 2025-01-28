@@ -1,28 +1,32 @@
 #about > .container {
-  display: grid;
-  justify-items: center;
-  gap: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
 }
 
 .about-text > div:not(:last-child) {
   margin-bottom: clamp(16px, 2vw, 24px);
 }
 
-.about-image {
-  width: 75%;
-  height: auto;
-  object-fit: contain;
-  align-self: center;
-}
-
-.about-image img {
+.about-img-wrapper img {
   max-width: 100%;
   height: auto;
 }
 
+.about-img-wrapper {
+  flex: 0 0 75%;
+}
+
+.about-text {
+  flex: 0 0 100%;
+}
+
 /* lg */
 @media (min-width: 64em) {
-  #about > .container {
-    grid-template-columns: 1fr 1fr;
+  .about-img-wrapper,
+  .about-text {
+    flex: 5;
   }
 }

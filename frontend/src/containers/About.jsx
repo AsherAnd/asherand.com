@@ -19,17 +19,17 @@ export default function About() {
   return (
     <div id="about">
       <div className="container glass-container">
-        <img
-          className="about-image"
-          src={image}
-          alt="Blue hand in red pool"
-          loading="lazy"
-          draggable="false"
-        />
+        <div className="about-img-wrapper">
+          <img
+            src={image}
+            alt="Blue hand in red pool"
+            loading="lazy"
+            draggable="false"
+          />
+        </div>
         <div className="about-text">
           <SectionTitle title="About" />
           <div>
-            {" "}
             <svg
               id="subtitle"
               xmlns="http://www.w3.org/2000/svg"
@@ -56,7 +56,6 @@ export default function About() {
             </svg>
           </div>
           <div>
-            {" "}
             <p>
               <a
                 href="https://www.google.com/search?q=amharic&rlz=1C1GCEA_enCA1104CA1104&oq=amharic&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQABiPAjIHCAIQABiPAtIBCDE1MTlqMGoxqAIAsAIA&sourceid=chrome&ie=UTF-8"
