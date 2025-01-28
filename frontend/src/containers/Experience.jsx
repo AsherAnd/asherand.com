@@ -1,6 +1,12 @@
-import SectionTitle from "../components/SectionTitle";
-import "../styles/experience.css";
 import { useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Scrollbar, Autoplay } from "swiper/modules";
+import SectionTitle from "../components/SectionTitle";
+import ExperienceCard from "../components/ExperienceCard";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "../styles/experience.css";
 
 export default function Experience() {
   const [experience, setExperience] = useState(null);
@@ -61,7 +67,39 @@ export default function Experience() {
             </g>
           </svg>
         </div>
-        <div className="experiences"></div>
+        <div className="experiences">
+          <Swiper
+            modules={[Navigation, Pagination, Scrollbar, Autoplay]}
+            slidesPerView={1}
+            spaceBetween={10}
+            centeredSlides={true}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: true,
+            }}
+            navigation
+            pagination={{ clickable: true }}
+            scrollbar={{ draggable: true }}
+            loop={true}
+          >
+            {experience?.map((experience) => {
+              return (
+                <SwiperSlide key={experience.id}>
+                  <ExperienceCard
+                    title={experience.position}
+                    desc={experience.description}
+                  />
+                </SwiperSlide>
+              );
+            })}
+            <SwiperSlide>
+              <ExperienceCard />
+            </SwiperSlide>
+            <SwiperSlide>
+              <ExperienceCard />
+            </SwiperSlide>
+          </Swiper>
+        </div>
       </div>
     </div>
   );

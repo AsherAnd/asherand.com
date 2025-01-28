@@ -1,0 +1,114 @@
+.experience-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  height: 75vh;
+  overflow: auto;
+  touch-action: pan-y;
+  gap: 20px;
+}
+
+.experience-img-wrapper {
+  width: 100%;
+  height: auto;
+}
+
+.experience-img-wrapper img {
+  max-width: 100%;
+  height: auto;
+}
+
+.experience-text .experience-title {
+  display: none;
+}
+
+.experience-text,
+.experience-text-mobile {
+  width: 100%;
+  word-wrap: break-word;
+}
+
+.experience-title span {
+  color: var(--highlight-text-color);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--highlight-text-color);
+  transition: 0.25s ease-out;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  display: none;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: var(--text-color);
+}
+
+.swiper-pagination {
+  position: static;
+  margin-top: 1rem;
+}
+
+.swiper-pagination-bullet {
+  width: 0.5rem;
+  height: 0.5rem;
+  text-align: center;
+  line-height: 0.5rem;
+  font-size: 12px;
+  opacity: 1;
+  background: var(--text-color);
+}
+
+.swiper-pagination-bullet-active {
+  color: var(--text-color);
+  background: var(--highlight-text-color);
+}
+
+.swiper-slide {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+/* md */
+@media (min-width: 48em) {
+  .experience-card-container {
+    overflow: hidden;
+    flex-direction: row-reverse;
+  }
+
+  .experience-desc {
+    height: 45vh;
+    overflow: auto;
+  }
+
+  .experience-text .experience-title {
+    display: block;
+  }
+
+  .experience-text-mobile {
+    display: none;
+  }
+
+  .experience-img-wrapper {
+    width: auto;
+    height: 100%;
+    flex: 5;
+  }
+
+  .experience-img-wrapper img {
+    max-height: 100%;
+    float: right;
+  }
+
+  .experience-text {
+    flex: 8;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: block;
+  }
+}
