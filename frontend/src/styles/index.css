@@ -54,7 +54,7 @@ a:hover {
 #experience,
 #home,
 #projects {
-  margin: 0 1rem;
+  margin: 0 1rem 50px 1rem;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -105,7 +105,7 @@ body.loading {
   height: 100vh;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: -100;
 }
 
 .bg-image {
@@ -115,7 +115,7 @@ body.loading {
   height: 100vh;
   width: 100vw;
   position: fixed;
-  z-index: -1;
+  z-index: -100;
 }
 
 .container {
@@ -239,7 +239,7 @@ svg {
   #experience,
   #home,
   #projects {
-    margin: 0 2rem;
+    margin: 0 2rem 50px 2rem;
   }
 }
 
@@ -254,7 +254,7 @@ svg {
   #experience,
   #home,
   #projects {
-    margin: 0 8rem;
+    margin: 0 8rem 50px 8rem;
   }
 
   .glass-container {
