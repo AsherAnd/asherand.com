@@ -48,10 +48,10 @@ export default function Home({ gsapTimeline }) {
   return (
     <>
       <div id="home">
-        <div className="comic-book">
-          <ComicBookEnvironment />
-        </div>
         <div className="container">
+          <div className="comic-book">
+            <ComicBookEnvironment />
+          </div>
           <div className="intro">
             <header>
               <div className="intro-title">Coder</div>

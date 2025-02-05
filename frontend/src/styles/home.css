@@ -5,9 +5,9 @@ canvas {
 
 .comic-book {
   height: 45vh;
+  width: 100vw;
   margin-left: -1rem;
   margin-right: -1rem;
-  width: 100vw;
 }
 
 header {
@@ -20,6 +20,10 @@ header {
   );
   display: flex;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+#home {
+  display: flex;
 }
 
 .intro {
@@ -62,23 +66,22 @@ header {
   header {
     font-size: clamp(18px, 2.5vw + 1rem, 22px);
   }
-
-  .comic-book {
-    height: 62.5vh;
-  }
 }
 
 /* lg */
 @media (min-width: 64em) {
   .comic-book {
     position: absolute;
-    top: 50%;
-    right: 0%;
-    transform: translate(0%, -50%);
-    height: 75vh;
-    width: 60%;
+    top: 0;
+    right: 0;
+    height: 90%;
+    width: 65%;
     margin-left: 0;
     margin-right: 0;
+  }
+
+  #home {
+    flex-direction: row;
   }
 
   .intro {
@@ -101,6 +104,6 @@ header {
 /* xl */
 @media (min-width: 80em) {
   .comic-book {
-    height: 90vh;
+    height: 100%;
   }
 }
