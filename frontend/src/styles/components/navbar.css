@@ -21,7 +21,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   z-index: 99;
   max-height: 100px;
 }
@@ -154,7 +154,7 @@
   }
 
   .nav-padder {
-    padding: 0;
+    padding: 1rem 0;
   }
 
   .navbar.scrolled {

@@ -1,3 +1,4 @@
+import { scrollTo } from "../utils/Navigation";
 import ComicButton from "../components/ComicButton";
 import ComicBookEnvironment from "../components/ComicBookEnvironment";
 import SvgName from "../components/SvgName";
@@ -37,14 +38,6 @@ export default function Home({ gsapTimeline }) {
       });
   }, [gsapTimeline]);
 
-  // scroll to animation
-  const scrollTo = contextSafe(() => {
-    gsap.to(window, {
-      duration: 0.25,
-      scrollTo: { y: "#contact", offsetY: 112 },
-    });
-  });
-
   return (
     <>
       <div id="home">
@@ -69,7 +62,10 @@ export default function Home({ gsapTimeline }) {
               </p>
               <p>Always looking to collaborate.</p>
             </div>
-            <ComicButton text="Get in touch" onClick={scrollTo} />
+            <ComicButton
+              text="Get in touch"
+              onClick={() => scrollTo("contact")}
+            />
           </div>
         </div>
       </div>

@@ -12,7 +12,7 @@ export default function PageLoader({ gsapTimeline }) {
     document.querySelector("body").classList.add("loading");
   }
 
-  useEffect(() => {
+  useGSAP(() => {
     if (progress === 100) {
       setTimeout(() => {
         setLoad(true);
@@ -22,16 +22,14 @@ export default function PageLoader({ gsapTimeline }) {
     }
 
     setIndex((textIndex + 1) % textRoll.length);
-  }, [progress]);
 
-  useGSAP(() => {
     gsapTimeline &&
       gsapTimeline.to(".page-loader", {
         duration: 0.5,
         height: "0vh",
         ease: "power1.out",
       });
-  }, [gsapTimeline]);
+  }, [progress, gsapTimeline]);
 
   return (
     <div className="page-loader">

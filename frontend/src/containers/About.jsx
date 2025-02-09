@@ -1,21 +1,9 @@
-import "../styles/about.css";
+import { scrollTo } from "../utils/Navigation";
 import SectionTitle from "../components/SectionTitle";
 import image from "../assets/images/All I know.png";
-
-gsap.registerPlugin(useGSAP, ScrollToPlugin);
+import "../styles/about.css";
 
 export default function About() {
-  // gsap cleanup
-  const { contextSafe } = useGSAP();
-
-  // scroll to animation
-  const scrollTo = contextSafe((e) => {
-    console.log(e);
-    gsap.to(window, {
-      duration: 0.25,
-      scrollTo: { y: "#projects", offsetY: 112 },
-    });
-  });
   return (
     <div id="about">
       <div className="container glass-container">
@@ -75,7 +63,7 @@ export default function About() {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={scrollTo}
+                onClick={() => scrollTo("projects")}
                 className="link"
               >
                 Photoshop
@@ -84,7 +72,7 @@ export default function About() {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={scrollTo}
+                onClick={() => scrollTo("projects")}
                 className="link"
               >
                 3D Printing
@@ -93,7 +81,7 @@ export default function About() {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={scrollTo}
+                onClick={() => scrollTo("projects")}
                 className="link"
               >
                 Basic Electronics
@@ -128,7 +116,7 @@ export default function About() {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={scrollTo}
+                onClick={() => scrollTo("projects")}
                 className="link"
               >
                 some of my projects!

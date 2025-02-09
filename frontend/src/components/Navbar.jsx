@@ -1,12 +1,12 @@
+import { scrollTo } from "../utils/Navigation";
 import { useState, useEffect, useRef } from "react";
-import { useGSAP } from "@gsap/react";
 import "../styles/components/navbar.css";
 
-gsap.registerPlugin(useGSAP, ScrollToPlugin);
-
 export default function Navbar() {
-  // Toggle only on devices less than a desktop
-  var windowWidth = window.innerWidth;
+  const navLinks = useRef();
+
+  // Window width (used for device checks)
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const screenSize = 1024;
 
   // Sticky Navbar
@@ -15,13 +15,17 @@ export default function Navbar() {
   //button state
   const [menuState, setMenuState] = useState("closed");
 
-  // gsap cleanup
-  const navLinks = useRef();
-  const { contextSafe } = useGSAP({ scope: navLinks });
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
 
-  window.addEventListener("resize", () => {
-    windowWidth = window.innerWidth;
-  });
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,18 +47,12 @@ export default function Navbar() {
     setMenuState((prevState) => (prevState === "open" ? "closed" : "open"));
   };
 
-  const scrollTo = contextSafe((e) => {
-    const id = e.target.innerText.toLowerCase();
-
-    gsap.to(window, {
-      duration: 0.25,
-      scrollTo: { y: `#${id}`, offsetY: 112 },
-    });
-
+  const navigateTo = (id) => {
+    scrollTo(id);
     if (windowWidth < screenSize) {
       toggleMenu();
     }
-  });
+  };
 
   return (
     <div>
@@ -67,27 +65,36 @@ export default function Navbar() {
         <div className="nav-links" ref={navLinks}>
           <ul>
             <li>
-              <button className="nav-link" onClick={scrollTo}>
+              <button className="nav-link" onClick={() => navigateTo("home")}>
                 Home
               </button>
             </li>
             <li>
-              <button className="nav-link" onClick={scrollTo}>
+              <button className="nav-link" onClick={() => navigateTo("about")}>
                 About
               </button>
             </li>
             <li>
-              <button className="nav-link" onClick={scrollTo}>
+              <button
+                className="nav-link"
+                onClick={() => navigateTo("experience")}
+              >
                 Experience
               </button>
             </li>
             <li>
-              <button className="nav-link" onClick={scrollTo}>
+              <button
+                className="nav-link"
+                onClick={() => navigateTo("projects")}
+              >
                 Projects
               </button>
             </li>
             <li>
-              <button className="nav-link" onClick={scrollTo}>
+              <button
+                className="nav-link"
+                onClick={() => navigateTo("contact")}
+              >
                 Contact
               </button>
             </li>

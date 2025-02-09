@@ -1,5 +1,6 @@
-import "../styles/components/Sectiontitle.css";
 import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import "../styles/components/Sectiontitle.css";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 

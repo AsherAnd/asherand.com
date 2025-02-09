@@ -9,7 +9,7 @@ import Contact from "./containers/Contact.jsx";
 import Footer from "./components/footer.jsx";
 import PageLoader from "./components/PageLoader.jsx";
 
-gsap.registerPlugin(useGSAP, ScrollToPlugin, DrawSVGPlugin);
+gsap.registerPlugin(useGSAP, DrawSVGPlugin);
 
 export default function App() {
   // gsap timeline
