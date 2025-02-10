@@ -1,9 +1,10 @@
 import { scrollTo } from "../utils/Navigation";
+import { useNavigate } from "react-router";
 import { useState, useEffect, useRef } from "react";
 import "../styles/components/navbar.css";
 
 export default function Navbar() {
-  const navLinks = useRef();
+  const navigate = useNavigate();
 
   // Window width (used for device checks)
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -62,7 +63,7 @@ export default function Navbar() {
         }`}
       >
         <div className="logo">Asher</div>
-        <div className="nav-links" ref={navLinks}>
+        <div className="nav-links">
           <ul>
             <li>
               <button className="nav-link" onClick={() => navigateTo("home")}>
@@ -99,7 +100,9 @@ export default function Navbar() {
               </button>
             </li>
             <li>
-              <button className="nav-link">Blog</button>
+              <button className="nav-link" onClick={() => navigate("/blog")}>
+                Blog
+              </button>
             </li>
           </ul>
         </div>

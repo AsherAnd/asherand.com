@@ -5,9 +5,6 @@ import SvgName from "../components/SvgName";
 import "../styles/home.css";
 
 export default function Home({ gsapTimeline }) {
-  // gsap cleanup
-  const { contextSafe } = useGSAP();
-
   useGSAP(() => {
     gsap.set(".intro-title", { y: "50px" });
     gsap.set(".strokeMask", { drawSVG: 0 });
