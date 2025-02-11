@@ -10,7 +10,7 @@ export default function NotFound() {
         <div className="error-message">
           <span>#404</span> <span>Not Found</span>
         </div>
-        <ComicButton text="Home" onClick={() => navigate("/")} />
+        <ComicButton text="Back" onClick={() => navigate(-1)} />
       </div>
     </>
   );

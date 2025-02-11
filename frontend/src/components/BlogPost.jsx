@@ -1,24 +1,28 @@
-import defImage from "../assets/images/PageTex001.jpg";
-import "../styles/components/project.css";
+import { useLoaderData } from "react-router";
 
-export default function BlogPost({ title = "Title", image = defImage }) {
+export async function getBlogPost({ params }) {
+  const { id } = params;
+  const res = await fetch(`https://api.asherand.com/api/projects/${id}`);
+
+  if (!res.ok) {
+    throw Error("There was an issue fetching your request");
+  }
+
+  return res.json();
+}
+
+export default function BlogPost() {
+  const blog = useLoaderData()[0];
+
+  if (blog === undefined || blog.length == 0) {
+    throw Error("Blog doesn't exist");
+  }
+
   return (
-    <div className="project-card">
-      <a href="" className="project-link">
-        <div className="project-image">
-          <img src={image} alt={title} loading="lazy" draggable="false" />
-        </div>
-        <div className="project-text">
-          <div className="project-title">
-            <h4>{title}</h4>
-          </div>
-          <div className="sub-categories">
-            <h6 className="sub-category">html</h6>
-            <h6 className="sub-category">css</h6>
-            <h6 className="sub-category">js</h6>
-          </div>
-        </div>
-      </a>
-    </div>
+    <>
+      <div id="blog">
+        <div className="blog-title">{blog.title}</div>
+      </div>
+    </>
   );
 }
