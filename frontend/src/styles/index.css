@@ -81,6 +81,7 @@ a:hover {
 html {
   scrollbar-color: var(--highlight-text-color) transparent;
   scrollbar-width: thin;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -109,7 +110,7 @@ body.loading {
 }
 
 .bg-image {
-  background-image: url("background.png");
+  background-image: url("/background3.jpg");
   background-position: center;
   background-size: contain;
   height: 100vh;
@@ -152,6 +153,7 @@ footer {
 .error-message,
 .loader-message {
   font-size: 10vw;
+  text-align: center;
 }
 
 .error-page {

@@ -66,6 +66,11 @@ header {
   header {
     font-size: clamp(18px, 2.5vw + 1rem, 22px);
   }
+
+  .comic-book {
+    margin-left: -2rem;
+    margin-right: -2rem;
+  }
 }
 
 /* lg */
