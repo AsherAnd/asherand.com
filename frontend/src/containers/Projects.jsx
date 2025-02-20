@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import ComicButton from "../components/ComicButton";
-import Project from "../components/Project";
+import ProjectCard from "../components/ProjectCard";
 import SectionTitle from "../components/SectionTitle";
 import "../styles/projects.css";
 
@@ -65,25 +65,26 @@ export default function Projects() {
           <button className="filter-btn">Misc.</button>
         </div>
         <div className="projects-layout">
-          {projects?.map((project, i) => {
+          <ProjectCard />
+          {projects?.map((project) => {
             return (
-              <Project
+              <ProjectCard
                 title={project.title}
                 image={project.thumbnail}
-                key={i}
+                key={project.id}
               />
             );
           })}
 
-          <Project />
-          <Project />
-          <Project />
-          <Project />
-          <Project />
-          <Project />
-          <Project />
-          <Project />
-          <Project />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
         </div>
         <div className="load-button">
           <ComicButton text="Load More" />
