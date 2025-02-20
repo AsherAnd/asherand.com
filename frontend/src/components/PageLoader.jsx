@@ -13,6 +13,13 @@ export default function PageLoader({ gsapTimeline }) {
   }
 
   useGSAP(() => {
+    gsapTimeline &&
+      gsapTimeline.to(".page-loader", {
+        duration: 0.5,
+        height: "0vh",
+        ease: "power1.out",
+      });
+
     if (progress === 100) {
       setTimeout(() => {
         setLoad(true);
@@ -21,21 +28,14 @@ export default function PageLoader({ gsapTimeline }) {
       }, 500);
     }
 
-    setIndex((textIndex + 1) % textRoll.length);
-
-    gsapTimeline &&
-      gsapTimeline.to(".page-loader", {
-        duration: 0.5,
-        height: "0vh",
-        ease: "power1.out",
-      });
+    setIndex(textIndex + 1);
   }, [progress, gsapTimeline]);
 
   return (
     <div className="page-loader">
       <div className="loader-message">
         <span>
-          #{Math.round(progress)} {textRoll[textIndex]}...
+          {textRoll[textIndex % textRoll.length]} #{Math.round(progress)}
         </span>
       </div>
     </div>
