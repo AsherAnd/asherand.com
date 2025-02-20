@@ -1,10 +1,11 @@
+import { Link } from "react-router";
 import defImage from "../assets/images/PageTex001.jpg";
 import "../styles/components/project.css";
 
-export default function Project({ title = "Title", image = defImage }) {
+export default function BlogPostCard({ title = "Title", image = defImage }) {
   return (
     <div className="project-card">
-      <a href="" className="project-link">
+      <Link to="/" className="project-link">
         <div className="project-image">
           <img src={image} alt={title} loading="lazy" draggable="false" />
         </div>
@@ -18,7 +19,7 @@ export default function Project({ title = "Title", image = defImage }) {
             <h6 className="sub-category">js</h6>
           </div>
         </div>
-      </a>
+      </Link>
     </div>
   );
 }

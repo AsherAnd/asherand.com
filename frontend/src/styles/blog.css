@@ -1,5 +1,15 @@
+#blog {
+  margin: 0 1rem;
+  min-height: 100vh;
+}
+
 .blog-layout {
   display: grid;
   gap: 2.6rem 1.9rem;
   grid-template-columns: repeat(4, 1fr);
+}
+
+header {
+  width: 100%;
+  text-align: center;
 }
