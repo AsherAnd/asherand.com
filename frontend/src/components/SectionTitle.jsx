@@ -16,14 +16,14 @@ export default function SectionTitle(props) {
     gsap.to(titleRef.current, {
       scrollTrigger: {
         trigger: titleRef.current,
-        start: "top 80%",
-        end: "100px 15%",
-        markers: true,
+        start: "top 70%",
+        end: "bottom 15%",
         toggleActions: "restart reverse restart reverse",
       },
       clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
     });
   });
+
   return (
     <div ref={titleRef} className="section-title">
       {props.title}
