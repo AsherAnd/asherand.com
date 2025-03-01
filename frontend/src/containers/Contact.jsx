@@ -37,8 +37,9 @@ export default function Contact() {
         </div>
         <div>
           <p>
-            Interested in connecting? You're welcome to reach me in any way
-            you'd like and I'll be sure to respond to you in a timely manner.
+            Interested in connecting? You&apos;re welcome to reach me in any way
+            you&apos;d like and I&apos;ll be sure to respond to you in a timely
+            manner.
           </p>
         </div>
         <div className="icons-list">

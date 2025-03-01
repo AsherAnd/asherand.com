@@ -54,8 +54,8 @@ export default function About() {
                 ሰላም!
               </a>{" "}
               My name is Asher Andargachew, Computer Science major and soon to
-              be graduate from Toronto Metropolitan University. When I'm not
-              coding for grades, I spend my free time exploring technologies
+              be graduate from Toronto Metropolitan University. When I&apos;m
+              not coding for grades, I spend my free time exploring technologies
               that interest me, constantly expanding and updating my skills and
               knowledge. Besides being a professional and hobbyist Software
               Developer, I also dable in other areas including but not limited
@@ -110,9 +110,9 @@ export default function About() {
               >
                 DC
               </a>{" "}
-              comic books (if you haven't already noticed from the look of this
-              site). So look around, see some things I've done, and if you want,
-              check out{" "}
+              comic books (if you haven&apos;t already noticed from the look of
+              this site). So look around, see some things I&apos;ve done, and if
+              you want, check out{" "}
               <a
                 target="_blank"
                 rel="noopener noreferrer"
