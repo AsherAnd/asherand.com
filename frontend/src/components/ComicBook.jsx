@@ -1,5 +1,5 @@
-import { useMemo, useRef, useState } from "react";
-import { useTexture, useHelper } from "@react-three/drei";
+import { useMemo, useRef, useState, useEffect } from "react";
+import { useTexture, useProgress, useHelper } from "@react-three/drei";
 import { useControls } from "leva";
 import { useFrame } from "@react-three/fiber";
 import { images } from "./Images";
@@ -230,8 +230,28 @@ const Page = ({ front, back, onPage, pageNumber, setPage }) => {
 };
 
 export default function ComicBook() {
-  const [page, setPage] = useState(0);
+  const { progress } = useProgress();
+  const [page, setPage] = useState(13);
+  const [isStartupComplete, setIsStartupComplete] = useState(false);
   const comicRef = useRef();
+
+  useEffect(() => {
+    if (progress === 100 && !isStartupComplete) {
+      const interval = setInterval(() => {
+        setPage((currentPage) => {
+          if (currentPage <= 0) {
+            clearInterval(interval); // Stop once the page reaches 0
+            setIsStartupComplete(true);
+            return 0;
+          }
+          return Math.max(currentPage - 1, 0);
+        });
+      }, 20);
+
+      // Clean up the interval when the component unmounts
+      return () => clearInterval(interval);
+    }
+  }, [progress, isStartupComplete]);
 
   useFrame((_, delta) => {
     let targetPosition = -PAGE_WIDTH / 2;
