@@ -12,7 +12,7 @@ export default function Experience() {
   const [experience, setExperience] = useState(null);
 
   const fetchExperience = async () => {
-    fetch(`https://api.asherand.com/api/experience`)
+    fetch(`${import.meta.env.VITE_API_URL}/experience`)
       .then((res) => {
         return res.json();
       })

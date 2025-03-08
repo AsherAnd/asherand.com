@@ -8,7 +8,7 @@ export default function Projects() {
   const [projects, setProjects] = useState(null);
 
   const fetchProjects = async () => {
-    fetch(`https://api.asherand.com/api/projects`)
+    fetch(`${import.meta.env.VITE_API_URL}/projects`)
       .then((res) => {
         return res.json();
       })
@@ -60,8 +60,9 @@ export default function Projects() {
 
         <div className="filters">
           <button className="filter-btn">All</button>
+          <button className="filter-btn">3D</button>
+          <button className="filter-btn">Art</button>
           <button className="filter-btn">Code</button>
-          <button className="filter-btn">Photoshop</button>
           <button className="filter-btn">Misc.</button>
         </div>
         <div className="projects-layout">

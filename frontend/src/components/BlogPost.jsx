@@ -2,7 +2,7 @@ import { useLoaderData } from "react-router";
 
 export async function getBlogPost({ params }) {
   const { id } = params;
-  const res = await fetch(`https://api.asherand.com/api/projects/${id}`);
+  const res = await fetch(`${import.meta.env.VITE_API_URL}/projects/${id}`);
 
   if (!res.ok) {
     throw Error("There was an issue fetching your request");
