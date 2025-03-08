@@ -6,10 +6,10 @@ import About from "./containers/About.jsx";
 import Experience from "./containers/Experience.jsx";
 import Projects from "./containers/Projects.jsx";
 import Contact from "./containers/Contact.jsx";
-import Footer from "./components/footer.jsx";
+import Footer from "./components/Footer.jsx";
 import PageLoader from "./components/PageLoader.jsx";
 
-gsap.registerPlugin(useGSAP, DrawSVGPlugin);
+gsap.registerPlugin(useGSAP, DrawSVGPlugin, ScrollTrigger);
 
 export default function App() {
   // gsap timeline

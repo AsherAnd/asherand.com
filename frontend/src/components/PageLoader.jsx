@@ -26,6 +26,7 @@ export default function PageLoader({ gsapTimeline }) {
         document.querySelector("body").classList.remove("loading");
         gsapTimeline && gsapTimeline.play();
       }, 500);
+      ScrollTrigger.refresh();
     }
 
     setIndex(textIndex + 1);
