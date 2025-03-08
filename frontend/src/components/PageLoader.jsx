@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useProgress } from "@react-three/drei";
 
 export default function PageLoader({ gsapTimeline }) {

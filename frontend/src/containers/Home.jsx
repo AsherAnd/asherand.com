@@ -52,7 +52,7 @@ export default function Home({ gsapTimeline }) {
               <SvgName />
             </div>
             <div className="intro-welcome">
-              <p>All right. Let’s do this again.</p>
+              <p>All right. Let&apos;s do this again.</p>
               <p>
                 Welcome to my personal website. Feel free to look around and
                 contact me for any service inquiries.
