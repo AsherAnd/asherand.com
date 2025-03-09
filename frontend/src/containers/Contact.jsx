@@ -82,7 +82,7 @@ export default function Contact() {
             </li>
             <li>
               <a
-                href="https://api.asherand.com/assets/Asher%20Andargachew%20Resume%202024.pdf"
+                href="https://api.asherand.com/Asher%20Andargachew%20Resume%202025.pdf"
                 className="link"
                 target="_blank"
                 rel="noreferrer"

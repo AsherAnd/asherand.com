@@ -1,2 +1,2 @@
 User-agent: *
-Disallow: /assets/Asher Andargachew Resume 2024.pdf
+Disallow: /Asher Andargachew Resume 2025.pdf
