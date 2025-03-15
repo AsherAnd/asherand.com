@@ -1,6 +1,6 @@
 .btn {
   position: relative;
-  background: var(--background-color);
+  background: var(--bg-surface);
   width: 100%; /* Full-width on smaller screens */
   max-width: 10.5rem; /* Limit max width */
   padding: 1rem; /* Responsive padding */
@@ -42,7 +42,7 @@
 
   &:hover {
     background: var(--text-color);
-    color: var(--background-color);
+    color: var(--bg-surface);
   }
 
   &:active {

@@ -1,8 +1,13 @@
 :root {
-  --highlight-text-color: #16b8f3;
-  --text-color: white;
-  --debug-color: red;
-  --background-color: black;
+  --primary-color: #16b8f3;
+  --light-color: white;
+  --dark-color: black;
+  --error-color: #a71814;
+
+  --background-color: #7f7f7f;
+  --highlight-text-color: var(--primary-color);
+  --text-color: var(--light-color);
+  --bg-surface: var(--dark-color);
 
   /* Responsive root font sizes */
   font-size: 16px; /* Default */
@@ -85,7 +90,7 @@ html {
 }
 
 body {
-  background-color: var(--background-color);
+  background-color: var(--bg-surface);
   overflow-x: hidden;
   color: var(--text-color);
   font-family: "Product Sans", sans-serif;
@@ -110,7 +115,9 @@ body.loading {
 }
 
 .bg-image {
+  background-color: var(--background-color);
   background-image: url("/background3.jpg");
+  background-blend-mode: hard-light;
   background-position: center;
   background-size: contain;
   height: 100vh;
@@ -188,7 +195,7 @@ footer {
 }
 
 .page-loader {
-  background-color: var(--background-color);
+  background-color: var(--bg-surface);
   height: 100vh;
   width: 100vw;
   position: fixed;

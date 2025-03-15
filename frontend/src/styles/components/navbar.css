@@ -11,7 +11,7 @@
 }
 
 .navbar {
-  background-color: var(--background-color);
+  background-color: var(--bg-surface);
   padding: 2.5rem 1rem;
   display: flex;
   align-items: center;
@@ -112,7 +112,7 @@
 
 .overlay {
   display: none;
-  background-color: var(--background-color);
+  background-color: var(--bg-surface);
   content: "";
   height: 100vh;
   opacity: 0;
@@ -158,7 +158,7 @@
   }
 
   .navbar.scrolled {
-    background-color: var(--background-color);
+    background-color: var(--bg-surface);
   }
 
   .nav-links {
