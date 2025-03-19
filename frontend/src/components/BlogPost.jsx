@@ -1,4 +1,5 @@
-import { useLoaderData } from "react-router";
+import { useLoaderData, useParams, useNavigate } from "react-router";
+import "../styles/components/blogpost.css";
 
 export async function getBlogPost({ params }) {
   const { id } = params;
@@ -12,17 +13,37 @@ export async function getBlogPost({ params }) {
 }
 
 export default function BlogPost() {
-  const blog = useLoaderData()[0];
+  const post = useLoaderData()[0];
+  const navigate = useNavigate();
+  const goBack = () => {
+    navigate(-1);
+  };
 
-  if (blog === undefined || blog.length == 0) {
-    throw Error("Blog doesn't exist");
+  if (post === undefined || post.length === 0) {
+    throw Error("Blog post doesn't exist");
   }
 
   return (
-    <>
-      <div id="blog">
-        <div className="blog-title">{blog.title}</div>
+    <div className="post-container">
+      <div id="blog-post">
+        <i className="fa-solid fa-arrow-left back-btn" onClick={goBack}></i>
+        <div className="post-title">
+          <h1>{post.title}</h1>
+        </div>
+        <div className="post-meta">
+          {post.author && <span className="post-author">By {post.author}</span>}
+          {post.date && (
+            <span className="post-date">
+              <h2>{blog.date}</h2>
+            </span>
+          )}
+        </div>
+        <div className="post-content">
+          {post.description && (
+            <div className="post-body">{post.description}</div>
+          )}
+        </div>
       </div>
-    </>
+    </div>
   );
 }
