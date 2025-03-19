@@ -22,7 +22,7 @@ export default function Footer() {
 
   return (
     <footer>
-      <h3 className="footer-text">
+      <h6 className="footer-text">
         <div>
           Made with{" "}
           <a
@@ -34,7 +34,7 @@ export default function Footer() {
             {footerText.text}
           </a>
         </div>
-      </h3>
+      </h6>
     </footer>
   );
 }

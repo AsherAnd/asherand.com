@@ -14,16 +14,16 @@ export default function ProjectCard({
           <img src={image} alt={title} loading="lazy" draggable="false" />
         </div>
         <div className="project-date">
-          <span>{date}</span>
+          <small>{date}</small>
         </div>
         <div className="project-text">
           <div className="project-title">
-            <h4>{title}</h4>
+            <h5>{title}</h5>
           </div>
           <div className="sub-categories">
-            <h6 className="sub-category">html</h6>
-            <h6 className="sub-category">css</h6>
-            <h6 className="sub-category">js</h6>
+            <small className="sub-category">html</small>
+            <small className="sub-category">css</small>
+            <small className="sub-category">js</small>
           </div>
         </div>
       </Link>

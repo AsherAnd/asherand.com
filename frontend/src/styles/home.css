@@ -1,3 +1,14 @@
+/*
+ * TABLE OF CONTENTS
+ * 1. Canvas Elements
+ * 2. Header Components
+ * 3. Home Section
+ * 4. Introduction Components
+ * 5. SVG Elements
+ * 6. Media Queries
+ */
+
+/* ---------- 1. CANVAS ELEMENTS ---------- */
 canvas {
   max-width: 100%;
   touch-action: none;
@@ -5,27 +16,25 @@ canvas {
 
 .comic-book {
   height: 45vh;
-  width: 100vw;
   margin-left: -1rem;
   margin-right: -1rem;
+  width: 100vw;
 }
 
+/* ---------- 2. HEADER COMPONENTS ---------- */
 header {
-  font-family: "Product Sans Bold", sans-serif;
-  font-size: 1rem;
-  font-size: clamp(
-    1rem,
-    0.9772727272727273rem + 0.11363636363636363vw,
-    1.25rem
-  );
-  display: flex;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  display: flex;
+  font-family: "Product Sans Bold", sans-serif;
+  font-size: clamp(1rem, 0.977rem + 0.114vw, 1.25rem);
 }
 
+/* ---------- 3. HOME SECTION ---------- */
 #home {
   display: flex;
 }
 
+/* ---------- 4. INTRODUCTION COMPONENTS ---------- */
 .intro {
   margin-top: -2rem;
 }
@@ -39,18 +48,19 @@ header {
 }
 
 .intro-title:not(:last-child)::after {
+  color: var(--highlight-text-color);
   content: "|";
   margin: 0 10px;
-  color: var(--highlight-text-color);
 }
 
 .intro-name {
   padding: 20px 0 0;
 }
 
+/* ---------- 5. SVG ELEMENTS ---------- */
 #svg-name {
-  width: 100%;
   height: auto;
+  width: 100%;
 }
 
 #svg-name #first-name-path {
@@ -61,7 +71,8 @@ header {
   fill: var(--highlight-text-color);
 }
 
-/* md */
+/* ---------- 6. MEDIA QUERIES ---------- */
+/* Medium screens (md) */
 @media (min-width: 48em) {
   header {
     font-size: clamp(18px, 2.5vw + 1rem, 22px);
@@ -73,18 +84,8 @@ header {
   }
 }
 
-/* lg */
+/* Large screens (lg) */
 @media (min-width: 64em) {
-  .comic-book {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 90%;
-    width: 65%;
-    margin-left: 0;
-    margin-right: 0;
-  }
-
   #home {
     flex-direction: row;
   }
@@ -104,9 +105,19 @@ header {
   .intro-welcome {
     max-width: 50%;
   }
+
+  .comic-book {
+    height: 90%;
+    margin-left: 0;
+    margin-right: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 65%;
+  }
 }
 
-/* xl */
+/* Extra-large screens (xl) */
 @media (min-width: 80em) {
   .comic-book {
     height: 100%;

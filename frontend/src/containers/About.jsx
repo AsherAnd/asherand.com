@@ -89,7 +89,6 @@ export default function About() {
               to name a few.
             </p>
             <br />
-            <br />
             <p>
               Another area of interest and big inspiration to me are comic
               books. Specifically{" "}

@@ -1,86 +1,68 @@
+/*
+ * TABLE OF CONTENTS
+ * 1. CSS Variables & Root Settings
+ * 2. Base Elements & Reset
+ * 3. Typography
+ * 4. Layout Components
+ * 5. UI Components
+ * 6. Background & Visual Elements
+ * 7. Utility Classes
+ * 8. Media Queries
+ */
+
+/* ---------- 1. CSS VARIABLES & ROOT SETTINGS ---------- */
 :root {
+  /* Color scheme */
   --primary-color: #16b8f3;
   --light-color: white;
   --dark-color: black;
   --error-color: #a71814;
-
   --background-color: #7f7f7f;
+
+  /* Applied colors */
   --highlight-text-color: var(--primary-color);
   --text-color: var(--light-color);
   --bg-surface: var(--dark-color);
 
-  /* Responsive root font sizes */
-  font-size: 16px; /* Default */
+  /* Typography scale - Using clamp for responsive sizing */
+  --font-scale: 1.2;
+  --p: 1rem;
+  --h6: clamp(1.1rem, 1rem + 0.5vw, 1.3rem);
+  --h5: clamp(1.3rem, 1.1rem + 0.8vw, 1.5rem);
+  --h4: clamp(1.5rem, 1.3rem + 1vw, 1.8rem);
+  --h3: clamp(1.8rem, 1.5rem + 1.3vw, 2.2rem);
+  --h2: clamp(2.2rem, 1.8rem + 1.6vw, 2.6rem);
+  --h1: clamp(2.6rem, 2.1rem + 2vw, 3.2rem);
+  --small: 0.85rem;
+
+  /* Base font size */
+  font-size: 16px;
+
+  /* Line heights */
+  --line-height-heading: 1.2;
+  --line-height-body: 1.5;
+
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 8rem;
+
+  /* Border radius */
+  --border-radius: 16px;
+
+  /* Transitions */
+  --transition-standard: 0.25s ease-out;
 }
 
-@media (min-width: 48em) {
-  :root {
-    font-size: 18px; /* Medium screens */
-  }
-}
-
-@media (min-width: 64em) {
-  :root {
-    font-size: 20px; /* Large screens */
-  }
-}
-
-@media (min-width: 80em) {
-  :root {
-    font-size: 22px; /* Extra-large screens */
-  }
-}
-
-::selection {
-  color: var(--text-color);
-  background: var(--highlight-text-color);
-}
-
+/* ---------- 2. BASE ELEMENTS & RESET ---------- */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-a {
-  text-decoration: none;
-  color: var(--highlight-text-color);
-  cursor: pointer;
-}
-
-a:hover {
-  color: var(--text-color);
-}
-
-#about,
-#contact,
-#experience,
-#home,
-#projects {
-  margin: 0 1rem 50px 1rem;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.App {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.icon {
-  color: var(--highlight-text-color);
-  cursor: pointer;
-  font-size: 2rem;
-}
-
-.icon:hover {
-  color: var(--text-color);
 }
 
 html {
@@ -91,128 +73,209 @@ html {
 
 body {
   background-color: var(--bg-surface);
-  overflow-x: hidden;
   color: var(--text-color);
   font-family: "Product Sans", sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
 }
 
 body.loading {
   overflow: hidden;
 }
 
-.bg-gradient {
-  background-image: radial-gradient(
-    circle,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.9) 100%
-  );
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  z-index: -100;
-}
-
-.bg-image {
-  background-color: var(--background-color);
-  background-image: url("/background3.jpg");
-  background-blend-mode: hard-light;
-  background-position: center;
-  background-size: contain;
-  height: 100vh;
-  width: 100vw;
-  position: fixed;
-  z-index: -100;
-}
-
-.container {
-  width: 100%;
-}
-
-.glass-container {
-  background: rgba(0, 0, 0, 0.41);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(7.7px);
-  -webkit-backdrop-filter: blur(7.7px);
-  padding: 16px;
-}
-
-.content {
-  flex: 1;
-}
-
 ul {
   list-style: none;
 }
 
-footer {
-  text-align: center;
-  border-top: 2px solid var(--highlight-text-color);
-  padding: 2rem;
+a {
+  color: var(--highlight-text-color);
+  cursor: pointer;
+  text-decoration: none;
+  transition: color var(--transition-standard);
+}
+
+a:hover {
+  color: var(--text-color);
+}
+
+::selection {
+  background: var(--highlight-text-color);
+  color: var(--text-color);
+}
+
+/* ---------- 3. TYPOGRAPHY ---------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: var(--line-height-heading);
+  margin-bottom: 0.5em;
+  margin-top: 0;
+  font-weight: 700;
+}
+
+p,
+small,
+a,
+li,
+table {
+  line-height: var(--line-height-body);
+  margin: 0;
+}
+
+h1 {
+  font-size: var(--h1);
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: var(--h2);
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-size: var(--h3);
+  letter-spacing: -0.01em;
+}
+
+h4 {
+  font-size: var(--h4);
+}
+
+h5 {
+  font-size: var(--h5);
+}
+
+h6 {
+  font-size: var(--h6);
+}
+
+p {
+  font-size: var(--p);
+  letter-spacing: normal;
+  text-align: left;
+  margin-bottom: 1em;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.small {
+  font-size: var(--small);
 }
 
 .highlight {
   color: var(--highlight-text-color);
 }
 
-.error-message,
-.loader-message {
-  font-size: 10vw;
+/* ---------- 4. LAYOUT COMPONENTS ---------- */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+}
+
+.content {
+  flex: 1;
+}
+
+footer {
+  border-top: 2px solid var(--highlight-text-color);
+  padding: var(--spacing-lg);
   text-align: center;
 }
 
-.error-page {
-  display: flex;
+/* Section layouts */
+#home,
+#about,
+#experience,
+#projects,
+#contact {
   align-items: center;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  flex-direction: column;
+  margin: 0 var(--spacing-md) 50px var(--spacing-md);
   min-height: 100vh;
+}
+
+/* ---------- 5. UI COMPONENTS ---------- */
+.glass-container {
+  background: rgba(0, 0, 0, 0.41);
+  backdrop-filter: blur(7.7px);
+  -webkit-backdrop-filter: blur(7.7px);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  padding: var(--spacing-md);
+}
+
+.sub-category {
+  background: rgba(0, 0, 0, 0.41);
+  backdrop-filter: blur(7.7px);
+  -webkit-backdrop-filter: blur(7.7px);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  color: var(--highlight-text-color);
+  cursor: default;
+  outline: var(--highlight-text-color) outset 0.5px;
+  padding: 2px 8px;
+  min-width: 2rem;
+  text-align: center;
+}
+
+.icon {
+  color: var(--highlight-text-color);
+  cursor: pointer;
+  font-size: 2rem;
+  transition: color var(--transition-standard);
+}
+
+.icon:hover {
+  color: var(--text-color);
 }
 
 .link {
   display: inline-block;
   position: relative;
-  transition: var(--highlight-text-color) 0.25s ease-out;
+  transition: color var(--transition-standard);
 }
 
 .link::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
   background-color: var(--highlight-text-color);
+  bottom: 0;
+  content: "";
+  height: 2px;
+  left: 0;
+  position: absolute;
+  transform: scaleX(0);
   transform-origin: bottom center;
-  transition: transform 0.25s ease-out;
+  transition: transform var(--transition-standard);
+  width: 100%;
 }
 
 .link:hover::after {
   transform: scaleX(1);
 }
 
-.page-loader {
-  background-color: var(--bg-surface);
-  height: 100vh;
-  width: 100vw;
-  position: fixed;
-  top: 0%;
-  left: 0%;
-  overflow: hidden;
-  z-index: 100;
-  pointer-events: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+.section-title,
+svg {
+  margin-bottom: clamp(16px, 2vw, 24px);
 }
 
 #subtitle {
-  width: 15rem;
   height: auto;
+  width: 15rem;
 }
 
 #subtitle #part1 {
@@ -223,47 +286,98 @@ footer {
   fill: var(--highlight-text-color);
 }
 
-.section-title,
-svg {
-  margin-bottom: clamp(16px, 2vw, 24px);
+/* ---------- 6. BACKGROUND & VISUAL ELEMENTS ---------- */
+.bg-image {
+  background-blend-mode: hard-light;
+  background-color: var(--background-color);
+  background-image: url("/background3.jpg");
+  background-position: center;
+  background-size: contain;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: -100;
 }
 
-.sub-category {
-  background: rgba(0, 0, 0, 0.41);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(7.7px);
-  -webkit-backdrop-filter: blur(7.7px);
-  color: var(--highlight-text-color);
-  padding: 2px 8px;
-  width: fit-content;
-  outline: var(--highlight-text-color) outset 0.5px;
-  cursor: default;
+.bg-gradient {
+  background-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.9) 100%
+  );
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: -100;
 }
 
-/* md */
+/* ---------- 7. UTILITY CLASSES ---------- */
+.error-page {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.error-message,
+.loader-message {
+  font-size: min(10vw, 4rem);
+  text-align: center;
+}
+
+.page-loader {
+  align-items: center;
+  background-color: var(--bg-surface);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  overflow: hidden;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;
+}
+
+/* ---------- 8. MEDIA QUERIES ---------- */
+/* Medium screens (md) */
 @media (min-width: 48em) {
-  #about,
-  #contact,
-  #experience,
+  :root {
+    font-size: 18px;
+  }
+
   #home,
-  #projects {
-    margin: 0 2rem 50px 2rem;
+  #about,
+  #experience,
+  #projects,
+  #contact {
+    margin: 0 var(--spacing-lg) 50px var(--spacing-lg);
   }
 }
 
-/* lg */
+/* Large screens (lg) */
 @media (min-width: 64em) {
+  :root {
+    font-size: 20px;
+  }
+
   .bg-image {
     background-size: 50%;
   }
 
-  #about,
-  #contact,
-  #experience,
   #home,
-  #projects {
-    margin: 0 8rem 50px 8rem;
+  #about,
+  #experience,
+  #projects,
+  #contact {
+    margin: 0 var(--spacing-xl) 50px var(--spacing-xl);
   }
 
   .glass-container {
@@ -271,8 +385,12 @@ svg {
   }
 }
 
-/* xl */
+/* Extra-large screens (xl) */
 @media (min-width: 80em) {
+  :root {
+    font-size: 22px;
+  }
+
   .glass-container {
     padding: 64px;
   }

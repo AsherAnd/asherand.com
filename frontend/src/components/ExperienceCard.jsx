@@ -9,9 +9,9 @@ export default function ExperienceCard({
     <div className="experience-card-container glass-container">
       <div className="experience-text-mobile">
         <div className="experience-title">
-          <h1>
+          <h2>
             <span>{title}</span> @ <span>Place</span>
-          </h1>
+          </h2>
         </div>
       </div>
       <div className="experience-img-wrapper">
@@ -19,9 +19,9 @@ export default function ExperienceCard({
       </div>
       <div className="experience-text">
         <div className="experience-title">
-          <h1>
+          <h2>
             <span>{title}</span> @ <span>Place</span>
-          </h1>
+          </h2>
         </div>
         <div className="experience-desc">{desc}</div>
       </div>

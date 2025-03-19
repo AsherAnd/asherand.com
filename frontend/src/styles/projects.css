@@ -5,7 +5,6 @@
   color: var(--text-color);
   background-color: transparent;
   font-family: "Product Sans Bold", sans-serif;
-  font-size: 0.85rem;
   margin: 0.5rem;
   cursor: pointer;
 }
