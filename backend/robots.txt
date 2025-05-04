@@ -1,2 +1,2 @@
 User-agent: *
-Disallow: /Asher Andargachew Resume 2025.pdf
+Disallow: /content
