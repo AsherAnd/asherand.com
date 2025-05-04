@@ -82,7 +82,10 @@ export default function Contact() {
             </li>
             <li>
               <a
-                href="https://api.asherand.com/Asher%20Andargachew%20Resume%202025.pdf"
+                href={
+                  import.meta.env.VITE_API_URL +
+                  "/content/Asher%20Andargachew%20Resume%202025.pdf"
+                }
                 className="link"
                 target="_blank"
                 rel="noreferrer"

@@ -53,13 +53,12 @@ export default function About() {
               >
                 ሰላም!
               </a>{" "}
-              My name is Asher Andargachew, Computer Science major and soon to
-              be graduate from Toronto Metropolitan University. When I&apos;m
-              not coding for grades, I spend my free time exploring technologies
-              that interest me, constantly expanding and updating my skills and
-              knowledge. Besides being a professional and hobbyist Software
-              Developer, I also dable in other areas including but not limited
-              to{" "}
+              My name is Asher Andargachew, Computer Science major and new grad
+              from Toronto Metropolitan University. When I&apos;m not coding for
+              work, I spend my free time exploring technologies that interest
+              me, constantly expanding and updating my skills and knowledge.
+              Besides coding both professionally and for fun, I also dable in
+              other areas including but not limited to{" "}
               <a
                 target="_blank"
                 rel="noopener noreferrer"

@@ -1,18 +1,29 @@
 import { useEffect, useState } from "react";
 
 export default function Footer() {
-  const [footerText, setFooterText] = useState({
+  const [footer, setFooter] = useState({
     text: "Code",
     link: "https://github.com/asherand",
   });
 
+  const APIUrl = import.meta.env.VITE_API_URL;
+  const APIKey = import.meta.env.VITE_API_KEY;
+
   const fetchFooter = async () => {
-    fetch(`${import.meta.env.VITE_API_URL}/footers`)
+    fetch(`${APIUrl}/footer`, {
+      method: "GET",
+      headers: {
+        "X-API-Key": APIKey,
+      },
+    })
       .then((res) => {
         return res.json();
       })
       .then((data) => {
-        setFooterText(data[Math.floor(Math.random() * data.length)]);
+        setFooter(data);
+      })
+      .catch((error) => {
+        console.log(error);
       });
   };
 
@@ -27,11 +38,11 @@ export default function Footer() {
           Made with{" "}
           <a
             className="link"
-            href={footerText.link}
+            href={footer.link}
             target="_blank"
             rel="noreferrer"
           >
-            {footerText.text}
+            {footer.text}
           </a>
         </div>
       </h6>

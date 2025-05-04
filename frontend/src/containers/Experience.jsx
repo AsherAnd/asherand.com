@@ -10,9 +10,19 @@ import "../styles/experience.css";
 
 export default function Experience() {
   const [experience, setExperience] = useState(null);
+  const [images, setImages] = useState({});
+  const [descriptions, setDescriptions] = useState({});
+
+  const APIUrl = import.meta.env.VITE_API_URL;
+  const APIKey = import.meta.env.VITE_API_KEY;
 
   const fetchExperience = async () => {
-    fetch(`${import.meta.env.VITE_API_URL}/experience`)
+    fetch(`${APIUrl}/experience`, {
+      method: "GET",
+      headers: {
+        "X-API-Key": APIKey,
+      },
+    })
       .then((res) => {
         return res.json();
       })
@@ -24,9 +34,55 @@ export default function Experience() {
       });
   };
 
+  const fetchImage = async (id, path) => {
+    try {
+      const res = await fetch(`${APIUrl}${path}`, {
+        headers: {
+          "X-API-Key": APIKey,
+        },
+      });
+
+      if (!res.ok) throw new Error("Image fetch failed");
+
+      const blob = await res.blob();
+      const imageUrl = URL.createObjectURL(blob);
+
+      setImages((prev) => ({ ...prev, [id]: imageUrl }));
+    } catch (err) {
+      console.error("Failed to fetch image for", id, err);
+    }
+  };
+
+  const fetchDescription = async (id, path) => {
+    try {
+      const res = await fetch(`${APIUrl}${path}`, {
+        headers: {
+          "X-API-Key": APIKey,
+        },
+      });
+
+      if (!res.ok) throw new Error("Failed to fetch description");
+
+      const text = await res.text();
+      console.log(text);
+      setDescriptions((prev) => ({ ...prev, [id]: text }));
+    } catch (err) {
+      console.error("Failed to fetch description for", id, err);
+    }
+  };
+
   useEffect(() => {
     fetchExperience();
   }, []);
+
+  useEffect(() => {
+    if (experience) {
+      experience.forEach((exp) => {
+        fetchImage(exp.id, exp.image);
+        fetchDescription(exp.id, exp.description);
+      });
+    }
+  }, [experience]);
 
   return (
     <div id="experience">
@@ -68,37 +124,35 @@ export default function Experience() {
           </svg>
         </div>
         <div className="experiences">
-          <Swiper
-            modules={[Navigation, Pagination, Scrollbar, Autoplay]}
-            slidesPerView={1}
-            spaceBetween={10}
-            centeredSlides={true}
-            autoplay={{
-              delay: 5000,
-              disableOnInteraction: true,
-            }}
-            navigation
-            pagination={{ clickable: true }}
-            scrollbar={{ draggable: true }}
-            loop={true}
-          >
-            {experience?.map((experience) => {
-              return (
-                <SwiperSlide key={experience.id}>
+          {!experience || experience.length === 0 ? (
+            <div>Couldn't Retrieve Data</div>
+          ) : (
+            <Swiper
+              modules={[Navigation, Pagination, Scrollbar, Autoplay]}
+              slidesPerView={1}
+              spaceBetween={10}
+              centeredSlides={true}
+              autoplay={{
+                delay: 5000,
+                disableOnInteraction: true,
+              }}
+              navigation
+              pagination={{ clickable: true }}
+              scrollbar={{ draggable: true }}
+              loop={experience?.length >= 2}
+            >
+              {experience.map((exp) => (
+                <SwiperSlide key={exp.id}>
                   <ExperienceCard
-                    title={experience.position}
-                    desc={experience.description}
+                    title={exp.title}
+                    place={exp.employer_name}
+                    desc={descriptions[exp.id]}
+                    image={images[exp.id]}
                   />
                 </SwiperSlide>
-              );
-            })}
-            <SwiperSlide>
-              <ExperienceCard />
-            </SwiperSlide>
-            <SwiperSlide>
-              <ExperienceCard />
-            </SwiperSlide>
-          </Swiper>
+              ))}
+            </Swiper>
+          )}
         </div>
       </div>
     </div>

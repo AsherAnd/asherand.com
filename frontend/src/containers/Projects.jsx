@@ -6,9 +6,18 @@ import "../styles/projects.css";
 
 export default function Projects() {
   const [projects, setProjects] = useState(null);
+  const [images, setImages] = useState({});
+
+  const APIUrl = import.meta.env.VITE_API_URL;
+  const APIKey = import.meta.env.VITE_API_KEY;
 
   const fetchProjects = async () => {
-    fetch(`${import.meta.env.VITE_API_URL}/projects`)
+    fetch(`${APIUrl}/projects`, {
+      method: "GET",
+      headers: {
+        "X-API-Key": APIKey,
+      },
+    })
       .then((res) => {
         return res.json();
       })
@@ -20,9 +29,36 @@ export default function Projects() {
       });
   };
 
+  const fetchImage = async (id, path) => {
+    try {
+      const res = await fetch(`${APIUrl}${path}`, {
+        headers: {
+          "X-API-Key": APIKey,
+        },
+      });
+
+      if (!res.ok) throw new Error("Image fetch failed");
+
+      const blob = await res.blob();
+      const imageUrl = URL.createObjectURL(blob);
+
+      setImages((prev) => ({ ...prev, [id]: imageUrl }));
+    } catch (err) {
+      console.error("Failed to fetch image for", id, err);
+    }
+  };
+
   useEffect(() => {
     fetchProjects();
   }, []);
+
+  useEffect(() => {
+    if (projects) {
+      projects.forEach((proj) => {
+        fetchImage(proj.id, proj.project_image);
+      });
+    }
+  }, [projects]);
 
   return (
     <div id="projects">
@@ -57,39 +93,39 @@ export default function Projects() {
             </g>
           </svg>
         </div>
-
-        <div className="filters">
-          <button className="filter-btn">All</button>
-          <button className="filter-btn">3D</button>
-          <button className="filter-btn">Art</button>
-          <button className="filter-btn">Code</button>
-          <button className="filter-btn">Misc.</button>
-        </div>
-        <div className="projects-layout">
-          <ProjectCard />
-          {projects?.map((project) => {
-            return (
-              <ProjectCard
-                title={project.title}
-                image={project.thumbnail}
-                key={project.id}
-              />
-            );
-          })}
-
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-        </div>
-        <div className="load-button">
-          <ComicButton text="Load More" />
-        </div>
+        {!projects || projects.length === 0 ? (
+          <div>Couldn't Retrieve Data</div>
+        ) : (
+          <>
+            <div className="filters">
+              <button className="filter-btn">All</button>
+              <button className="filter-btn">3D</button>
+              <button className="filter-btn">Art</button>
+              <button className="filter-btn">Code</button>
+              <button className="filter-btn">Misc.</button>
+            </div>
+            <div className="projects-layout">
+              <ProjectCard />
+              {projects?.map((proj) => {
+                return (
+                  <ProjectCard
+                    title={proj.project_name}
+                    image={images[proj.id]}
+                    key={proj.id}
+                    url={
+                      proj.project_url.String
+                        ? proj.project_url.String
+                        : proj.blog_slug.String
+                    }
+                  />
+                );
+              })}
+            </div>
+            <div className="load-button">
+              <ComicButton text="Load More" />
+            </div>
+          </>
+        )}
       </div>
     </div>
   );

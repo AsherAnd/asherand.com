@@ -6,9 +6,18 @@ import "../styles/blog.css";
 
 export default function Blog() {
   const [posts, setPosts] = useState(null);
+  const [images, setImages] = useState({});
+
+  const APIUrl = import.meta.env.VITE_API_URL;
+  const APIKey = import.meta.env.VITE_API_KEY;
 
   const fetchPosts = async () => {
-    fetch(`${import.meta.env.VITE_API_URL}/projects`)
+    fetch(`${APIUrl}/blog`, {
+      method: "GET",
+      headers: {
+        "X-API-Key": APIKey,
+      },
+    })
       .then((res) => {
         return res.json();
       })
@@ -20,9 +29,36 @@ export default function Blog() {
       });
   };
 
+  const fetchImage = async (id, path) => {
+    try {
+      const res = await fetch(`${APIUrl}${path}`, {
+        headers: {
+          "X-API-Key": APIKey,
+        },
+      });
+
+      if (!res.ok) throw new Error("Image fetch failed");
+
+      const blob = await res.blob();
+      const imageUrl = URL.createObjectURL(blob);
+
+      setImages((prev) => ({ ...prev, [id]: imageUrl }));
+    } catch (err) {
+      console.error("Failed to fetch image for", id, err);
+    }
+  };
+
   useEffect(() => {
     fetchPosts();
   }, []);
+
+  useEffect(() => {
+    if (posts) {
+      posts.forEach((post) => {
+        fetchImage(post.id, post.blog_image);
+      });
+    }
+  }, [posts]);
 
   return (
     <>
@@ -40,19 +76,15 @@ export default function Blog() {
             <button className="filter-btn">Misc.</button>
           </div>
           <div className="blog-layout">
-            {posts?.map((project) => {
+            {posts?.map((post) => {
               return (
                 <BlogPostCard
-                  title={project.title}
-                  image={project.thumbnail}
-                  key={project.id}
+                  title={post.title}
+                  image={images[post.id]}
+                  key={post.id}
                 />
               );
             })}
-            <BlogPostCard />
-            <BlogPostCard />
-            <BlogPostCard />
-            <BlogPostCard />
           </div>
           <div className="load-button">
             <ComicButton text="Load More" />

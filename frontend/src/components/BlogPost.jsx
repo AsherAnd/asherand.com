@@ -2,8 +2,16 @@ import { useLoaderData, useParams, useNavigate } from "react-router";
 import "../styles/components/blogpost.css";
 
 export async function getBlogPost({ params }) {
-  const { id } = params;
-  const res = await fetch(`${import.meta.env.VITE_API_URL}/projects/${id}`);
+  const { slug } = params;
+  const APIUrl = import.meta.env.VITE_API_URL;
+  const APIKey = import.meta.env.VITE_API_KEY;
+
+  const res = await fetch(`${APIUrl}/blog/${slug}`, {
+    method: "GET",
+    headers: {
+      "X-API-Key": APIKey,
+    },
+  });
 
   if (!res.ok) {
     throw Error("There was an issue fetching your request");
@@ -13,7 +21,7 @@ export async function getBlogPost({ params }) {
 }
 
 export default function BlogPost() {
-  const post = useLoaderData()[0];
+  const post = useLoaderData();
   const navigate = useNavigate();
   const goBack = () => {
     navigate(-1);
@@ -40,7 +48,7 @@ export default function BlogPost() {
         </div>
         <div className="post-content">
           {post.description && (
-            <div className="post-body">{post.description}</div>
+            <Markdown remarkPlugins={[remarkGfm]}>{post.content}</Markdown>
           )}
         </div>
       </div>

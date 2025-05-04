@@ -1,5 +1,6 @@
 import { useGSAP } from "@gsap/react";
 import { useState } from "react";
+import { ScrollRestoration } from "react-router";
 import Navbar from "./components/Navbar.jsx";
 import Home from "./containers/Home.jsx";
 import About from "./containers/About.jsx";
@@ -32,6 +33,7 @@ export default function App() {
         <Contact />
       </div>
       <Footer />
+      <ScrollRestoration />
     </div>
   );
 }
