@@ -273,6 +273,11 @@ svg {
   margin-bottom: clamp(16px, 2vw, 24px);
 }
 
+strong {
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 2px;
+}
+
 #subtitle {
   height: auto;
   width: 15rem;

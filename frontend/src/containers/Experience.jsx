@@ -64,7 +64,6 @@ export default function Experience() {
       if (!res.ok) throw new Error("Failed to fetch description");
 
       const text = await res.text();
-      console.log(text);
       setDescriptions((prev) => ({ ...prev, [id]: text }));
     } catch (err) {
       console.error("Failed to fetch description for", id, err);
