@@ -226,7 +226,7 @@ footer {
   -webkit-backdrop-filter: blur(7.7px);
   border-radius: var(--border-radius);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  color: var(--highlight-text-color);
+  color: var(--text-color);
   cursor: default;
   outline: var(--highlight-text-color) outset 0.5px;
   padding: 2px 8px;

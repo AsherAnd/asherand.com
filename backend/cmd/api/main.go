@@ -24,7 +24,7 @@ import (
 func NewServer(logger *slog.Logger, blogModel *models.BlogModel, experienceModel *models.ExperienceModel, footerModel *models.FooterModel, projectModel *models.ProjectModel) http.Handler {
 	authConfig := middlewares.AuthConfig{
 		APIKey:        os.Getenv("APIKEY"),
-		AllowedDomain: "http://localhost:5173/", ///// Make website
+		AllowedDomain: "", ///// Make website
 		APIKeyHeader:  "X-API-Key",
 		RefererHeader: "Referer",
 	}

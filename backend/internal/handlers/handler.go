@@ -120,7 +120,21 @@ func FooterGetRandom(logger *slog.Logger, footerModel *models.FooterModel) http.
 
 func ProjectsGet(logger *slog.Logger, projectModel *models.ProjectModel) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
-		projects, err := projectModel.GetAll()
+		category := r.URL.Query().Get("category")
+
+		limit, err := strconv.Atoi(r.URL.Query().Get("limit"))
+		if err != nil && limit < 0 {
+			http.NotFound(w, r)
+			return
+		}
+
+		offset, err := strconv.Atoi(r.URL.Query().Get("offset"))
+		if err != nil && offset < 0 {
+			http.NotFound(w, r)
+			return
+		}
+
+		projects, err := projectModel.Get(category, limit, offset)
 		if err != nil {
 			if errors.Is(err, models.ErrNoRecord) {
 				http.NotFound(w, r)

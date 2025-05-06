@@ -7,6 +7,22 @@
   font-family: "Product Sans Bold", sans-serif;
   margin: 0.5rem;
   cursor: pointer;
+
+  padding: 0.1rem 0.4rem;
+  border-radius: 100px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.filter-btn:hover,
+.filter-btn:focus {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.filter-btn.active {
+  background-color: var(--highlight-text-color);
+  color: var(--bg-surface);
+  border-color: var(--highlight-text-color);
 }
 
 #projects > div:not(:last-child) {

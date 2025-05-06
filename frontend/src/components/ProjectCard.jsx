@@ -6,10 +6,21 @@ export default function ProjectCard({
   title = "???",
   image = defImage,
   date = "TBD",
+  subcategories = "",
   url = "#",
 }) {
   const isExternalLink =
     url.startsWith("http://") || url.startsWith("https://");
+
+  const formattedDate =
+    date !== "TBD"
+      ? new Date(date).toLocaleDateString("en-US", {
+          timeZone: "UTC",
+          year: "numeric",
+          month: "short",
+          day: "numeric",
+        })
+      : "TBD";
 
   const cardContent = (
     <>
@@ -17,16 +28,22 @@ export default function ProjectCard({
         <img src={image} alt={title} loading="lazy" draggable="false" />
       </div>
       <div className="project-date">
-        <small>{date}</small>
+        <small>{formattedDate}</small>
       </div>
       <div className="project-text">
         <div className="project-title">
           <h5>{title}</h5>
         </div>
         <div className="sub-categories">
-          <small className="sub-category">html</small>
-          <small className="sub-category">css</small>
-          <small className="sub-category">js</small>
+          {subcategories && subcategories.length > 0 ? (
+            subcategories.map((sub) => (
+              <small key={sub.id} className="sub-category">
+                {sub.name}
+              </small>
+            ))
+          ) : (
+            <small className="sub-category">???</small>
+          )}
         </div>
       </div>
     </>
@@ -44,7 +61,7 @@ export default function ProjectCard({
           {cardContent}
         </a>
       ) : (
-        <Link to={`/blog/${url}`} className="project-link">
+        <Link to={url} className="project-link">
           {cardContent}
         </Link>
       )}

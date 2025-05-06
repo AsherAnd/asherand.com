@@ -7,26 +7,57 @@ import "../styles/projects.css";
 export default function Projects() {
   const [projects, setProjects] = useState(null);
   const [images, setImages] = useState({});
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [offset, setOffset] = useState(0);
+  const [hasMore, setHasMore] = useState(true);
+
+  const limit = 5;
 
   const APIUrl = import.meta.env.VITE_API_URL;
   const APIKey = import.meta.env.VITE_API_KEY;
 
-  const fetchProjects = async () => {
-    fetch(`${APIUrl}/projects`, {
-      method: "GET",
-      headers: {
-        "X-API-Key": APIKey,
-      },
-    })
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        setProjects(data);
-      })
-      .catch((error) => {
-        console.log(error);
+  const categories = ["All", "3D", "Art", "Code", "Misc."];
+
+  const handleCategoryClick = (category) => {
+    setSelectedCategory(category);
+    setOffset(0);
+    setProjects([]);
+    setHasMore(true);
+    fetchProjects(0, category, true);
+  };
+
+  const fetchProjects = async (
+    offsetValue = 0,
+    category = selectedCategory,
+    replace = false
+  ) => {
+    const categoryQuery =
+      category !== "All" ? `&category=${encodeURIComponent(category)}` : "";
+    const query = `?limit=${limit}&offset=${offsetValue}${categoryQuery}`;
+
+    try {
+      const res = await fetch(`${APIUrl}/projects${query}`, {
+        headers: {
+          "X-API-Key": APIKey,
+        },
       });
+
+      const data = await res.json();
+
+      if (data.length < limit) {
+        setHasMore(false);
+      }
+
+      setProjects((prev) => (replace ? data : [...prev, ...data]));
+
+      data.forEach((proj) => {
+        if (!images[proj.id]) {
+          fetchImage(proj.id, proj.project_image);
+        }
+      });
+    } catch (error) {
+      console.log("Failed to fetch projects:", error);
+    }
   };
 
   const fetchImage = async (id, path) => {
@@ -49,16 +80,14 @@ export default function Projects() {
   };
 
   useEffect(() => {
-    fetchProjects();
+    fetchProjects(0, "All", true);
   }, []);
 
-  useEffect(() => {
-    if (projects) {
-      projects.forEach((proj) => {
-        fetchImage(proj.id, proj.project_image);
-      });
-    }
-  }, [projects]);
+  const handleLoadMore = () => {
+    const newOffset = offset + limit;
+    setOffset(newOffset);
+    fetchProjects(newOffset);
+  };
 
   return (
     <div id="projects">
@@ -93,17 +122,23 @@ export default function Projects() {
             </g>
           </svg>
         </div>
+        <div className="filters">
+          {categories.map((category) => (
+            <button
+              key={category}
+              className={`filter-btn ${
+                selectedCategory === category ? "active" : ""
+              }`}
+              onClick={() => handleCategoryClick(category)}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
         {!projects || projects.length === 0 ? (
           <div>Couldn't Retrieve Data</div>
         ) : (
           <>
-            <div className="filters">
-              <button className="filter-btn">All</button>
-              <button className="filter-btn">3D</button>
-              <button className="filter-btn">Art</button>
-              <button className="filter-btn">Code</button>
-              <button className="filter-btn">Misc.</button>
-            </div>
             <div className="projects-layout">
               <ProjectCard />
               {projects?.map((proj) => {
@@ -111,19 +146,23 @@ export default function Projects() {
                   <ProjectCard
                     title={proj.project_name}
                     image={images[proj.id]}
+                    date={proj.completion_date}
+                    subcategories={proj.subcategories}
                     key={proj.id}
                     url={
                       proj.project_url.String
                         ? proj.project_url.String
-                        : proj.blog_slug.String
+                        : `/blog/${proj.blog_slug.String}`
                     }
                   />
                 );
               })}
             </div>
-            <div className="load-button">
-              <ComicButton text="Load More" />
-            </div>
+            {hasMore && (
+              <div className="load-button">
+                <ComicButton text="Load More" onClick={handleLoadMore} />
+              </div>
+            )}
           </>
         )}
       </div>
