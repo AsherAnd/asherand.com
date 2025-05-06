@@ -30,21 +30,19 @@ export default function ProjectCard({
       <div className="project-date">
         <small>{formattedDate}</small>
       </div>
-      <div className="project-text">
-        <div className="project-title">
-          <h5>{title}</h5>
-        </div>
-        <div className="sub-categories">
-          {subcategories && subcategories.length > 0 ? (
-            subcategories.map((sub) => (
-              <small key={sub.id} className="sub-category">
-                {sub.name}
-              </small>
-            ))
-          ) : (
-            <small className="sub-category">???</small>
-          )}
-        </div>
+      <div className="project-title">
+        <h5>{title}</h5>
+      </div>
+      <div className="sub-categories">
+        {subcategories && subcategories.length > 0 ? (
+          subcategories.map((sub) => (
+            <small key={sub.id} className="sub-category">
+              {sub.name}
+            </small>
+          ))
+        ) : (
+          <small className="sub-category">???</small>
+        )}
       </div>
     </>
   );

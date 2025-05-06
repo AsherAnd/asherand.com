@@ -1,3 +1,7 @@
+#projects {
+  align-items: baseline !important;
+}
+
 .filter-btn {
   text-decoration: none;
   text-transform: uppercase;
