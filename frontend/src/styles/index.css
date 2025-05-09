@@ -336,19 +336,28 @@ strong {
 }
 
 .page-loader {
-  align-items: center;
-  background-color: var(--bg-surface);
   display: flex;
-  flex-direction: column;
-  height: 100vh;
-  justify-content: center;
   left: 0;
   overflow: hidden;
   pointer-events: none;
   position: fixed;
   top: 0;
-  width: 100vw;
   z-index: 100;
+}
+
+.loading-left-panel,
+.loading-right-panel {
+  width: 50vw;
+  height: 100vh;
+  background-color: var(--bg-surface);
+}
+
+.loader-message {
+  position: inherit;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
 }
 
 /* ---------- 8. MEDIA QUERIES ---------- */

@@ -14,11 +14,28 @@ export default function PageLoader({ gsapTimeline }) {
 
   useGSAP(() => {
     gsapTimeline &&
-      gsapTimeline.to(".page-loader", {
+      gsapTimeline.to(".loader-message", {
         duration: 0.5,
-        height: "0vh",
+        opacity: 0,
         ease: "power1.out",
       });
+
+    gsapTimeline &&
+      gsapTimeline
+        .to(".loading-left-panel", {
+          duration: 0.5,
+          xPercent: "-100",
+          ease: "power1.out",
+        })
+        .to(
+          ".loading-right-panel",
+          {
+            duration: 0.5,
+            xPercent: "100",
+            ease: "power1.out",
+          },
+          "<"
+        );
 
     if (progress === 100) {
       setTimeout(() => {
@@ -34,6 +51,8 @@ export default function PageLoader({ gsapTimeline }) {
 
   return (
     <div className="page-loader">
+      <div className="loading-left-panel"></div>
+      <div className="loading-right-panel"></div>
       <div className="loader-message">
         <span>
           {textRoll[textIndex % textRoll.length]} #{Math.round(progress)}
