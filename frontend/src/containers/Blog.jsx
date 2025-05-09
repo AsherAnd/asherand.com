@@ -7,26 +7,56 @@ import "../styles/blog.css";
 export default function Blog() {
   const [posts, setPosts] = useState(null);
   const [images, setImages] = useState({});
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [offset, setOffset] = useState(0);
+  const [hasMore, setHasMore] = useState(true);
+
+  const limit = 5;
 
   const APIUrl = import.meta.env.VITE_API_URL;
   const APIKey = import.meta.env.VITE_API_KEY;
 
-  const fetchPosts = async () => {
-    fetch(`${APIUrl}/blog`, {
-      method: "GET",
-      headers: {
-        "X-API-Key": APIKey,
-      },
-    })
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        setPosts(data);
-      })
-      .catch((error) => {
-        console.log(error);
+  const categories = ["All", "3D", "Art", "Code", "Misc."];
+
+  const handleCategoryClick = (category) => {
+    setSelectedCategory(category);
+    setOffset(0);
+    setPosts([]);
+    setHasMore(true);
+    fetchPosts(0, category, true);
+  };
+
+  const fetchPosts = async (
+    offsetValue = 0,
+    category = selectedCategory,
+    replace = false
+  ) => {
+    const categoryQuery =
+      category !== "All" ? `&category=${encodeURIComponent(category)}` : "";
+    const query = `?limit=${limit}&offset=${offsetValue}${categoryQuery}`;
+
+    try {
+      const res = await fetch(`${APIUrl}/blog${query}`, {
+        headers: {
+          "X-API-Key": APIKey,
+        },
       });
+      const data = await res.json();
+
+      if (data.length < limit) {
+        setHasMore(false);
+      }
+
+      setPosts((prev) => (replace ? data : [...prev, ...data]));
+
+      data.forEach((post) => {
+        if (!images[post.id]) {
+          fetchImage(post.id, post.blog_image);
+        }
+      });
+    } catch (error) {
+      console.log("Failed to fetch posts:", error);
+    }
   };
 
   const fetchImage = async (id, path) => {
@@ -49,7 +79,7 @@ export default function Blog() {
   };
 
   useEffect(() => {
-    fetchPosts();
+    fetchPosts(0, "All", true);
   }, []);
 
   useEffect(() => {
@@ -60,6 +90,12 @@ export default function Blog() {
     }
   }, [posts]);
 
+  const handleLoadMore = () => {
+    const newOffset = offset + limit;
+    setOffset(newOffset);
+    fetchPosts(newOffset);
+  };
+
   return (
     <>
       <header className="blog-header">
@@ -69,26 +105,38 @@ export default function Blog() {
       <div id="blog">
         <div className="container">
           <div className="filters">
-            <button className="filter-btn">All</button>
-            <button className="filter-btn">3D</button>
-            <button className="filter-btn">Art</button>
-            <button className="filter-btn">Code</button>
-            <button className="filter-btn">Misc.</button>
+            {categories.map((category) => (
+              <button
+                key={category}
+                className={`filter-btn ${
+                  selectedCategory === category ? "active" : ""
+                }`}
+                onClick={() => handleCategoryClick(category)}
+              >
+                {category}
+              </button>
+            ))}
           </div>
           <div className="blog-layout">
             {posts?.map((post) => {
               return (
                 <BlogPostCard
                   title={post.title}
+                  slug={post.slug}
+                  date={post.publication_date}
                   image={images[post.id]}
+                  category={post.categories}
+                  subcategories={post.subcategories}
                   key={post.id}
                 />
               );
             })}
           </div>
-          <div className="load-button">
-            <ComicButton text="Load More" />
-          </div>
+          {hasMore && (
+            <div className="load-button">
+              <ComicButton text="Load More" onClick={handleLoadMore} />
+            </div>
+          )}
         </div>
       </div>
       <Footer />

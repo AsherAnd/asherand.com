@@ -1,10 +1,9 @@
 .post-container {
-  max-width: 1200px;
+  max-width: 100vw;
   margin: 0 auto;
   padding: 20px;
 }
 
-/* post Post */
 #blog-post {
   background: var(--bg-surface);
   margin: 2rem auto;
@@ -14,7 +13,6 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Back Button */
 .back-btn {
   color: var(--highlight-text-color);
   font-size: 2rem;
@@ -31,7 +29,6 @@
   transform: translateX(-3px);
 }
 
-/* post Title */
 .post-title {
   color: var(--text-color);
   margin-bottom: 1rem;
@@ -39,7 +36,6 @@
   text-align: center;
 }
 
-/* post Meta Information */
 .post-meta {
   color: var(--secondary-text-color);
   margin-bottom: 2rem;

@@ -154,7 +154,7 @@ h6 {
 
 p {
   font-size: var(--p);
-  letter-spacing: normal;
+  letter-spacing: 0.05rem;
   text-align: left;
   margin-bottom: 1em;
 }

@@ -4,31 +4,51 @@ import "../styles/components/blogcard.css";
 
 export default function BlogPostCard({
   title = "???",
+  slug = "#",
   image = defImage,
-  category = "Code",
-  date = "Mar 5th, 2024",
+  category = "",
+  subcategories = "",
+  date = "TBD",
 }) {
+  const formattedDate =
+    date !== "TBD"
+      ? new Date(date).toLocaleDateString("en-US", {
+          timeZone: "UTC",
+          year: "numeric",
+          month: "short",
+          day: "numeric",
+        })
+      : "TBD";
+
   return (
     <div className="blog-card">
-      <Link to={title} className="blog-link">
-        <div className="blog-img-wrapper">
-          <img src={image} alt={title} loading="lazy" draggable="false" />
-        </div>
-        <div className="blog-info">
-          <span>{category}</span>
-          <span>{date}</span>
-        </div>
-        <div className="blog-text">
-          <div className="blog-title">
-            <h2>{title}</h2>
+      <div className="blog-card-content">
+        <Link to={slug} className="blog-link">
+          <div className="blog-img-wrapper">
+            <img src={image} alt={title} loading="lazy" draggable="false" />
           </div>
-          <div className="sub-categories">
-            <small className="sub-category">html</small>
-            <small className="sub-category">css</small>
-            <small className="sub-category">js</small>
+          <div className="blog-info">
+            <span>{category?.name}</span>
+            <span>{formattedDate}</span>
           </div>
-        </div>
-      </Link>
+          <div className="blog-text">
+            <div className="blog-title">
+              <h2>{title}</h2>
+            </div>
+            <div className="sub-categories">
+              {subcategories && subcategories.length > 0 ? (
+                subcategories.map((sub) => (
+                  <small key={sub.id} className="sub-category">
+                    {sub.name}
+                  </small>
+                ))
+              ) : (
+                <small className="sub-category">???</small>
+              )}
+            </div>
+          </div>
+        </Link>
+      </div>
     </div>
   );
 }

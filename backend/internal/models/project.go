@@ -5,16 +5,6 @@ import (
 	"time"
 )
 
-type Category struct {
-	ID   int    `json:"id"`
-	Name string `json:"name"`
-}
-
-type Subcategory struct {
-	ID   int    `json:"id"`
-	Name string `json:"name"`
-}
-
 type Project struct {
 	ID             int            `json:"id"`
 	ProjectName    string         `json:"project_name"`
@@ -30,7 +20,7 @@ type ProjectModel struct {
 	DB *sql.DB
 }
 
-func (m *ProjectModel) Get(categoryName string, limit, offset int) ([]Project, error) {
+func (m *ProjectModel) GetAll(categoryName string, limit, offset int) ([]Project, error) {
 	args := []interface{}{categoryName, categoryName, categoryName, categoryName}
 	stmt := `
 	WITH paginated_projects AS (
@@ -130,22 +120,4 @@ func (m *ProjectModel) Get(categoryName string, limit, offset int) ([]Project, e
 	}
 
 	return projects, nil
-}
-
-func containsCategory(list []Category, id int) bool {
-	for _, c := range list {
-		if c.ID == id {
-			return true
-		}
-	}
-	return false
-}
-
-func containsSubcategory(list []Subcategory, id int) bool {
-	for _, s := range list {
-		if s.ID == id {
-			return true
-		}
-	}
-	return false
 }

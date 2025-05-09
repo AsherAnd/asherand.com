@@ -1,10 +1,14 @@
+import { useEffect, useState } from "react";
 import { useLoaderData, useParams, useNavigate } from "react-router";
+import Markdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import "../styles/components/blogpost.css";
+
+const APIUrl = import.meta.env.VITE_API_URL;
+const APIKey = import.meta.env.VITE_API_KEY;
 
 export async function getBlogPost({ params }) {
   const { slug } = params;
-  const APIUrl = import.meta.env.VITE_API_URL;
-  const APIKey = import.meta.env.VITE_API_KEY;
 
   const res = await fetch(`${APIUrl}/blog/${slug}`, {
     method: "GET",
@@ -23,11 +27,31 @@ export async function getBlogPost({ params }) {
 export default function BlogPost() {
   const post = useLoaderData();
   const navigate = useNavigate();
+  const [markdown, setMarkdown] = useState("");
   const goBack = () => {
     navigate(-1);
   };
 
-  if (post === undefined || post.length === 0) {
+  useEffect(() => {
+    if (post?.content) {
+      fetch(`${APIUrl}${post.content}`, {
+        headers: {
+          "X-API-Key": APIKey,
+        },
+      })
+        .then((res) => {
+          if (!res.ok) throw new Error("Failed to fetch markdown content");
+          return res.text();
+        })
+        .then(setMarkdown)
+        .catch((err) => {
+          console.error("Error loading markdown:", err);
+          setMarkdown("# Error loading content");
+        });
+    }
+  }, [post]);
+
+  if (!post) {
     throw Error("Blog post doesn't exist");
   }
 
@@ -47,9 +71,7 @@ export default function BlogPost() {
           )}
         </div>
         <div className="post-content">
-          {post.description && (
-            <Markdown remarkPlugins={[remarkGfm]}>{post.content}</Markdown>
-          )}
+          <Markdown remarkPlugins={[remarkGfm]}>{markdown}</Markdown>
         </div>
       </div>
     </div>
