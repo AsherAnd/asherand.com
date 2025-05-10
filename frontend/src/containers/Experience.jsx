@@ -10,8 +10,6 @@ import "../styles/experience.css";
 
 export default function Experience() {
   const [experience, setExperience] = useState(null);
-  const [images, setImages] = useState({});
-  const [descriptions, setDescriptions] = useState({});
 
   const APIUrl = import.meta.env.VITE_API_URL;
   const APIKey = import.meta.env.VITE_API_KEY;
@@ -34,54 +32,9 @@ export default function Experience() {
       });
   };
 
-  const fetchImage = async (id, path) => {
-    try {
-      const res = await fetch(`${APIUrl}${path}`, {
-        headers: {
-          "X-API-Key": APIKey,
-        },
-      });
-
-      if (!res.ok) throw new Error("Image fetch failed");
-
-      const blob = await res.blob();
-      const imageUrl = URL.createObjectURL(blob);
-
-      setImages((prev) => ({ ...prev, [id]: imageUrl }));
-    } catch (err) {
-      console.error("Failed to fetch image for", id, err);
-    }
-  };
-
-  const fetchDescription = async (id, path) => {
-    try {
-      const res = await fetch(`${APIUrl}${path}`, {
-        headers: {
-          "X-API-Key": APIKey,
-        },
-      });
-
-      if (!res.ok) throw new Error("Failed to fetch description");
-
-      const text = await res.text();
-      setDescriptions((prev) => ({ ...prev, [id]: text }));
-    } catch (err) {
-      console.error("Failed to fetch description for", id, err);
-    }
-  };
-
   useEffect(() => {
     fetchExperience();
   }, []);
-
-  useEffect(() => {
-    if (experience) {
-      experience.forEach((exp) => {
-        fetchImage(exp.id, exp.image);
-        fetchDescription(exp.id, exp.description);
-      });
-    }
-  }, [experience]);
 
   return (
     <div id="experience">
@@ -145,8 +98,8 @@ export default function Experience() {
                   <ExperienceCard
                     title={exp.title}
                     place={exp.employer_name}
-                    desc={descriptions[exp.id]}
-                    image={images[exp.id]}
+                    desc={APIUrl + exp.description}
+                    image={APIUrl + exp.image}
                   />
                 </SwiperSlide>
               ))}

@@ -234,6 +234,10 @@ footer {
   text-align: center;
 }
 
+.filters {
+  padding-bottom: 1rem;
+}
+
 .icon {
   color: var(--highlight-text-color);
   cursor: pointer;

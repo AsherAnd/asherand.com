@@ -6,7 +6,6 @@ import "../styles/projects.css";
 
 export default function Projects() {
   const [projects, setProjects] = useState(null);
-  const [images, setImages] = useState({});
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [offset, setOffset] = useState(0);
   const [hasMore, setHasMore] = useState(true);
@@ -49,33 +48,8 @@ export default function Projects() {
       }
 
       setProjects((prev) => (replace ? data : [...prev, ...data]));
-
-      data.forEach((proj) => {
-        if (!images[proj.id]) {
-          fetchImage(proj.id, proj.project_image);
-        }
-      });
     } catch (error) {
       console.log("Failed to fetch projects:", error);
-    }
-  };
-
-  const fetchImage = async (id, path) => {
-    try {
-      const res = await fetch(`${APIUrl}${path}`, {
-        headers: {
-          "X-API-Key": APIKey,
-        },
-      });
-
-      if (!res.ok) throw new Error("Image fetch failed");
-
-      const blob = await res.blob();
-      const imageUrl = URL.createObjectURL(blob);
-
-      setImages((prev) => ({ ...prev, [id]: imageUrl }));
-    } catch (err) {
-      console.error("Failed to fetch image for", id, err);
     }
   };
 
@@ -145,7 +119,7 @@ export default function Projects() {
                 return (
                   <ProjectCard
                     title={proj.project_name}
-                    image={images[proj.id]}
+                    image={APIUrl + proj.project_image}
                     date={proj.completion_date}
                     subcategories={proj.subcategories}
                     key={proj.id}

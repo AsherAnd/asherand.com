@@ -21,18 +21,12 @@ import (
 	"github.com/joho/godotenv"
 )
 
-func NewServer(logger *slog.Logger, blogModel *models.BlogModel, experienceModel *models.ExperienceModel, footerModel *models.FooterModel, projectModel *models.ProjectModel) http.Handler {
-	authConfig := middlewares.AuthConfig{
-		APIKey:        os.Getenv("APIKEY"),
-		AllowedDomain: "", ///// Make website
-		APIKeyHeader:  "X-API-Key",
-		RefererHeader: "Referer",
-	}
-
+func NewServer(logger *slog.Logger, authConfig *middlewares.AuthConfig, blogModel *models.BlogModel, experienceModel *models.ExperienceModel, footerModel *models.FooterModel, projectModel *models.ProjectModel) http.Handler {
 	mux := http.NewServeMux()
-	router.AddRoutes(mux, logger, blogModel, experienceModel, footerModel, projectModel)
+	router.AddRoutes(mux, authConfig, logger, blogModel, experienceModel, footerModel, projectModel)
 
-	var handler http.Handler = middlewares.CORSMiddleware(middlewares.AuthMiddleWare(authConfig, logger)(mux))
+	var handler http.Handler = mux
+	handler = middlewares.CORSMiddleware(handler)
 	return handler
 }
 
@@ -54,6 +48,13 @@ func run(ctx context.Context) error {
 	logger := slog.New(slog.NewTextHandler(os.Stdout, &slog.HandlerOptions{
 		AddSource: true,
 	}))
+
+	authConfig := &middlewares.AuthConfig{
+		APIKey:        os.Getenv("APIKEY"),
+		AllowedDomain: "", ///// Make website
+		APIKeyHeader:  "X-API-Key",
+		RefererHeader: "Referer",
+	}
 
 	cfg := mysql.Config{
 		User:      os.Getenv("USER"),
@@ -79,7 +80,7 @@ func run(ctx context.Context) error {
 	footerModel := &models.FooterModel{DB: db}
 	projectModel := &models.ProjectModel{DB: db}
 
-	srv := NewServer(logger, blogModel, experienceModel, footerModel, projectModel)
+	srv := NewServer(logger, authConfig, blogModel, experienceModel, footerModel, projectModel)
 	httpServer := &http.Server{
 		Addr:      net.JoinHostPort("", *addr),
 		Handler:   srv,

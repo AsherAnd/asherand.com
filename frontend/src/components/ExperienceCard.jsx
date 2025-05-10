@@ -1,6 +1,6 @@
 import Markdown from "react-markdown";
-import remarkGfm from "remark-gfm";
 import defImage from "../assets/images/PageTex001.jpg";
+import { useEffect, useState } from "react";
 
 export default function ExperienceCard({
   title = "Title",
@@ -8,6 +8,25 @@ export default function ExperienceCard({
   image = defImage,
   desc = "",
 }) {
+  const [markdown, setMarkdown] = useState(null);
+
+  const APIUrl = import.meta.env.VITE_API_URL;
+  const APIKey = import.meta.env.VITE_API_KEY;
+
+  useEffect(() => {
+    if (desc) {
+      fetch(desc)
+        .then((res) => {
+          if (!res.ok) throw new Error("Failed to fetch markdown content");
+          return res.text();
+        })
+        .then(setMarkdown)
+        .catch((err) => {
+          console.error("Error loading markdown:", err);
+          setMarkdown("# Error loading content");
+        });
+    }
+  }, []);
   return (
     <div className="experience-card-container glass-container">
       <div className="experience-text-mobile">
@@ -27,7 +46,7 @@ export default function ExperienceCard({
           </h2>
         </div>
         <div className="experience-desc">
-          <Markdown remarkPlugins={[remarkGfm]}>{desc}</Markdown>
+          <Markdown>{markdown}</Markdown>
         </div>
       </div>
     </div>

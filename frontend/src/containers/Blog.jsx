@@ -6,7 +6,6 @@ import "../styles/blog.css";
 
 export default function Blog() {
   const [posts, setPosts] = useState(null);
-  const [images, setImages] = useState({});
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [offset, setOffset] = useState(0);
   const [hasMore, setHasMore] = useState(true);
@@ -48,47 +47,14 @@ export default function Blog() {
       }
 
       setPosts((prev) => (replace ? data : [...prev, ...data]));
-
-      data.forEach((post) => {
-        if (!images[post.id]) {
-          fetchImage(post.id, post.blog_image);
-        }
-      });
     } catch (error) {
       console.log("Failed to fetch posts:", error);
-    }
-  };
-
-  const fetchImage = async (id, path) => {
-    try {
-      const res = await fetch(`${APIUrl}${path}`, {
-        headers: {
-          "X-API-Key": APIKey,
-        },
-      });
-
-      if (!res.ok) throw new Error("Image fetch failed");
-
-      const blob = await res.blob();
-      const imageUrl = URL.createObjectURL(blob);
-
-      setImages((prev) => ({ ...prev, [id]: imageUrl }));
-    } catch (err) {
-      console.error("Failed to fetch image for", id, err);
     }
   };
 
   useEffect(() => {
     fetchPosts(0, "All", true);
   }, []);
-
-  useEffect(() => {
-    if (posts) {
-      posts.forEach((post) => {
-        fetchImage(post.id, post.blog_image);
-      });
-    }
-  }, [posts]);
 
   const handleLoadMore = () => {
     const newOffset = offset + limit;
@@ -124,7 +90,7 @@ export default function Blog() {
                   title={post.title}
                   slug={post.slug}
                   date={post.publication_date}
-                  image={images[post.id]}
+                  image={APIUrl + post.blog_image}
                   category={post.categories}
                   subcategories={post.subcategories}
                   key={post.id}
