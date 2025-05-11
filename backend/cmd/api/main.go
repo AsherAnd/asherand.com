@@ -89,7 +89,7 @@ func run(ctx context.Context) error {
 	}
 	go func() {
 		logger.Info("starting server", slog.String("addr", httpServer.Addr))
-		if err := httpServer.ListenAndServeTLS(os.Getenv("TLSCERT"), os.Getenv("TLSKEY")); err != nil && err != http.ErrServerClosed {
+		if err := httpServer.ListenAndServe(); err != nil && err != http.ErrServerClosed {
 			fmt.Fprintf(os.Stderr, "error listening and serving: %s\n", err)
 		}
 	}()
