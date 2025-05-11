@@ -1,2 +1,2 @@
 User-agent: *
-Disallow: /content
+Disallow: /content/*
