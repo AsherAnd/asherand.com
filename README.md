@@ -1,5 +1,9 @@
 # My Portfolio Site
 
-This is my own personal full stack portfolio site that I've been able to create using <b>ReactJS</b> with a <b>NodeJS</b> backend and a <b>MYSQL</b> database. Check it out at <a href="https://asherand.com">asherand.com</a> and tell me what you think.
+This is the second version of my full stack portfolio site. This site showcases my work, skills, and contact information. Built with <b>ReactJS</b> with a <b>Go</b> backend and a <b>MYSQL</b> database. It's designed to be fast, responsive, and easy to navigate.
 
-![Image of my portfolio website](frontend/public/Page.png?raw=true)
+## 🚀 Live Site
+
+Check it out at <a href="https://asherand.com">asherand.com</a> and tell me what you think.
+
+![Image of my portfolio website](frontend/public/page.jpg?raw=true)
