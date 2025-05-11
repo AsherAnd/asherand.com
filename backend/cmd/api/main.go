@@ -51,7 +51,7 @@ func run(ctx context.Context) error {
 
 	authConfig := &middlewares.AuthConfig{
 		APIKey:        os.Getenv("APIKEY"),
-		AllowedDomain: "", ///// Make website
+		AllowedDomain: "https://asherand.com", ///// Make website
 		APIKeyHeader:  "X-API-Key",
 		RefererHeader: "Referer",
 	}
@@ -60,7 +60,7 @@ func run(ctx context.Context) error {
 		User:      os.Getenv("USER"),
 		Passwd:    os.Getenv("PASS"),
 		Net:       "tcp",
-		Addr:      ":3306", // replace with env port
+		Addr:      os.Getenv("PORT"), // replace with env port
 		DBName:    os.Getenv("DATABASE"),
 		ParseTime: true,
 	}
