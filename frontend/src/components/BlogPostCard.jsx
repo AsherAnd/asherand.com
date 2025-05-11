@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import defImage from "../assets/images/Working on something3.jpg";
+import defImage from "../assets/images/working_on_something3.jpg";
 import "../styles/components/blogcard.css";
 
 export default function BlogPostCard({

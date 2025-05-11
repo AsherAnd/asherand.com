@@ -1,3 +1,4 @@
+import { useGSAP } from "@gsap/react";
 import { useState } from "react";
 import { useProgress } from "@react-three/drei";
 

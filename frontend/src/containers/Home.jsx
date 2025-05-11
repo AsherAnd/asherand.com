@@ -1,3 +1,4 @@
+import { useGSAP } from "@gsap/react";
 import { scrollTo } from "../utils/Navigation";
 import ComicButton from "../components/ComicButton";
 import ComicBookEnvironment from "../components/ComicBookEnvironment";

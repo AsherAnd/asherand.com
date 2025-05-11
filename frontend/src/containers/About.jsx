@@ -1,6 +1,6 @@
 import { scrollTo } from "../utils/Navigation";
 import SectionTitle from "../components/SectionTitle";
-import image from "../assets/images/All I know.png";
+import image from "../assets/images/all_i_know.png";
 import "../styles/about.css";
 
 export default function About() {
