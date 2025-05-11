@@ -1,0 +1,32 @@
+#about > .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.about-text > div:not(:last-child) {
+  margin-bottom: clamp(16px, 2vw, 24px);
+}
+
+.about-img-wrapper img {
+  max-width: 100%;
+  height: auto;
+}
+
+.about-img-wrapper {
+  flex: 0 0 75%;
+}
+
+.about-text {
+  flex: 0 0 100%;
+}
+
+/* lg */
+@media (min-width: 64em) {
+  .about-img-wrapper,
+  .about-text {
+    flex: 5;
+  }
+}

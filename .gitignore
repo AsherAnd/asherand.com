@@ -1,5 +1,7 @@
-node_modules
-data.json
-build/
 .env
+node_modules
 .unlighthouse
+
+
+tls/
+content/

@@ -1,0 +1,11 @@
+.icons-list {
+  margin-top: 4rem;
+}
+
+.icons-list ul {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-evenly;
+  font-size: 2rem;
+}

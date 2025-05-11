@@ -1,0 +1,76 @@
+.btn {
+  position: relative;
+  background: var(--bg-surface);
+  width: 100%; /* Full-width on smaller screens */
+  max-width: 10.5rem; /* Limit max width */
+  padding: 1rem; /* Responsive padding */
+  border: 2px solid var(--highlight-text-color);
+  color: var(--text-color);
+  font-weight: bold;
+  text-transform: capitalize;
+  text-align: center;
+  background-clip: padding-box;
+  z-index: 2;
+  transition: all 0.15s ease-out; /* Simplified transition */
+  font-family: "Product Sans Bold", sans-serif; /* Fallback font */
+
+  &::after,
+  &::before {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    content: "";
+    z-index: 1;
+    transition: all 0.1s ease-out;
+  }
+
+  &::before {
+    background: var(--highlight-text-color);
+    top: 4px;
+    left: -8px;
+    height: 100%;
+    width: 8px;
+  }
+
+  &::after {
+    background: var(--highlight-text-color);
+    right: 0;
+    left: -8px;
+    height: 8px;
+  }
+
+  &:hover {
+    background: var(--text-color);
+    color: var(--bg-surface);
+  }
+
+  &:active {
+    background: var(--highlight-text-color);
+    color: var(--text-color);
+    margin-left: -7.5px;
+    margin-bottom: -7.5px;
+    cursor: pointer;
+
+    &::after,
+    &::before {
+      top: 100%;
+      left: 0;
+    }
+
+    &::before {
+      top: 0;
+      width: 0;
+    }
+
+    &::after {
+      height: 0;
+    }
+  }
+}
+
+.comic-btn {
+  height: 4rem; /* Responsive height */
+  min-width: 150px; /* Ensure minimum width */
+  margin: 1rem 0;
+}
