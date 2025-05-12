@@ -236,6 +236,8 @@ footer {
 
 .filters {
   padding-bottom: 1rem;
+  display: flex;
+  justify-content: center;
 }
 
 .icon {
@@ -377,6 +379,10 @@ strong {
   #projects,
   #contact {
     margin: 0 var(--spacing-lg) 50px var(--spacing-lg);
+  }
+
+  .filters {
+    justify-content: start;
   }
 }
 
